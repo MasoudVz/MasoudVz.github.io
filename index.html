@@ -4,98 +4,110 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Masoud Valizadeh — Technical Delivery Lead & Scrum Master</title>
-  <meta name="description" content="Executive technical portfolio of Masoud Valizadeh. Flow Engineering, Anti-Agile Theater, and High-Throughput Delivery Architecture." />
+  <meta name="description" content="Technical portfolio of Masoud Valizadeh. Flow Engineering, Anti-Agile Theater, and High-Throughput Delivery Architecture." />
 
-  <!-- Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <!-- Typography: Plus Jakarta Sans & Space Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg: #09090b;
-      --bg-subtle: #111114;
-      --surface: #141417;
-      --surface-hover: #1a1a1f;
-      --surface-elevated: #202026;
-      --border: rgba(255, 255, 255, 0.07);
-      --border-strong: rgba(255, 255, 255, 0.18);
-      --text-high: #f4f4f5;
+      --bg: #08080a;
+      --bg-subtle: #101014;
+      --surface: #141418;
+      --surface-hover: #1c1c22;
+      --border: rgba(255, 255, 255, 0.08);
+      --border-strong: rgba(255, 255, 255, 0.22);
+      --text-high: #f4f4f6;
       --text-mid: #a1a1aa;
-      --text-low: #52525b;
+      --text-low: #52525c;
       --accent: #ffffff;
-      --accent-invert: #09090b;
-      --bronze: #d4af37;
-      --bronze-bg: rgba(212, 175, 55, 0.05);
-      --bronze-border: rgba(212, 175, 55, 0.25);
-      --font-sans: 'Plus Jakarta Sans', -apple-system, sans-serif;
-      --font-mono: 'JetBrains Mono', monospace;
-      --radius-sm: 6px;
-      --radius-md: 12px;
-      --radius-lg: 18px;
-      --transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      --accent-invert: #08080a;
+      --award-gold: #c5a880;
+      --award-bg: rgba(197, 168, 128, 0.05);
+      --award-border: rgba(197, 168, 128, 0.28);
+      --code-bg: #040405;
+      --code-border: rgba(255, 255, 255, 0.09);
+      --font-display: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      --font-mono: 'Space Mono', monospace;
+      --transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     [data-theme="light"] {
-      --bg: #fbfbfb;
-      --bg-subtle: #f3f3f2;
+      --bg: #f7f7f5;
+      --bg-subtle: #ecece9;
       --surface: #ffffff;
-      --surface-hover: #f5f5f4;
-      --surface-elevated: #eaeaea;
+      --surface-hover: #f1f1ee;
       --border: rgba(0, 0, 0, 0.08);
-      --border-strong: rgba(0, 0, 0, 0.2);
-      --text-high: #121215;
-      --text-mid: #52525b;
-      --text-low: #a1a1aa;
-      --accent: #121215;
+      --border-strong: rgba(0, 0, 0, 0.22);
+      --text-high: #111114;
+      --text-mid: #4b4b54;
+      --text-low: #8e8e98;
+      --accent: #111114;
       --accent-invert: #ffffff;
-      --bronze: #996515;
-      --bronze-bg: rgba(153, 101, 21, 0.05);
-      --bronze-border: rgba(153, 101, 21, 0.22);
+      --award-gold: #8c6d46;
+      --award-bg: rgba(140, 109, 70, 0.06);
+      --award-border: rgba(140, 109, 70, 0.28);
+      --code-bg: #f0f0ed;
+      --code-border: rgba(0, 0, 0, 0.12);
     }
 
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: var(--font-sans);
+      font-family: var(--font-display);
     }
 
     body {
       background-color: var(--bg);
       color: var(--text-high);
       line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
       transition: background-color 0.25s ease, color 0.25s ease;
     }
 
-    .container {
-      max-width: 1260px;
-      margin: 0 auto;
-      padding: 0 1.75rem;
+    .film-grain {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.035;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
     }
 
-    /* Fixed Minimalist Navbar */
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* Fixed Navigation Header */
     nav {
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
-      background: rgba(9, 9, 11, 0.85);
+      background: rgba(8, 8, 10, 0.88);
       backdrop-filter: blur(18px);
       -webkit-backdrop-filter: blur(18px);
       border-bottom: 1px solid var(--border);
       z-index: 1000;
+      transition: var(--transition);
     }
     [data-theme="light"] nav {
-      background: rgba(251, 251, 251, 0.88);
+      background: rgba(247, 247, 245, 0.9);
     }
     .nav-wrap {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 68px;
+      height: 70px;
     }
     .nav-brand {
       display: flex;
@@ -107,17 +119,21 @@
       font-size: 0.95rem;
       letter-spacing: -0.02em;
     }
-    .brand-avatar {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
+    .brand-symbol {
+      width: 28px;
+      height: 28px;
       border: 1px solid var(--border-strong);
-      object-fit: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
     }
     .nav-links {
       display: flex;
-      gap: 2.2rem;
       list-style: none;
+      gap: 2.5rem;
     }
     .nav-links a {
       color: var(--text-mid);
@@ -134,93 +150,95 @@
       align-items: center;
       gap: 0.65rem;
     }
-    .btn-icon {
-      background: var(--surface);
+    .btn-nav {
+      background: transparent;
       border: 1px solid var(--border);
       color: var(--text-high);
-      height: 36px;
-      padding: 0 0.85rem;
-      border-radius: var(--radius-sm);
-      font-family: var(--font-mono);
+      padding: 0.45rem 0.85rem;
       font-size: 0.75rem;
-      font-weight: 600;
+      font-family: var(--font-mono);
       cursor: pointer;
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
       transition: var(--transition);
+      text-decoration: none;
     }
-    .btn-icon:hover {
+    .btn-nav:hover {
       border-color: var(--border-strong);
-      background: var(--surface-hover);
+      background: var(--surface);
     }
 
     /* Hero Section */
     .hero {
-      padding: 145px 0 75px;
+      padding: 155px 0 85px;
       border-bottom: 1px solid var(--border);
     }
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.35fr 0.65fr;
-      gap: 4rem;
+    .hero-meta {
+      display: flex;
+      justify-content: space-between;
       align-items: center;
+      margin-bottom: 2.8rem;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-low);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
     }
-    .badge-status {
+    .status-badge {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      font-family: var(--font-mono);
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      padding: 0.35rem 0.85rem;
-      border-radius: 99px;
-      border: 1px solid var(--border-strong);
       color: var(--text-high);
-      margin-bottom: 1.5rem;
     }
     .status-dot {
       width: 6px;
       height: 6px;
-      border-radius: 50%;
       background: var(--text-high);
+      border-radius: 50%;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 0.65fr;
+      gap: 4rem;
+      align-items: flex-end;
     }
     .hero-title {
-      font-size: clamp(2.6rem, 5.2vw, 4.6rem);
+      font-size: clamp(2.8rem, 5.5vw, 5.2rem);
       font-weight: 900;
-      line-height: 1.05;
+      line-height: 0.98;
       letter-spacing: -0.04em;
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
       text-transform: uppercase;
     }
     .hero-title span.dim {
       color: var(--text-low);
-      font-weight: 400;
+      font-weight: 300;
     }
     .hero-desc {
       color: var(--text-mid);
-      font-size: 1.1rem;
+      font-size: 1.12rem;
       line-height: 1.75;
       max-width: 640px;
-      margin-bottom: 2.2rem;
+      margin-bottom: 2.6rem;
     }
     .hero-actions {
       display: flex;
       gap: 1rem;
       flex-wrap: wrap;
     }
+
     .btn {
-      padding: 0.85rem 1.8rem;
-      border-radius: var(--radius-sm);
-      font-size: 0.88rem;
-      font-weight: 600;
+      padding: 0.9rem 2rem;
+      font-size: 0.85rem;
+      font-weight: 700;
       text-decoration: none;
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
-      cursor: pointer;
+      gap: 0.6rem;
       transition: var(--transition);
+      cursor: pointer;
     }
     .btn-solid {
       background: var(--accent);
@@ -229,7 +247,7 @@
     }
     .btn-solid:hover {
       opacity: 0.88;
-      transform: translateY(-1px);
+      transform: translateY(-2px);
     }
     .btn-outline {
       background: transparent;
@@ -239,354 +257,273 @@
     .btn-outline:hover {
       background: var(--surface);
       border-color: var(--text-high);
-      transform: translateY(-1px);
+      transform: translateY(-2px);
     }
 
-    /* Executive Portrait Card */
-    .portrait-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 1.5rem;
+    /* Portrait Specification Card */
+    .portrait-stack {
       display: flex;
       flex-direction: column;
-      gap: 1.25rem;
+      gap: 1.5rem;
     }
     .portrait-frame {
       width: 100%;
       aspect-ratio: 1 / 1;
-      border-radius: var(--radius-md);
-      overflow: hidden;
+      max-width: 320px;
       border: 1px solid var(--border-strong);
-      background: #000;
+      background: var(--surface);
+      overflow: hidden;
     }
-    .portrait-frame img {
+    .portrait-img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       filter: grayscale(100%) contrast(108%);
       transition: var(--transition);
     }
-    .portrait-frame:hover img {
+    .portrait-frame:hover .portrait-img {
       filter: grayscale(0%);
     }
-    .profile-specs {
-      display: flex;
-      flex-direction: column;
-      gap: 0.45rem;
+    .system-manifest {
+      border: 1px solid var(--border);
+      background: var(--surface);
+      padding: 1.25rem;
       font-family: var(--font-mono);
       font-size: 0.74rem;
     }
-    .spec-item {
+    .manifest-row {
       display: flex;
       justify-content: space-between;
-      padding-bottom: 0.4rem;
+      padding: 0.45rem 0;
       border-bottom: 1px solid var(--border);
     }
-    .spec-item:last-child {
+    .manifest-row:last-child {
       border-bottom: none;
       padding-bottom: 0;
     }
-    .spec-key { color: var(--text-low); }
-    .spec-val { color: var(--text-high); font-weight: 500; }
+    .manifest-k { color: var(--text-low); }
+    .manifest-v { color: var(--text-high); font-weight: 700; }
+
+    /* Marquee Ribbon */
+    .ticker-ribbon {
+      border-bottom: 1px solid var(--border);
+      padding: 1.1rem 0;
+      overflow: hidden;
+      white-space: nowrap;
+      background: var(--bg-subtle);
+    }
+    .ticker-track {
+      display: inline-flex;
+      gap: 3rem;
+      animation: tickerLoop 32s linear infinite;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-mid);
+    }
+    @keyframes tickerLoop {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
 
     /* National Award Monolith */
     .award-card {
-      margin: 4.5rem 0;
-      background: var(--bronze-bg);
-      border: 1px solid var(--bronze-border);
-      border-radius: var(--radius-lg);
-      padding: 2.2rem 2.8rem;
+      margin: 5.5rem 0 3rem;
+      background: var(--award-bg);
+      border: 1px solid var(--award-border);
+      padding: 3rem;
       display: grid;
-      grid-template-columns: 80px 1fr;
-      gap: 2rem;
+      grid-template-columns: 110px 1fr;
+      gap: 2.5rem;
       align-items: center;
     }
     .award-badge {
       font-family: var(--font-mono);
-      font-size: 3rem;
+      font-size: 3.5rem;
       font-weight: 800;
-      color: var(--bronze);
+      color: var(--award-gold);
       line-height: 1;
     }
     .award-content h3 {
-      font-size: 1.3rem;
-      font-weight: 750;
+      font-size: 1.4rem;
+      font-weight: 800;
       color: var(--text-high);
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.5rem;
       letter-spacing: -0.02em;
     }
     .award-content p {
       color: var(--text-mid);
-      font-size: 0.94rem;
-      line-height: 1.65;
+      font-size: 0.95rem;
+      line-height: 1.7;
     }
 
-    /* Interactive Flow Inspector (Card-based benchmarks) */
-    .flow-inspector {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 2.2rem;
-      margin-bottom: 6rem;
-    }
-    .inspector-header {
+    /* Section Bar */
+    .section-bar {
+      padding: 6rem 0 2.2rem;
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
-      margin-bottom: 1.75rem;
-    }
-    .inspector-title {
-      font-size: 1.25rem;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      text-transform: uppercase;
-    }
-    .metric-tabs {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.25rem;
-    }
-    .metric-tab {
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 1.4rem;
-      cursor: pointer;
-      transition: var(--transition);
-      text-align: left;
-    }
-    .metric-tab:hover, .metric-tab.active {
-      border-color: var(--border-strong);
-      background: var(--surface-elevated);
-    }
-    .metric-tab.active {
-      border-left: 3px solid var(--accent);
-    }
-    .metric-tab-label {
-      font-family: var(--font-mono);
-      font-size: 0.72rem;
-      color: var(--text-low);
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-    }
-    .metric-tab-val {
-      font-family: var(--font-mono);
-      font-size: 1.9rem;
-      font-weight: 800;
-      color: var(--text-high);
-      margin: 0.45rem 0 0.25rem;
-    }
-    .metric-tab-desc {
-      font-size: 0.82rem;
-      color: var(--text-mid);
-      line-height: 1.5;
-    }
-
-    /* Section Headers */
-    .section-head {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      padding-bottom: 1.5rem;
       border-bottom: 1px solid var(--border);
-      margin-bottom: 2.5rem;
+      margin-bottom: 3.5rem;
     }
-    .section-head-num {
+    .section-index {
       font-family: var(--font-mono);
-      font-size: 0.75rem;
+      font-size: 0.78rem;
       color: var(--text-low);
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.1em;
       margin-bottom: 0.4rem;
     }
-    .section-head-title {
-      font-size: 2.2rem;
+    .section-name {
+      font-size: 2.4rem;
       font-weight: 850;
       letter-spacing: -0.03em;
       text-transform: uppercase;
     }
 
-    /* Bento Grid: Case Dossiers */
-    .bento-grid {
+    /* Ledger Grid (Bento) */
+    .ledger-grid {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
       gap: 1.5rem;
       margin-bottom: 6rem;
     }
-    .bento-cell {
+    .ledger-card {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 2.2rem;
+      padding: 2.4rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       transition: var(--transition);
       position: relative;
     }
-    .bento-cell:hover {
+    .ledger-card:hover {
       border-color: var(--border-strong);
       background: var(--surface-hover);
     }
-    .cell-8 { grid-column: span 8; }
-    .cell-4 { grid-column: span 4; }
-    .cell-12 { grid-column: span 12; }
+    .col-8 { grid-column: span 8; }
+    .col-4 { grid-column: span 4; }
+    .col-12 { grid-column: span 12; }
 
-    .chip-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.45rem;
-      margin-bottom: 1.25rem;
-    }
-    .chip {
+    .entry-meta {
       font-family: var(--font-mono);
       font-size: 0.72rem;
-      padding: 0.25rem 0.65rem;
-      border-radius: var(--radius-sm);
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid var(--border);
-      color: var(--text-mid);
+      text-transform: uppercase;
+      color: var(--text-low);
+      letter-spacing: 0.08em;
+      margin-bottom: 1rem;
+      display: block;
     }
-    .bento-cell h3 {
-      font-size: 1.4rem;
+    .ledger-card h3 {
+      font-size: 1.45rem;
       font-weight: 800;
       letter-spacing: -0.02em;
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.85rem;
     }
-    .bento-cell p {
+    .ledger-card p {
       color: var(--text-mid);
       font-size: 0.94rem;
       line-height: 1.7;
     }
 
-    /* Monospace Code Preview Inspector */
-    .code-block {
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      padding: 1.1rem 1.35rem;
-      margin-top: 1.4rem;
+    /* Clean Monospace Code Inspector */
+    .code-manifest {
+      background: var(--code-bg);
+      border: 1px solid var(--code-border);
+      padding: 1.25rem;
       font-family: var(--font-mono);
-      font-size: 0.75rem;
+      font-size: 0.78rem;
       color: var(--text-mid);
-      line-height: 1.6;
+      margin-top: 1.8rem;
+      line-height: 1.55;
     }
-    .code-block .key { color: var(--text-high); font-weight: 600; }
-    .code-block .val { color: var(--text-high); }
-    .code-block .comment { color: var(--text-low); }
+    .code-manifest .light { color: var(--text-high); font-weight: 700; }
+    .code-manifest .dim { color: var(--text-low); }
 
-    .stat-bar {
+    .kpi-block {
+      margin-top: 1.8rem;
+      padding-top: 1.4rem;
+      border-top: 1px solid var(--border);
       display: flex;
       align-items: baseline;
-      gap: 0.85rem;
-      margin-top: 1.5rem;
-      padding-top: 1.2rem;
-      border-top: 1px solid var(--border);
+      gap: 1rem;
     }
-    .stat-bar-val {
+    .kpi-metric {
       font-family: var(--font-mono);
-      font-size: 1.9rem;
-      font-weight: 850;
+      font-size: 2.1rem;
+      font-weight: 800;
       color: var(--text-high);
       line-height: 1;
     }
-    .stat-bar-label {
-      font-size: 0.8rem;
-      color: var(--text-low);
-    }
-
-    /* Organization Ledger Columns */
-    .ledger-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.25rem;
-      margin-top: 1.6rem;
-    }
-    .ledger-box {
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      padding: 1.2rem;
-    }
-    .ledger-box-title {
-      font-family: var(--font-mono);
-      font-size: 0.88rem;
-      font-weight: 700;
-      color: var(--text-high);
-      margin-bottom: 0.4rem;
-    }
-    .ledger-box-desc {
+    .kpi-caption {
       font-size: 0.82rem;
       color: var(--text-low);
-      line-height: 1.55;
+      font-weight: 500;
     }
 
     /* Capabilities Matrix */
-    .matrix-grid {
+    .capabilities-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 1.25rem;
-      margin-bottom: 6.5rem;
+      gap: 1.5rem;
+      margin-bottom: 8rem;
     }
-    .matrix-card {
+    .cap-column {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 1.8rem;
+      padding: 2.2rem;
     }
-    .matrix-card h4 {
+    .cap-column h4 {
       font-size: 0.95rem;
       font-weight: 800;
-      letter-spacing: -0.01em;
       text-transform: uppercase;
-      margin-bottom: 1.3rem;
-      padding-bottom: 0.75rem;
+      letter-spacing: 0.05em;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.85rem;
       border-bottom: 1px solid var(--border);
     }
-    .matrix-items {
+    .cap-list {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 0.75rem;
+      gap: 0.85rem;
     }
-    .matrix-items li {
-      font-size: 0.85rem;
+    .cap-list li {
+      font-size: 0.88rem;
       color: var(--text-mid);
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.6rem;
     }
-    .matrix-items li::before {
-      content: "—";
+    .cap-list li::before {
+      content: "/";
       color: var(--text-low);
       font-family: var(--font-mono);
     }
 
-    /* Contact Section */
-    .contact-card {
-      background: var(--surface);
-      border: 1px solid var(--border-strong);
-      border-radius: var(--radius-lg);
-      padding: 5rem 2rem;
+    /* Inquiry & Contact Monolith */
+    .inquiry-monolith {
+      border-top: 1px solid var(--border);
+      padding: 7.5rem 0 5.5rem;
       text-align: center;
-      margin-bottom: 5rem;
     }
-    .contact-card h2 {
-      font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+    .inquiry-monolith h2 {
+      font-size: clamp(2.4rem, 4.8vw, 4.2rem);
       font-weight: 900;
       letter-spacing: -0.04em;
       text-transform: uppercase;
-      margin-bottom: 1.2rem;
+      margin-bottom: 1.25rem;
     }
-    .contact-card p {
+    .inquiry-monolith p {
       color: var(--text-mid);
-      max-width: 600px;
-      margin: 0 auto 2.5rem;
+      max-width: 580px;
+      margin: 0 auto 2.8rem;
       font-size: 1.05rem;
       line-height: 1.7;
     }
-    .contact-links {
+    .inquiry-buttons {
       display: flex;
       justify-content: center;
       gap: 1rem;
@@ -596,403 +533,365 @@
     footer {
       border-top: 1px solid var(--border);
       padding: 2.5rem 0;
-      font-family: var(--font-mono);
-      font-size: 0.78rem;
+      font-size: 0.8rem;
       color: var(--text-low);
+      font-family: var(--font-mono);
       display: flex;
       justify-content: space-between;
     }
 
     @media (max-width: 960px) {
       .hero-grid { grid-template-columns: 1fr; }
-      .cell-8, .cell-4, .cell-12 { grid-column: span 12; }
-      .metric-tabs { grid-template-columns: 1fr; }
-      .ledger-grid { grid-template-columns: 1fr; }
-      .matrix-grid { grid-template-columns: 1fr 1fr; }
+      .col-8, .col-4, .col-12 { grid-column: span 12; }
+      .capabilities-grid { grid-template-columns: 1fr 1fr; }
       .nav-links { display: none; }
-      .award-card { grid-template-columns: 1fr; }
+      .award-card { grid-template-columns: 1fr; gap: 1rem; }
     }
     @media (max-width: 640px) {
-      .matrix-grid { grid-template-columns: 1fr; }
-      footer { flex-direction: column; gap: 0.85rem; text-align: center; }
+      .capabilities-grid { grid-template-columns: 1fr; }
+      footer { flex-direction: column; gap: 1rem; text-align: center; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Minimalist Fixed Navigation -->
+  <div class="film-grain"></div>
+
+  <!-- Navigation -->
   <nav>
     <div class="container nav-wrap">
       <a href="#" class="nav-brand">
-        <img src="https://github.com/MasoudVz.png" alt="Masoud Valizadeh" class="brand-avatar" onerror="this.src='https://via.placeholder.com/32'" />
+        <div class="brand-symbol">MV</div>
         <span>Masoud Valizadeh</span>
       </a>
 
       <ul class="nav-links">
-        <li><a href="#benchmarks">Benchmarks</a></li>
-        <li><a href="#dossiers">Case Dossiers</a></li>
+        <li><a href="#dossiers">Engineering Dossiers</a></li>
         <li><a href="#capabilities">Capabilities</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
 
       <div class="nav-actions">
-        <button id="themeToggle" class="btn-icon" title="Toggle Light/Dark Mode">
-          <span id="themeLabel">MODE</span>
+        <button id="themeTrigger" class="btn-nav" title="Toggle Light/Dark Theme">
+          <span id="themeValue">MODE</span>
         </button>
-        <a href="Masoud_Valizadeh_Scrum_Master_CV.pdf" target="_blank" class="btn-icon" style="border-color: var(--border-strong);">
+        <a href="Masoud_Valizadeh_Scrum_Master_CV.pdf" target="_blank" class="btn-nav" style="border-color: var(--border-strong);">
           CV.PDF
         </a>
       </div>
     </div>
   </nav>
 
-  <main class="container">
-    <!-- Hero Section -->
-    <header class="hero">
-      <div class="hero-grid">
-        <div>
-          <div class="badge-status">
-            <span class="status-dot"></span>
-            <span>Available for Technical Delivery Leadership</span>
-          </div>
+  <!-- Hero Section -->
+  <header class="hero container">
+    <div class="hero-meta">
+      <div class="status-badge">
+        <span class="status-dot"></span>
+        <span>Operational Cadence & Delivery Flow</span>
+      </div>
+      <span>LOCATION: TEHRAN / REMOTE</span>
+    </div>
 
-          <h1 class="hero-title">
-            Engineering Software Flow,<br />
-            <span class="dim">Without Agile Theater.</span>
-          </h1>
+    <div class="hero-grid">
+      <div>
+        <h1 class="hero-title">
+          Flow Over Ceremony.<br />
+          <span class="dim">Delivery Over Theater.</span>
+        </h1>
 
-          <p class="hero-desc">
-            Senior Technical Delivery Coordinator & Scrum Master with a software engineering foundation. Eliminating ritual overhead, unblocking cross-squad API dependencies, and stabilizing release cadences through concrete flow analytics.
-          </p>
+        <p class="hero-desc">
+          Technical Scrum Master and Delivery Lead with a software engineering foundation[cite: 1, 3]. Eliminating performative rituals, resolving cross-squad API dependencies, and orchestrating predictable release cadences via quantitative flow analytics[cite: 1, 3].
+        </p>
 
-          <div class="hero-actions">
-            <a href="#dossiers" class="btn btn-solid">Inspect Case Dossiers</a>
-            <a href="mailto:masoudvzii@gmail.com" class="btn btn-outline">Initiate Technical Chat</a>
-          </div>
+        <div class="hero-actions">
+          <a href="#dossiers" class="btn btn-solid">Inspect Dossiers</a>
+          <a href="mailto:masoudvzii@gmail.com" class="btn btn-outline">Direct Inquiry</a>
         </div>
+      </div>
 
-        <!-- Portrait Specification Card -->
-        <div class="portrait-card">
-          <div class="portrait-frame">
-            <img src="https://github.com/MasoudVz.png" alt="Masoud Valizadeh Portrait" onerror="this.src='https://via.placeholder.com/320'" />
+      <!-- Portrait & Specs -->
+      <div class="portrait-stack">
+        <div class="portrait-frame">
+          <img src="https://github.com/MasoudVz.png" alt="Masoud Valizadeh" class="portrait-img" onerror="this.src='https://via.placeholder.com/320'" />
+        </div>
+        <div class="system-manifest">
+          <div class="manifest-row">
+            <span class="manifest-k">DISCIPLINE</span>
+            <span class="manifest-v">Technical Delivery Lead</span>
           </div>
-          <div class="profile-specs">
-            <div class="spec-item">
-              <span class="spec-key">DISCIPLINE</span>
-              <span class="spec-val">Technical Delivery & Scrum</span>
-            </div>
-            <div class="spec-item">
-              <span class="spec-key">EXPERIENCE</span>
-              <span class="spec-val">8+ Years SDLC & Cross-Squad</span>
-            </div>
-            <div class="spec-item">
-              <span class="spec-key">SDLC DECOUPLING</span>
-              <span class="spec-val">OpenAPI / Mocking / CI/CD</span>
-            </div>
-            <div class="spec-item">
-              <span class="spec-key">PARLIAMENT AWARD</span>
-              <span class="spec-val" style="color: var(--bronze);">1st Place (Shahid Modarres)</span>
-            </div>
+          <div class="manifest-row">
+            <span class="manifest-k">ALIGNMENT</span>
+            <span class="manifest-v">API Contracts & Mocking[cite: 1]</span>
+          </div>
+          <div class="manifest-row">
+            <span class="manifest-k">GOVERNANCE</span>
+            <span class="manifest-v">Cycle Time / WIP Limits[cite: 1, 3]</span>
+          </div>
+          <div class="manifest-row">
+            <span class="manifest-k">PARLIAMENT AWARD</span>
+            <span class="manifest-v" style="color: var(--award-gold);">1st Place (Modarres)[cite: 1]</span>
           </div>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <!-- National Honor Monolith -->
-    <section class="award-card">
+  <!-- Ticker Marquee -->
+  <div class="ticker-ribbon">
+    <div class="ticker-track">
+      <span>Flow Architecture</span>
+      <span>•</span>
+      <span>Anti-Agile Theater</span>
+      <span>•</span>
+      <span>API Contract First[cite: 1]</span>
+      <span>•</span>
+      <span>Zero Regression Payments[cite: 4]</span>
+      <span>•</span>
+      <span>WIP Strict Governance[cite: 3]</span>
+      <span>•</span>
+      <span>Lead Time Reduction[cite: 2]</span>
+      <span>•</span>
+      <span>Flow Architecture</span>
+      <span>•</span>
+      <span>Anti-Agile Theater</span>
+      <span>•</span>
+      <span>API Contract First[cite: 1]</span>
+      <span>•</span>
+      <span>Zero Regression Payments[cite: 4]</span>
+      <span>•</span>
+      <span>WIP Strict Governance[cite: 3]</span>
+      <span>•</span>
+      <span>Lead Time Reduction[cite: 2]</span>
+    </div>
+  </div>
+
+  <!-- National Award -->
+  <section class="container">
+    <div class="award-card">
       <div class="award-badge">01</div>
       <div class="award-content">
-        <h3>1st Place Winner — 6th Shahid Modarres National Festival</h3>
+        <h3>1st Place — 6th Shahid Modarres National Festival (Parliament Research Center)</h3>
         <p>
-          Awarded first place at the Parliament Research Center festival for designing the structural framework and governance mechanism for participatory oversight[cite: 2]. Demonstrates systemic thinking, institutional process modeling, and macro-architecture design capabilities[cite: 2].
+          Awarded first place nationally for co-authoring the macro-level governance framework for civil society oversight in parliamentary monitoring (joint submission with Dr. Siavash Sayyar Irani — Dec 2025)[cite: 1]. Validates structural process engineering, systemic architecture, and macro-organizational mechanics[cite: 1].
         </p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Interactive Delivery Flow Dashboard -->
-    <section class="flow-inspector" id="benchmarks">
-      <div class="inspector-header">
+  <!-- Engineering Dossiers Section -->
+  <section id="dossiers" class="container">
+    <div class="section-bar">
+      <div>
+        <div class="section-index">02 / DOSSIERS</div>
+        <h2 class="section-name">Engineering Delivery Ledger</h2>
+      </div>
+      <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-low);">6 VERIFIED DOSSIERS</span>
+    </div>
+
+    <div class="ledger-grid">
+      <!-- Dossier 1: TherExNow -->
+      <div class="ledger-card col-8">
         <div>
-          <div class="section-head-num">EMPIRICAL BENCHMARKS</div>
-          <h2 class="inspector-title">Delivery Flow Indicators</h2>
+          <span class="entry-meta">ENTRY #01 — PLATFORM ARCHITECTURE</span>
+          <h3>TherExNow Platform Ecosystem</h3>
+          <p>
+            Eliminated Frontend squad idle time by defining strict OpenAPI contracts and deploying Confluence-backed Mock Servers, completely decoupling UI delivery from ongoing backend microservice refactoring[cite: 4].
+          </p>
         </div>
-        <div class="badge-status" style="margin-bottom: 0;">
-          <span class="status-dot"></span>
-          <span>EMPIRICAL METRICS ENFORCED</span>
+
+        <div class="code-manifest">
+          <span class="dim">// Confluence Contract Decoupling Schema</span><br />
+          { <span class="light">"service"</span>: "therexnow-dispatch-core", <span class="light">"mock_state"</span>: "FROZEN_VALIDATED", <span class="light">"frontend_blockers"</span>: 0 }
         </div>
       </div>
 
-      <div class="metric-tabs">
-        <div class="metric-tab active" onclick="activateTab(this, '-38%', 'From branch creation to automated staging verification, achieved by removing cross-squad API blocks.')">
-          <div class="metric-tab-label">Cycle Time Compression</div>
-          <div class="metric-tab-val">-38%</div>
-          <div class="metric-tab-desc">From initial branch creation to automated staging verification via CI/CD pipelines.</div>
-        </div>
-
-        <div class="metric-tab" onclick="activateTab(this, 'Strict ≤ 2', 'Enforcing strict task concurrency limits to eliminate code review stalls and column bottlenecks.')">
-          <div class="metric-tab-label">WIP Limit Governance</div>
-          <div class="metric-tab-val">Strict ≤ 2</div>
-          <div class="metric-tab-desc">Swarming on PR reviews and manual QA testing to eliminate column wait queues.</div>
-        </div>
-
-        <div class="metric-tab" onclick="activateTab(this, '95%', 'Stabilizing release lead-time variance using Cumulative Flow Diagrams (CFD).')">
-          <div class="metric-tab-label">Lead Time Predictability</div>
-          <div class="metric-tab-val">95%</div>
-          <div class="metric-tab-desc">Standard deviation stabilization across sprints via Cumulative Flow Diagrams (CFD).</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Case Dossiers Section -->
-    <section id="dossiers">
-      <div class="section-head">
+      <!-- Dossier 2: SocialOrder -->
+      <div class="ledger-card col-4">
         <div>
-          <div class="section-head-num">CASE STUDIES</div>
-          <h2 class="section-head-title">Technical Delivery Dossiers</h2>
+          <span class="entry-meta">ENTRY #02 — TRANSACTIONAL COMMERCE</span>
+          <h3>SocialOrder Commerce Engine</h3>
+          <p>
+            Enforced rigid Definition of Ready (DoR)[cite: 4]. Sliced bulky feature epics into atomic 1-2 day user stories using Planning Poker to eliminate mid-sprint scope creep[cite: 4].
+          </p>
         </div>
-        <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-low);">6 VERIFIED DOSSIERS</span>
+        <div class="kpi-block">
+          <div class="kpi-metric">100%</div>
+          <div class="kpi-caption">Clarity in Acceptance Criteria prior to sprint initiation[cite: 4].</div>
+        </div>
       </div>
 
-      <div class="bento-grid">
-        
-        <!-- Dossier 1: TherExNow -->
-        <div class="bento-cell cell-8">
-          <div>
-            <div class="chip-list">
-              <span class="chip">Platform Architecture</span>
-              <span class="chip">OpenAPI Contracts</span>
-              <span class="chip">Confluence Mocks</span>
-            </div>
-            <h3>TherExNow Platform Ecosystem</h3>
-            <p>
-              Eliminated recurring frontend wait-states during microservice refactoring. Spearheaded OpenAPI contract standardization and deployed Confluence-backed Mock Servers, decoupling mobile and web squad workflows from backend delivery schedules.
-            </p>
-          </div>
-
-          <div class="code-block">
-            <span class="comment">// Confluence Contract Decoupling Schema</span><br />
-            {<br />
-            &nbsp;&nbsp;<span class="key">"service"</span>: <span class="val">"therexnow-dispatch-core"</span>,<br />
-            &nbsp;&nbsp;<span class="key">"contract_status"</span>: <span class="val">"FROZEN_VALIDATED"</span>,<br />
-            &nbsp;&nbsp;<span class="key">"mock_stub_endpoint"</span>: <span class="val">"/api/v1/therexnow/session"</span>,<br />
-            &nbsp;&nbsp;<span class="key">"frontend_blockers"</span>: <span class="val">0</span><br />
-            }
-          </div>
-        </div>
-
-        <!-- Dossier 2: SocialOrder -->
-        <div class="bento-cell cell-4">
-          <div>
-            <div class="chip-list">
-              <span class="chip">Transactional Commerce</span>
-              <span class="chip">INVEST Slicing</span>
-            </div>
-            <h3>SocialOrder Platform</h3>
-            <p>
-              Enforced strict Definition of Ready (DoR) and Definition of Done (DoD). Deconstructed multi-tiered commerce user stories into atomic 1-2 day slices using Planning Poker to eliminate mid-sprint scope creep.
-            </p>
-          </div>
-          <div class="stat-bar">
-            <div class="stat-bar-val">100%</div>
-            <div class="stat-bar-label">DoR / DoD adherence before sprint intake</div>
-          </div>
-        </div>
-
-        <!-- Dossier 3: QuesShare -->
-        <div class="bento-cell cell-4">
-          <div>
-            <div class="chip-list">
-              <span class="chip">Knowledge Architecture</span>
-              <span class="chip">Sprint Cadences</span>
-            </div>
-            <h3>QuesShare Platform</h3>
-            <p>
-              Streamlined end-to-end sprint cadences, established concise stakeholder review feedback loops, and maintained consistent deployment throughput through disciplined backlog grooming.
-            </p>
-          </div>
-          <div class="stat-bar">
-            <div class="stat-bar-val">+25%</div>
-            <div class="stat-bar-label">Sprint commitment predictability without crunch</div>
-          </div>
-        </div>
-
-        <!-- Dossier 4: Payment & FinTech Architecture -->
-        <div class="bento-cell cell-4">
-          <div>
-            <div class="chip-list">
-              <span class="chip">Stripe API</span>
-              <span class="chip">Financial Integrity</span>
-            </div>
-            <h3>Payment & FinTech Architecture</h3>
-            <p>
-              Orchestrated transactional payment integrations (Stripe APIs and financial gateways). Enforced zero-regression quality gates and circuit-breaker verification in DoD checklists.
-            </p>
-          </div>
-          <div class="stat-bar">
-            <div class="stat-bar-val">0</div>
-            <div class="stat-bar-label">Payment gateway regression incidents</div>
-          </div>
-        </div>
-
-        <!-- Dossier 5: Anti-Agile Theater Mindset -->
-        <div class="bento-cell cell-4">
-          <div>
-            <div class="chip-list">
-              <span class="chip">Engineering Culture</span>
-              <span class="chip">No Ritual Overhead</span>
-            </div>
-            <h3>Anti-Agile Theater Mindset</h3>
-            <p>
-              Moving Jira cards or holding 30-minute status check-ins does not equate to agility[cite: 5]. Agility is reducing lead time from code commit to verified production release while protecting developer deep-work hours[cite: 5].
-            </p>
-          </div>
-          <div class="stat-bar">
-            <div class="stat-bar-val">FLOW</div>
-            <div class="stat-bar-label">Running software over performative rituals[cite: 5]</div>
-          </div>
-        </div>
-
-        <!-- Dossier 6: Organizational Leadership -->
-        <div class="bento-cell cell-12">
-          <div>
-            <div class="chip-list">
-              <span class="chip">Innovative Future Software House</span>
-              <span class="chip">Apsy</span>
-              <span class="chip">Capacity Allocation</span>
-            </div>
-            <h3>Cross-Squad Leadership: Innovative Future Software House & Apsy</h3>
-            <p>
-              Led multi-squad Scrum execution across cross-functional engineering units[cite: 4]. Standardized a permanent 20% sprint capacity reserve dedicated exclusively to technical debt refactoring and instituted blameless retrospectives to foster an open, high-trust psychological safety culture[cite: 4].
-            </p>
-          </div>
-
-          <div class="ledger-grid">
-            <div class="ledger-box">
-              <div class="ledger-box-title">20% TECH DEBT RESERVE</div>
-              <div class="ledger-box-desc">Permanent capacity allocation for continuous refactoring without business friction[cite: 4].</div>
-            </div>
-            <div class="ledger-box">
-              <div class="ledger-box-title">BLAMELESS RETROSPECTIVES</div>
-              <div class="ledger-box-desc">Targeting system and pipeline bottlenecks rather than individuals to drive permanent fixes[cite: 5].</div>
-            </div>
-            <div class="ledger-box">
-              <div class="ledger-box-title">CROSS-SQUAD SYNCHRONY</div>
-              <div class="ledger-box-desc">Eliminating cross-team wait states through Scrum-of-Scrums and transparent dependency mapping[cite: 1].</div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Capabilities Matrix Section -->
-    <section id="capabilities">
-      <div class="section-head">
+      <!-- Dossier 3: QuesShare -->
+      <div class="ledger-card col-4">
         <div>
-          <div class="section-head-num">SYSTEM COMPETENCIES</div>
-          <h2 class="section-head-title">Capabilities & Technical Tooling</h2>
+          <span class="entry-meta">ENTRY #03 — COLLABORATION</span>
+          <h3>QuesShare Collaborative Platform</h3>
+          <p>
+            Established structured Sprint Reviews, tightened feedback loops with primary stakeholders, and maintained continuous throughput through disciplined backlog prioritization[cite: 4].
+          </p>
         </div>
-        <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-low);">SDLC ALIGNMENT</span>
-      </div>
-
-      <div class="matrix-grid">
-        <div class="matrix-card">
-          <h4>Delivery Frameworks</h4>
-          <ul class="matrix-items">
-            <li>Scrum & Kanban Systems</li>
-            <li>Cadence Synchronization</li>
-            <li>Backlog Grooming & Refinement</li>
-            <li>DoR & DoD Governance</li>
-            <li>MVP Scope Trimming</li>
-          </ul>
-        </div>
-
-        <div class="matrix-card">
-          <h4>Flow & Metrics</h4>
-          <ul class="matrix-items">
-            <li>Cycle Time & Lead Time</li>
-            <li>Cumulative Flow (CFD)</li>
-            <li>WIP Limits Enforcement</li>
-            <li>Throughput Analytics</li>
-            <li>Capacity Forecasting</li>
-          </ul>
-        </div>
-
-        <div class="matrix-card">
-          <h4>Engineering Alignment</h4>
-          <ul class="matrix-items">
-            <li>Jira Advanced Schemes</li>
-            <li>Confluence Technical Specs</li>
-            <li>OpenAPI & Mocking</li>
-            <li>Git Workflow & Branches</li>
-            <li>CI/CD Pipeline Awareness</li>
-          </ul>
-        </div>
-
-        <div class="matrix-card">
-          <h4>Servant Leadership</h4>
-          <ul class="matrix-items">
-            <li>Cross-Squad Mediation</li>
-            <li>Developer Shielding[cite: 5]</li>
-            <li>Conflict Resolution</li>
-            <li>1-on-1 Mentorship</li>
-            <li>Psychological Safety</li>
-          </ul>
+        <div class="kpi-block">
+          <div class="kpi-metric">+25%</div>
+          <div class="kpi-caption">Sprint commitment reliability without developer crunch.</div>
         </div>
       </div>
-    </section>
 
-    <!-- Contact & Direct Engagement -->
-    <section id="contact">
-      <div class="contact-card">
-        <h2>Initiate Technical Engagement.</h2>
-        <p>
-          Available for Technical Scrum Master, Delivery Lead, or Flow Engineering engagements where throughput, predictability, and engineering alignment matter.
-        </p>
-        <div class="contact-links">
-          <a href="mailto:masoudvzii@gmail.com" class="btn btn-solid">Direct: masoudvzii@gmail.com</a>
-          <a href="https://linkedin.com/in/masoud-valizadeh" target="_blank" rel="noopener" class="btn btn-outline">LinkedIn Profile</a>
-          <a href="Masoud_Valizadeh_Scrum_Master_CV.pdf" target="_blank" class="btn btn-outline">Download Resume (PDF)</a>
+      <!-- Dossier 4: Payment Gateways & Stripe -->
+      <div class="ledger-card col-4">
+        <div>
+          <span class="entry-meta">ENTRY #04 — FINTECH & PAYMENTS</span>
+          <h3>Payment Gateways & Stripe Architecture</h3>
+          <p>
+            Coordinated delivery cycles for transactional payment gateway integrations (Stripe API) and Web3 financial modules under strict security and zero-regression DoD requirements[cite: 1, 4].
+          </p>
+        </div>
+        <div class="kpi-block">
+          <div class="kpi-metric">0%</div>
+          <div class="kpi-caption">Transaction regression rate across deployment cycles.</div>
         </div>
       </div>
-    </section>
 
-    <!-- Minimalist Technical Footer -->
-    <footer>
-      <div>© 2026 MASOUD VALIZADEH — TECHNICAL DELIVERY LEADERSHIP</div>
-      <div>MONOCHROME ARCHITECTURAL PRECISION</div>
-    </footer>
-  </main>
+      <!-- Dossier 5: Anti-Agile Theater -->
+      <div class="ledger-card col-4">
+        <div>
+          <span class="entry-meta">ENTRY #05 — GOVERNANCE DOCTRINE</span>
+          <h3>Anti-Agile Theater Mindset</h3>
+          <p>
+            Replaced performative meetings and whiteboard aesthetics with actual deployment metrics[cite: 2]. Focus on lowering Lead Time from code commit to verified production deployment[cite: 2].
+          </p>
+        </div>
+        <div class="kpi-block">
+          <div class="kpi-metric">FLOW</div>
+          <div class="kpi-caption">Working software prioritized over ritual documentation[cite: 2].</div>
+        </div>
+      </div>
 
+      <!-- Dossier 6: Innovative Future & Apsy -->
+      <div class="ledger-card col-12">
+        <div>
+          <span class="entry-meta">ENTRY #06 — ORGANIZATIONAL SCALE & CONTINUOUS DELIVERY</span>
+          <h3>Innovative Future Software House & Apsy</h3>
+          <p>
+            Led cross-squad Scrum facilitation across Apsy (until May 2024) and Innovative Future Software House (May 2024 - Present)[cite: 1, 4]. Standardized a permanent 20% sprint capacity reserve for technical debt refactoring and instituted blameless retrospectives[cite: 4].
+          </p>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+          <div style="border-left: 2px solid var(--border-strong); padding-left: 1.25rem;">
+            <div style="font-family: var(--font-mono); font-size: 1.15rem; font-weight: 800;">20% SPRINT BUFFER</div>
+            <div style="font-size: 0.8rem; color: var(--text-low);">Hardened reserve for architecture refactoring[cite: 4].</div>
+          </div>
+          <div style="border-left: 2px solid var(--border-strong); padding-left: 1.25rem;">
+            <div style="font-family: var(--font-mono); font-size: 1.15rem; font-weight: 800;">BLAMELESS RETROS</div>
+            <div style="font-size: 0.8rem; color: var(--text-low);">Action-driven root cause discovery[cite: 4].</div>
+          </div>
+          <div style="border-left: 2px solid var(--border-strong); padding-left: 1.25rem;">
+            <div style="font-family: var(--font-mono); font-size: 1.15rem; font-weight: 800;">CROSS-SQUAD CADENCE</div>
+            <div style="font-size: 0.8rem; color: var(--text-low);">Synchronized releases without micro-management[cite: 1, 2].</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Capabilities Matrix Section -->
+  <section id="capabilities" class="container">
+    <div class="section-bar">
+      <div>
+        <div class="section-index">03 / CAPABILITIES</div>
+        <h2 class="section-name">Competencies & Tooling</h2>
+      </div>
+      <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-low);">SYSTEM MATRIX</span>
+    </div>
+
+    <div class="capabilities-grid">
+      <div class="cap-column">
+        <h4>Frameworks</h4>
+        <ul class="cap-list">
+          <li>Scrum & Kanban Systems[cite: 1]</li>
+          <li>Sprint Cadence Synchronization</li>
+          <li>Backlog Refinement & INVEST[cite: 1, 4]</li>
+          <li>DoR & DoD Governance[cite: 3, 4]</li>
+          <li>MVP Scope Trimming[cite: 3]</li>
+        </ul>
+      </div>
+
+      <div class="cap-column">
+        <h4>Flow & Metrics</h4>
+        <ul class="cap-list">
+          <li>Cycle Time & Lead Time[cite: 2, 3]</li>
+          <li>Cumulative Flow (CFD)[cite: 1, 3]</li>
+          <li>WIP Limit Enforcement[cite: 1, 3]</li>
+          <li>Throughput Analysis[cite: 3]</li>
+          <li>Capacity Forecasting[cite: 2, 3]</li>
+        </ul>
+      </div>
+
+      <div class="cap-column">
+        <h4>Engineering</h4>
+        <ul class="cap-list">
+          <li>Jira Advanced Schemes[cite: 1]</li>
+          <li>Confluence Technical Specs[cite: 1]</li>
+          <li>API Contracts & Mocking[cite: 1]</li>
+          <li>Git SDLC Lifecycle[cite: 1]</li>
+          <li>CI/CD Pipeline Flow</li>
+        </ul>
+      </div>
+
+      <div class="cap-column">
+        <h4>Leadership</h4>
+        <ul class="cap-list">
+          <li>Cross-Squad Alignment[cite: 1]</li>
+          <li>Developer Shielding[cite: 2]</li>
+          <li>Conflict Mediation[cite: 1]</li>
+          <li>1-on-1 Mentorship[cite: 2, 3]</li>
+          <li>Psychological Safety[cite: 3, 4]</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Inquiry & Contact Section -->
+  <section id="contact" class="container">
+    <div class="inquiry-monolith">
+      <h2>Initiate Technical Engagement.</h2>
+      <p>
+        Available for Technical Scrum Master, Delivery Lead, or Flow Engineering engagements where outcome velocity is prioritized over ceremony[cite: 1, 2].
+      </p>
+      <div class="inquiry-buttons">
+        <a href="mailto:masoudvzii@gmail.com" class="btn btn-solid">masoudvzii@gmail.com</a>
+        <a href="https://linkedin.com/in/masoud-valizadeh" target="_blank" rel="noopener" class="btn btn-outline">LinkedIn Profile</a>
+        <a href="Masoud_Valizadeh_Scrum_Master_CV.pdf" target="_blank" class="btn btn-outline">Download CV (PDF)</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="container">
+    <div>© 2026 MASOUD VALIZADEH — TECHNICAL DELIVERY LEADERSHIP</div>
+    <div>MONOCHROME ARCHITECTURAL PRECISION</div>
+  </footer>
+
+  <!-- Light / Dark Mode Toggle Script (100% English) -->
   <script>
-    // Pure Theme Controller
-    const themeBtn = document.getElementById('themeToggle');
-    const root = document.documentElement;
+    const themeBtn = document.getElementById('themeTrigger');
+    const htmlNode = document.documentElement;
 
     function initTheme() {
       const savedTheme = localStorage.getItem('site-theme') || 'dark';
-      root.setAttribute('data-theme', savedTheme);
-      updateThemeLabel(savedTheme);
+      htmlNode.setAttribute('data-theme', savedTheme);
+      updateLabel(savedTheme);
     }
 
-    function updateThemeLabel(theme) {
-      const label = document.getElementById('themeLabel');
-      label.textContent = theme === 'dark' ? 'LIGHT' : 'DARK';
+    function updateLabel(theme) {
+      document.getElementById('themeValue').textContent = theme === 'dark' ? 'LIGHT' : 'DARK';
     }
 
     themeBtn.addEventListener('click', () => {
-      const currentTheme = root.getAttribute('data-theme') || 'dark';
-      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-      root.setAttribute('data-theme', newTheme);
-      localStorage.setItem('site-theme', newTheme);
-      updateThemeLabel(newTheme);
+      const current = htmlNode.getAttribute('data-theme') || 'dark';
+      const next = current === 'dark' ? 'light' : 'dark';
+      htmlNode.setAttribute('data-theme', next);
+      localStorage.setItem('site-theme', next);
+      updateLabel(next);
     });
-
-    // Benchmark Tab Interaction
-    function activateTab(element) {
-      document.querySelectorAll('.metric-tab').forEach(t => t.classList.remove('active'));
-      element.classList.add('active');
-    }
 
     initTheme();
   </script>
