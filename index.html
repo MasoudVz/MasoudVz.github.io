@@ -3,93 +3,88 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Masoud Valizadeh — Staff Delivery Architect & Flow Systems Engineer</title>
-  <meta name="description" content="Technical portfolio of Masoud Valizadeh. Systems Flow Engineering, Queue Architecture, Anti-Agile Theater, and Distributed Delivery Infrastructure." />
+  <title>Masoud Valizadeh — Technical Delivery Lead & Scrum Master</title>
+  <meta name="description" content="Official portfolio of Masoud Valizadeh. Technical Scrum Master, Software Engineering background, SDLC alignment, and Data-Driven Delivery." />
 
-  <!-- Typography: Plus Jakarta Sans & JetBrains Mono -->
+  <!-- فونت فوق‌العاده خوانا و استاندارد جهانی Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      /* Swiss Industrial Palette (Onyx / Zinc / Titanium) */
-      --bg-base: #09090b;
-      --bg-surface: #121215;
-      --bg-surface-elevated: #18181c;
-      --border-hairline: #27272a;
-      --border-subdued: #1f1f23;
-      --text-titanium: #f4f4f5;
-      --text-steel: #a1a1aa;
-      --text-graphite: #71717a;
-      --text-dim: #3f3f46;
-      --accent-white: #ffffff;
-      --accent-black: #09090b;
-      --bronze-seal: #d4af37;
-      --bronze-surface: rgba(212, 175, 55, 0.04);
-      --bronze-hairline: rgba(212, 175, 55, 0.22);
-      --font-display: 'Plus Jakarta Sans', -apple-system, sans-serif;
-      --font-code: 'JetBrains Mono', monospace;
-      --radius-xs: 3px;
-      --radius-sm: 6px;
-      --radius-md: 10px;
-      --transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      --bg: #09090b;
+      --surface: #121215;
+      --surface-hover: #18181c;
+      --border: rgba(255, 255, 255, 0.08);
+      --border-focus: rgba(255, 255, 255, 0.2);
+      --text-main: #f4f4f5;
+      --text-muted: #a1a1aa;
+      --text-dim: #71717a;
+      --accent: #ffffff;
+      --accent-inv: #09090b;
+      --gold: #d4af37;
+      --gold-bg: rgba(212, 175, 55, 0.05);
+      --gold-border: rgba(212, 175, 55, 0.25);
+      --font-main: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --radius: 8px;
+      --transition: all 0.2s ease;
     }
 
     [data-theme="light"] {
-      --bg-base: #ffffff;
-      --bg-surface: #f9f9fb;
-      --bg-surface-elevated: #f1f1f4;
-      --border-hairline: #e4e4e7;
-      --border-subdued: #ecece9;
-      --text-titanium: #09090b;
-      --text-steel: #52525b;
-      --text-graphite: #71717a;
-      --text-dim: #d4d4d8;
-      --accent-white: #09090b;
-      --accent-black: #ffffff;
-      --bronze-seal: #996515;
-      --bronze-surface: rgba(153, 101, 21, 0.04);
-      --bronze-hairline: rgba(153, 101, 21, 0.25);
+      --bg: #fbfbfb;
+      --surface: #ffffff;
+      --surface-hover: #f4f4f5;
+      --border: rgba(0, 0, 0, 0.08);
+      --border-focus: rgba(0, 0, 0, 0.2);
+      --text-main: #18181b;
+      --text-muted: #52525b;
+      --text-dim: #a1a1aa;
+      --accent: #18181b;
+      --accent-inv: #ffffff;
+      --gold: #996515;
+      --gold-bg: rgba(153, 101, 21, 0.05);
+      --gold-border: rgba(153, 101, 21, 0.25);
     }
 
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: var(--font-display);
+      font-family: var(--font-main);
     }
 
     body {
-      background-color: var(--bg-base);
-      color: var(--text-titanium);
+      background-color: var(--bg);
+      color: var(--text-main);
       line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
-      transition: background-color 0.22s ease, color 0.22s ease;
+      -webkit-font-smoothing: antialiased;
+      transition: background-color 0.2s ease, color 0.2s ease;
     }
 
     .container {
-      max-width: 1240px;
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 0 1.75rem;
+      padding: 0 1.5rem;
     }
 
-    /* Fixed Editorial Navigation */
+    /* Fixed Clean Navbar */
     nav {
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
-      background: rgba(9, 9, 11, 0.88);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--border-hairline);
+      background: rgba(9, 9, 11, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
       z-index: 1000;
       transition: var(--transition);
     }
     [data-theme="light"] nav {
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(251, 251, 251, 0.9);
     }
     .nav-wrap {
       display: flex;
@@ -97,552 +92,446 @@
       align-items: center;
       height: 64px;
     }
-    .nav-identity {
+    .brand {
       display: flex;
       align-items: center;
-      gap: 0.85rem;
+      gap: 0.75rem;
       text-decoration: none;
-      color: var(--text-titanium);
-      font-weight: 800;
-      font-size: 0.92rem;
-      letter-spacing: -0.02em;
+      color: var(--text-main);
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: -0.01em;
     }
     .brand-avatar {
-      width: 30px;
-      height: 30px;
+      width: 32px;
+      height: 32px;
       border-radius: 50%;
-      border: 1px solid var(--border-hairline);
+      border: 1px solid var(--border-focus);
       object-fit: cover;
     }
     .nav-links {
       display: flex;
-      gap: 2.2rem;
+      gap: 2rem;
       list-style: none;
     }
     .nav-links a {
-      color: var(--text-steel);
+      color: var(--text-muted);
       text-decoration: none;
-      font-size: 0.82rem;
-      font-weight: 600;
-      letter-spacing: -0.01em;
+      font-size: 0.85rem;
+      font-weight: 500;
       transition: var(--transition);
     }
     .nav-links a:hover {
-      color: var(--text-titanium);
+      color: var(--text-main);
     }
     .nav-actions {
       display: flex;
       align-items: center;
-      gap: 0.65rem;
+      gap: 0.75rem;
     }
-    .btn-action {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-hairline);
-      color: var(--text-titanium);
+    .btn-theme {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-main);
       height: 34px;
       padding: 0 0.85rem;
-      border-radius: var(--radius-xs);
-      font-family: var(--font-code);
-      font-size: 0.72rem;
+      border-radius: var(--radius);
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
       font-weight: 600;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
-      text-decoration: none;
       transition: var(--transition);
     }
-    .btn-action:hover {
-      border-color: var(--text-steel);
-      background: var(--bg-surface-elevated);
+    .btn-theme:hover {
+      border-color: var(--border-focus);
+      background: var(--surface);
     }
 
     /* Hero Section */
     .hero {
-      padding: 135px 0 70px;
-      border-bottom: 1px solid var(--border-hairline);
+      padding: 140px 0 80px;
+      border-bottom: 1px solid var(--border);
     }
-    .hero-meta-strip {
-      display: flex;
-      justify-content: space-between;
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 0.65fr;
+      gap: 4rem;
       align-items: center;
-      margin-bottom: 2.2rem;
-      font-family: var(--font-code);
-      font-size: 0.72rem;
-      color: var(--text-graphite);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
     }
-    .status-active {
+    .status-pill {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      color: var(--text-titanium);
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: 99px;
+      border: 1px solid var(--border-focus);
+      color: var(--text-main);
+      margin-bottom: 1.5rem;
     }
     .status-dot {
       width: 6px;
       height: 6px;
       border-radius: 50%;
-      background: var(--text-titanium);
-    }
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.35fr 0.65fr;
-      gap: 3.5rem;
-      align-items: center;
+      background: var(--text-main);
     }
     .hero-title {
-      font-size: clamp(2.4rem, 4.8vw, 4.2rem);
-      font-weight: 850;
-      line-height: 1.04;
-      letter-spacing: -0.04em;
-      margin-bottom: 1.6rem;
-      text-transform: uppercase;
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.5rem;
     }
     .hero-title span.dimmed {
-      color: var(--text-graphite);
+      color: var(--text-dim);
       font-weight: 400;
     }
-    .hero-lead {
-      color: var(--text-steel);
+    .hero-desc {
+      color: var(--text-muted);
       font-size: 1.05rem;
-      line-height: 1.75;
-      max-width: 630px;
-      margin-bottom: 2.4rem;
+      line-height: 1.7;
+      max-width: 620px;
+      margin-bottom: 2.2rem;
     }
     .hero-cta {
       display: flex;
-      gap: 0.9rem;
+      gap: 1rem;
       flex-wrap: wrap;
     }
+
+    /* Buttons */
     .btn {
-      padding: 0.85rem 1.8rem;
-      border-radius: var(--radius-xs);
-      font-size: 0.84rem;
-      font-weight: 700;
+      padding: 0.85rem 1.75rem;
+      border-radius: var(--radius);
+      font-size: 0.88rem;
+      font-weight: 600;
       text-decoration: none;
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
       cursor: pointer;
       transition: var(--transition);
-      letter-spacing: -0.01em;
     }
     .btn-solid {
-      background: var(--accent-white);
-      color: var(--accent-black);
-      border: 1px solid var(--accent-white);
+      background: var(--accent);
+      color: var(--accent-inv);
+      border: 1px solid var(--accent);
     }
     .btn-solid:hover {
       opacity: 0.88;
       transform: translateY(-1px);
     }
-    .btn-ghost {
+    .btn-outline {
       background: transparent;
-      color: var(--text-titanium);
-      border: 1px solid var(--border-hairline);
+      color: var(--text-main);
+      border: 1px solid var(--border-focus);
     }
-    .btn-ghost:hover {
-      background: var(--bg-surface);
-      border-color: var(--text-titanium);
+    .btn-outline:hover {
+      background: var(--surface);
+      border-color: var(--text-main);
       transform: translateY(-1px);
     }
 
-    /* Portrait Specification Panel */
-    .portrait-panel {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-hairline);
-      border-radius: var(--radius-sm);
+    /* Portrait Panel */
+    .portrait-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
       padding: 1.25rem;
       display: flex;
       flex-direction: column;
-      gap: 1.1rem;
+      gap: 1rem;
     }
     .portrait-frame {
       width: 100%;
       aspect-ratio: 1 / 1;
-      border-radius: var(--radius-xs);
+      border-radius: 4px;
       overflow: hidden;
-      border: 1px solid var(--border-hairline);
-      background: #000000;
+      border: 1px solid var(--border);
+      background: #000;
     }
-    .portrait-img {
+    .portrait-frame img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      filter: grayscale(100%) contrast(110%);
+      filter: grayscale(100%);
       transition: var(--transition);
     }
-    .portrait-frame:hover .portrait-img {
+    .portrait-frame:hover img {
       filter: grayscale(0%);
     }
     .profile-manifest {
       display: flex;
       flex-direction: column;
-      gap: 0.45rem;
-      font-family: var(--font-code);
-      font-size: 0.74rem;
+      gap: 0.4rem;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
     }
-    .manifest-item {
+    .manifest-row {
       display: flex;
       justify-content: space-between;
       padding-bottom: 0.35rem;
-      border-bottom: 1px solid var(--border-subdued);
+      border-bottom: 1px solid var(--border);
     }
-    .manifest-item:last-child {
+    .manifest-row:last-child {
       border-bottom: none;
       padding-bottom: 0;
     }
-    .manifest-key { color: var(--text-graphite); }
-    .manifest-val { color: var(--text-titanium); font-weight: 600; }
+    .manifest-k { color: var(--text-dim); }
+    .manifest-v { color: var(--text-main); font-weight: 500; }
 
-    /* National Systems Architecture Award Monolith */
+    /* National Award Banner */
     .award-monolith {
-      margin: 4.5rem 0 3rem;
-      background: var(--bronze-surface);
-      border: 1px solid var(--bronze-hairline);
-      border-radius: var(--radius-sm);
-      padding: 2.5rem 3rem;
+      margin: 4rem 0;
+      background: var(--gold-bg);
+      border: 1px solid var(--gold-border);
+      border-radius: var(--radius);
+      padding: 2.2rem 2.5rem;
       display: grid;
-      grid-template-columns: 80px 1fr;
-      gap: 2.2rem;
-      align-items: center;
-    }
-    .award-seal {
-      font-family: var(--font-code);
-      font-size: 3.2rem;
-      font-weight: 800;
-      color: var(--bronze-seal);
-      line-height: 1;
-    }
-    .award-body h3 {
-      font-size: 1.35rem;
-      font-weight: 800;
-      color: var(--text-titanium);
-      margin-bottom: 0.4rem;
-      letter-spacing: -0.02em;
-    }
-    .award-body p {
-      color: var(--text-steel);
-      font-size: 0.94rem;
-      line-height: 1.7;
-    }
-
-    /* Section Bar */
-    .section-bar {
-      padding: 5.5rem 0 1.8rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      border-bottom: 1px solid var(--border-hairline);
-      margin-bottom: 3rem;
-    }
-    .section-idx {
-      font-family: var(--font-code);
-      font-size: 0.75rem;
-      color: var(--text-graphite);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 0.4rem;
-    }
-    .section-title {
-      font-size: 2.2rem;
-      font-weight: 850;
-      letter-spacing: -0.03em;
-      text-transform: uppercase;
-    }
-
-    /* Interactive Little's Law Flow Simulator Component */
-    .simulator-container {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-hairline);
-      border-radius: var(--radius-sm);
-      padding: 2.2rem;
-      margin-bottom: 5.5rem;
-    }
-    .simulator-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 2rem;
-      padding-bottom: 1.5rem;
-      border-bottom: 1px solid var(--border-hairline);
-    }
-    .sim-tag {
-      font-family: var(--font-code);
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      color: var(--text-graphite);
-      margin-bottom: 0.35rem;
-    }
-    .sim-headline {
-      font-size: 1.35rem;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-    }
-    .sim-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 70px 1fr;
       gap: 2rem;
       align-items: center;
     }
-    .sim-control-group {
-      display: flex;
-      flex-direction: column;
-      gap: 0.8rem;
-    }
-    .sim-control-label {
-      display: flex;
-      justify-content: space-between;
-      font-family: var(--font-code);
-      font-size: 0.78rem;
-      color: var(--text-steel);
-    }
-    .sim-slider {
-      -webkit-appearance: none;
-      width: 100%;
-      height: 4px;
-      background: var(--border-hairline);
-      outline: none;
-      border-radius: 2px;
-    }
-    .sim-slider::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      width: 16px;
-      height: 16px;
-      background: var(--text-titanium);
-      border: 1px solid var(--bg-base);
-      cursor: pointer;
-      border-radius: 50%;
-    }
-    .sim-output-box {
-      background: var(--bg-base);
-      border: 1px solid var(--border-hairline);
-      border-radius: var(--radius-xs);
-      padding: 1.6rem;
-      text-align: center;
-    }
-    .sim-formula-tag {
-      font-family: var(--font-code);
-      font-size: 0.72rem;
-      color: var(--text-graphite);
-      margin-bottom: 0.5rem;
-    }
-    .sim-result-value {
-      font-family: var(--font-code);
-      font-size: 2.4rem;
-      font-weight: 800;
-      color: var(--text-titanium);
+    .award-badge {
+      font-family: var(--font-mono);
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--gold);
       line-height: 1;
-      margin-bottom: 0.4rem;
     }
-    .sim-result-caption {
-      font-size: 0.82rem;
-      color: var(--text-steel);
+    .award-content h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 0.35rem;
+      letter-spacing: -0.01em;
     }
-
-    /* 4-Part Engineering Dossier Grid */
-    .dossier-stack {
-      display: flex;
-      flex-direction: column;
-      gap: 2.5rem;
-      margin-bottom: 6rem;
-    }
-    .dossier-card {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-hairline);
-      border-radius: var(--radius-sm);
-      padding: 2.5rem;
-      transition: var(--transition);
-    }
-    .dossier-card:hover {
-      border-color: var(--border-strong);
-      background: var(--bg-surface-elevated);
-    }
-    .dossier-meta {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1rem;
-      font-family: var(--font-code);
-      font-size: 0.72rem;
-      color: var(--text-graphite);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-    .dossier-title {
-      font-size: 1.6rem;
-      font-weight: 850;
-      letter-spacing: -0.03em;
-      margin-bottom: 1.8rem;
-    }
-
-    /* 4-Part Structure Breakdown */
-    .four-part-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
-      margin-top: 1.5rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid var(--border-subdued);
-    }
-    .part-box h4 {
-      font-family: var(--font-code);
-      font-size: 0.74rem;
-      text-transform: uppercase;
-      color: var(--text-graphite);
-      letter-spacing: 0.05em;
-      margin-bottom: 0.6rem;
-    }
-    .part-box p {
-      color: var(--text-steel);
-      font-size: 0.88rem;
+    .award-content p {
+      color: var(--text-muted);
+      font-size: 0.92rem;
       line-height: 1.65;
     }
-    .part-box .metric-callout {
-      font-family: var(--font-code);
-      font-size: 1.7rem;
-      font-weight: 800;
-      color: var(--text-titanium);
-      line-height: 1;
-      margin-top: 0.4rem;
-    }
 
-    /* Terminal & Mock Inspection Window */
-    .terminal-inspector {
-      background: var(--bg-base);
-      border: 1px solid var(--border-hairline);
-      border-radius: var(--radius-xs);
-      margin-top: 1.8rem;
-      overflow: hidden;
-      font-family: var(--font-code);
-    }
-    .terminal-nav {
-      background: var(--bg-surface-elevated);
-      padding: 0.45rem 1rem;
+    /* Section Headings */
+    .section-head {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid var(--border-hairline);
+      align-items: flex-end;
+      padding-bottom: 1.2rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 2.5rem;
     }
-    .terminal-tabs {
+    .section-num {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.4rem;
+    }
+    .section-title {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    /* Projects Grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 5.5rem;
+    }
+    .project-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
       display: flex;
-      gap: 0.6rem;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition);
     }
-    .term-tab {
-      background: transparent;
-      border: 1px solid transparent;
-      color: var(--text-graphite);
-      font-family: var(--font-code);
+    .project-card:hover {
+      border-color: var(--border-focus);
+      background: var(--surface-hover);
+    }
+    .col-8 { grid-column: span 8; }
+    .col-4 { grid-column: span 4; }
+    .col-12 { grid-column: span 12; }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-bottom: 1.2rem;
+    }
+    .tag {
+      font-family: var(--font-mono);
       font-size: 0.72rem;
-      padding: 0.25rem 0.6rem;
-      border-radius: var(--radius-xs);
-      cursor: pointer;
+      padding: 0.25rem 0.65rem;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
     }
-    .term-tab.active {
-      color: var(--text-titanium);
-      background: var(--bg-base);
-      border-color: var(--border-hairline);
+    [data-theme="light"] .tag {
+      background: rgba(0, 0, 0, 0.03);
     }
-    .terminal-content {
-      padding: 1.25rem;
-      font-size: 0.78rem;
-      color: var(--text-steel);
+    .project-card h3 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.01em;
+    }
+    .project-card p {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.65;
+    }
+
+    /* Verified Metric Box in Projects */
+    .metric-box {
+      margin-top: 1.5rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: baseline;
+      gap: 0.85rem;
+    }
+    .metric-val {
+      font-family: var(--font-mono);
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1;
+    }
+    .metric-label {
+      font-size: 0.82rem;
+      color: var(--text-dim);
+    }
+
+    /* Real Company Experience Rows */
+    .company-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+    }
+    .company-box {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1.2rem;
+    }
+    .company-box h5 {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 0.4rem;
+    }
+    .company-box p {
+      font-size: 0.82rem;
+      color: var(--text-dim);
       line-height: 1.55;
     }
-    .t-light { color: var(--text-titanium); font-weight: 600; }
-    .t-dim { color: var(--text-graphite); }
 
     /* Capabilities Matrix */
-    .capabilities-grid {
+    .matrix-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
-      margin-bottom: 7rem;
+      gap: 1.25rem;
+      margin-bottom: 6rem;
     }
-    .cap-column {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-hairline);
-      border-radius: var(--radius-sm);
-      padding: 2.2rem;
+    .matrix-col {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.8rem;
     }
-    .cap-column h4 {
-      font-size: 0.94rem;
-      font-weight: 800;
+    .matrix-col h4 {
+      font-size: 0.9rem;
+      font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.04em;
-      margin-bottom: 1.4rem;
-      padding-bottom: 0.75rem;
-      border-bottom: 1px solid var(--border-hairline);
+      letter-spacing: 0.05em;
+      margin-bottom: 1.3rem;
+      padding-bottom: 0.65rem;
+      border-bottom: 1px solid var(--border);
     }
-    .cap-list {
+    .matrix-list {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 0.85rem;
+      gap: 0.75rem;
     }
-    .cap-list li {
-      font-size: 0.86rem;
-      color: var(--text-steel);
+    .matrix-list li {
+      font-size: 0.85rem;
+      color: var(--text-muted);
       display: flex;
       align-items: center;
-      gap: 0.6rem;
+      gap: 0.5rem;
     }
-    .cap-list li::before {
-      content: "/";
-      color: var(--text-graphite);
-      font-family: var(--font-code);
+    .matrix-list li::before {
+      content: "—";
+      color: var(--text-dim);
+      font-family: var(--font-mono);
     }
 
-    /* Inquiry & Direct Engagement Monolith */
-    .inquiry-monolith {
-      border-top: 1px solid var(--border-hairline);
-      padding: 7.5rem 0 5.5rem;
+    /* Contact Section */
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 4.5rem 2rem;
       text-align: center;
+      margin-bottom: 4.5rem;
     }
-    .inquiry-monolith h2 {
-      font-size: clamp(2.4rem, 4.8vw, 4rem);
-      font-weight: 900;
-      letter-spacing: -0.04em;
-      text-transform: uppercase;
-      margin-bottom: 1.25rem;
+    .contact-card h2 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
     }
-    .inquiry-monolith p {
-      color: var(--text-steel);
-      max-width: 620px;
-      margin: 0 auto 2.8rem;
-      font-size: 1.05rem;
+    .contact-card p {
+      color: var(--text-muted);
+      max-width: 580px;
+      margin: 0 auto 2.2rem;
+      font-size: 1rem;
       line-height: 1.7;
     }
-    .inquiry-buttons {
+    .contact-links {
       display: flex;
       justify-content: center;
       gap: 1rem;
       flex-wrap: wrap;
     }
 
+    /* Footer */
     footer {
-      border-top: 1px solid var(--border-hairline);
-      padding: 2.5rem 0;
+      border-top: 1px solid var(--border);
+      padding: 2.2rem 0;
+      font-family: var(--font-mono);
       font-size: 0.78rem;
-      color: var(--text-graphite);
-      font-family: var(--font-code);
+      color: var(--text-dim);
       display: flex;
       justify-content: space-between;
     }
 
     @media (max-width: 960px) {
       .hero-grid { grid-template-columns: 1fr; }
-      .four-part-grid { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
-      .sim-grid { grid-template-columns: 1fr; gap: 1.5rem; }
-      .capabilities-grid { grid-template-columns: 1fr 1fr; }
+      .col-8, .col-4, .col-12 { grid-column: span 12; }
+      .company-grid { grid-template-columns: 1fr; }
+      .matrix-grid { grid-template-columns: 1fr 1fr; }
       .nav-links { display: none; }
       .award-monolith { grid-template-columns: 1fr; }
     }
     @media (max-width: 640px) {
-      .four-part-grid { grid-template-columns: 1fr; }
-      .capabilities-grid { grid-template-columns: 1fr; }
-      footer { flex-direction: column; gap: 1rem; text-align: center; }
+      .matrix-grid { grid-template-columns: 1fr; }
+      footer { flex-direction: column; gap: 0.85rem; text-align: center; }
     }
   </style>
 </head>
@@ -651,24 +540,25 @@
   <!-- Navigation -->
   <nav>
     <div class="container nav-wrap">
-      <a href="#" class="nav-identity">
-        <img src="https://github.com/MasoudVz.png" alt="Masoud Valizadeh" class="brand-avatar" onerror="this.src='https://via.placeholder.com/30'" />
+      <a href="#" class="brand">
+        <img src="https://github.com/MasoudVz.png" alt="Masoud Valizadeh" class="brand-avatar" onerror="this.src='https://via.placeholder.com/32'" />
         <span>Masoud Valizadeh</span>
       </a>
 
       <ul class="nav-links">
-        <li><a href="#simulator">Queue Simulation</a></li>
-        <li><a href="#dossiers">Engineering Dossiers</a></li>
-        <li><a href="#capabilities">System Capabilities</a></li>
+        <li><a href="#about">About & Philosophy</a></li>
+        <li><a href="#projects">Key Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Competencies</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
 
       <div class="nav-actions">
-        <button id="themeToggle" class="btn-action" title="Toggle Light/Dark Theme">
-          <span id="themeLabel">MODE</span>
+        <button id="themeToggle" class="btn-theme" title="Toggle Theme">
+          <span id="themeLabel">THEME</span>
         </button>
-        <a href="Masoud_Valizadeh_Scrum_Master_CV.pdf" target="_blank" class="btn-action">
-          CV.PDF
+        <a href="Masoud_Valizadeh_Scrum_Master_CV.pdf" target="_blank" class="btn-theme" style="border-color: var(--border-focus);">
+          CV (PDF)
         </a>
       </div>
     </div>
@@ -676,53 +566,50 @@
 
   <main class="container">
     <!-- Hero Section -->
-    <header class="hero">
-      <div class="hero-meta-strip">
-        <div class="status-active">
-          <span class="status-dot"></span>
-          <span>Operational Cadence & Flow Systems Engineering</span>
-        </div>
-        <span>LOCATION: TEHRAN / REMOTE</span>
-      </div>
-
+    <header class="hero" id="about">
       <div class="hero-grid">
         <div>
+          <div class="status-pill">
+            <span class="status-dot"></span>
+            <span>Technical Scrum Master & Delivery Coordinator</span>
+          </div>
+
           <h1 class="hero-title">
-            Eliminating Process Debt.<br />
-            <span class="dimmed">Engineering Continuous Flow.</span>
+            Engineering Software Delivery.<br />
+            <span class="dimmed">Without Agile Theater.</span>
           </h1>
 
-          <p class="hero-lead">
-            Staff Technical Delivery Architect & Flow Systems Engineer with a software engineering foundation. Traditional agile frameworks introduce synchronization latency disguised as collaboration. This operational practice replaces ritualistic ceremonies with empirical flow metrics, deterministic WIP constraints, and contract-first interfaces that accelerate commit-to-production throughput.
+          <p class="hero-desc">
+            Computer Software Engineering background with extensive experience facilitating cross-functional teams in Fintech, e-commerce, and high-stakes platforms. Dedicated to eliminating performative rituals, resolving squad dependencies, and embedding data-driven metrics to ship reliable software.
           </p>
 
           <div class="hero-cta">
-            <a href="#dossiers" class="btn btn-solid">Inspect Case Dossiers</a>
-            <a href="mailto:masoudvzii@gmail.com" class="btn btn-ghost">Direct Technical Inquiry</a>
+            <a href="#projects" class="btn btn-solid">Explore Projects</a>
+            <a href="mailto:masoudvzii@gmail.com" class="btn btn-outline">Direct Contact</a>
           </div>
         </div>
 
-        <!-- Portrait & System Manifest -->
-        <div class="portrait-panel">
+        <!-- Portrait & Profile Manifest -->
+        <div class="portrait-card">
           <div class="portrait-frame">
-            <img src="https://github.com/MasoudVz.png" alt="Masoud Valizadeh" class="portrait-img" onerror="this.src='https://via.placeholder.com/320'" />
+            <img src="https://github.com/MasoudVz.png" alt="Masoud Valizadeh Portrait" onerror="this.src='https://via.placeholder.com/320'" />
           </div>
           <div class="profile-manifest">
-            <div class="manifest-item">
-              <span class="manifest-key">ROLE DOMAIN</span>
-              <span class="manifest-val">Staff Delivery Architect</span>
+            <div class="manifest-row">
+              <span class="manifest-k">PRIMARY ROLE</span>
+              <span class="manifest-v">Technical Delivery / Scrum Master</span>
             </div>
-            <div class="manifest-item">
-              <span class="manifest-key">THEORETICAL BASIS</span>
-              <span class="manifest-val">Queueing Theory / Little's Law</span>
+            <div class="manifest-row">
+              <span class="manifest-k">BACKGROUND</span>
+              <span class="manifest-v">B.Sc. Software Engineering</span>
             </div>
-            <div class="manifest-item">
-              <span class="manifest-key">INTERFACE DECOUPLING</span>
-              <span class="manifest-val">OpenAPI 3.1 & Mock Servers</span>
+            <div class="manifest-row">
+              <span class="manifest-k">EXPERTISE</span>
+              <span class="manifest-v">SDLC, Flow Metrics, Jira & API Mocking</span>
             </div>
-            <div class="manifest-item">
-              <span class="manifest-key">NATIONAL AWARD</span>
-              <span class="manifest-val" style="color: var(--bronze-seal);">1st Place (Modarres Systems)</span>
+            <div class="manifest-row">
+              <span class="manifest-k">NATIONAL AWARD</span>
+              <span class="manifest-v" style="color: var(--gold);">1st Place (Shahid Modarres)</span>
             </div>
           </div>
         </div>
@@ -731,278 +618,241 @@
 
     <!-- National Award Monolith -->
     <section class="award-monolith">
-      <div class="award-seal">01</div>
-      <div class="award-body">
-        <h3>1st Place — National Systems Architecture & Mechanism Design Award</h3>
+      <div class="award-badge">01</div>
+      <div class="award-content">
+        <h3>1st Place Winner — 6th Shahid Modarres National Festival (Parliament Research Center)</h3>
         <p>
-          Honored with the 1st Place National Award at the 6th Shahid Modarres National Festival, conferred by the Parliamentary Systems Research Center (Macro Governance & Systems Division). Awarded for engineering an asynchronous state-machine protocol for participatory institutional oversight, establishing decentralized verification telemetry and deterministic compliance thresholds across macro-scale resource allocation pipelines.
+          Honored with the national first place award for co-authoring the structural framework on participatory governance and civil society oversight in parliamentary monitoring (Dec 2025). Reflects systemic vision, institutional process engineering, and macro-architecture design capabilities.
         </p>
       </div>
     </section>
 
-    <!-- Interactive Little's Law Simulator Component -->
-    <section id="simulator" class="simulator-container">
-      <div class="simulator-header">
+    <!-- Real Projects Section -->
+    <section id="projects">
+      <div class="section-head">
         <div>
-          <div class="sim-tag">DIAGNOSTIC ENGINE // OPERATIONS RESEARCH</div>
-          <h2 class="sim-headline">Little's Law Queue Saturation & Lead Time Simulator</h2>
+          <div class="section-num">CASE STUDIES</div>
+          <h2 class="section-title">Key Projects & Deliverables</h2>
         </div>
-        <span style="font-family: var(--font-code); font-size: 0.75rem; color: var(--text-graphite);">W = L / λ</span>
+        <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-dim);">SDLC ALIGNMENT</span>
       </div>
 
-      <div class="sim-grid">
-        <div class="sim-control-group">
-          <div class="sim-control-label">
-            <span>Work-In-Progress (WIP: L)</span>
-            <span id="wipValDisplay" style="font-weight: 700; color: var(--text-titanium);">12 Items</span>
+      <div class="projects-grid">
+        
+        <!-- Project 1: TherExNow -->
+        <div class="project-card col-8">
+          <div>
+            <div class="tag-row">
+              <span class="tag">TherExNow</span>
+              <span class="tag">API Contract Design</span>
+              <span class="tag">Mock Servers</span>
+              <span class="tag">Cross-Squad</span>
+            </div>
+            <h3>TherExNow Platform: Unblocking Frontend Squads</h3>
+            <p>
+              Resolved recurring frontend wait-states during microservice backend refactoring. Established strict API Contract documentation in Confluence and deployed Mock Servers, enabling mobile and web engineers to build parallel features with zero blocker latency.
+            </p>
           </div>
-          <input type="range" min="1" max="40" value="12" class="sim-slider" id="wipSlider" oninput="calculateFlow()" />
-          <span style="font-size: 0.75rem; color: var(--text-graphite);">Active concurrently running work items across squads.</span>
+          <div class="metric-box">
+            <div class="metric-val">0 Days</div>
+            <div class="metric-label">Frontend idle wait time eliminated during backend development</div>
+          </div>
         </div>
 
-        <div class="sim-control-group">
-          <div class="sim-control-label">
-            <span>Throughput (Velocity: λ)</span>
-            <span id="throughputValDisplay" style="font-weight: 700; color: var(--text-titanium);">4.0 Items/Wk</span>
+        <!-- Project 2: SocialOrder -->
+        <div class="project-card col-4">
+          <div>
+            <div class="tag-row">
+              <span class="tag">SocialOrder</span>
+              <span class="tag">INVEST Method</span>
+              <span class="tag">DoR / DoD</span>
+            </div>
+            <h3>SocialOrder Platform</h3>
+            <p>
+              Enforced rigid Definition of Ready (DoR) and Definition of Done (DoD). Sliced high-complexity order management user stories into atomic 1-2 day increments using Planning Poker to eliminate mid-sprint scope creep.
+            </p>
           </div>
-          <input type="range" min="1" max="10" step="0.5" value="4.0" class="sim-slider" id="throughputSlider" oninput="calculateFlow()" />
-          <span style="font-size: 0.75rem; color: var(--text-graphite);">Completed, production-verified units shipped per week.</span>
+          <div class="metric-box">
+            <div class="metric-val">100%</div>
+            <div class="metric-label">Story clarity before sprint commitment</div>
+          </div>
         </div>
 
-        <div class="sim-output-box">
-          <div class="sim-formula-tag">COMPUTED SYSTEM LEAD TIME (W)</div>
-          <div class="sim-result-value" id="leadTimeResult">3.0 Wks</div>
-          <div class="sim-result-caption" id="leadTimeDays">~21.0 Calendar Days</div>
+        <!-- Project 3: QuesShare -->
+        <div class="project-card col-4">
+          <div>
+            <div class="tag-row">
+              <span class="tag">QuesShare</span>
+              <span class="tag">Backlog Refinement</span>
+              <span class="tag">Sprint Review</span>
+            </div>
+            <h3>QuesShare Platform</h3>
+            <p>
+              Standardized sprint review feedback loops with product owners and stakeholders. Streamlined continuous backlog refinement to ensure steady team velocity and clear acceptance criteria.
+            </p>
+          </div>
+          <div class="metric-box">
+            <div class="metric-val">Predictable</div>
+            <div class="metric-label">Release cadence without team burnout</div>
+          </div>
         </div>
-      </div>
-    </section>
 
-    <!-- 4-Part Engineering Case Dossiers -->
-    <section id="dossiers">
-      <div class="section-bar">
-        <div>
-          <div class="section-idx">02 / VERIFIED DOSSIERS</div>
-          <h2 class="section-title">Systems Engineering Case Dossiers</h2>
+        <!-- Project 4: Payment & Fintech -->
+        <div class="project-card col-4">
+          <div>
+            <div class="tag-row">
+              <span class="tag">FinTech</span>
+              <span class="tag">Payment Gateways</span>
+              <span class="tag">Stripe API</span>
+            </div>
+            <h3>Payment & FinTech Integrations</h3>
+            <p>
+              Coordinated technical delivery across financial modules and transactional payment integrations (Stripe APIs), applying strict verification gates in DoD to guarantee transactional reliability.
+            </p>
+          </div>
+          <div class="metric-box">
+            <div class="metric-val">Zero Defect</div>
+            <div class="metric-label">Regression-free transactional deployments</div>
+          </div>
         </div>
-        <span style="font-family: var(--font-code); font-size: 0.78rem; color: var(--text-graphite);">4-PART CAUSAL PROOFS</span>
-      </div>
 
-      <div class="dossier-stack">
-
-        <!-- Dossier 1: TherExNow -->
-        <article class="dossier-card">
-          <div class="dossier-meta">
-            <span>Dossier #01 // Distributed Healthcare Platform</span>
-            <span>Stack: OpenAPI 3.1, Prism, Confluence, Schemathesis</span>
+        <!-- Project 5: Anti-Agile Theater Doctrine -->
+        <div class="project-card col-4">
+          <div>
+            <div class="tag-row">
+              <span class="tag">Methodology</span>
+              <span class="tag">Flow Metrics</span>
+            </div>
+            <h3>Anti-Agile Theater Mindset</h3>
+            <p>
+              Moving cards or holding status meetings does not equal agility. Real agility is removing blockers, protecting developer deep work, and shortening Cycle Time from initial commit to verified staging release.
+            </p>
           </div>
-          <h3 class="dossier-title">TherExNow: Interface Decoupling & Mock Infrastructure</h3>
-          
-          <div class="four-part-grid">
-            <div class="part-box">
-              <h4>1. Systemic Constraint</h4>
-              <p>
-                Frontend client engineering suffered 62% cycle-time idle latency waiting for backend service completion. Uncoordinated payload schema mutations triggered a 28.5% regression rate during sprint releases.
-              </p>
+          <div class="metric-box">
+            <div class="metric-val">Data-Driven</div>
+            <div class="metric-label">Cycle Time & WIP over ritual compliance</div>
+          </div>
+        </div>
+
+        <!-- Work Experience Breakdown -->
+        <div class="project-card col-12" id="experience">
+          <div>
+            <div class="tag-row">
+              <span class="tag">Work Experience</span>
+              <span class="tag">Innovative Future Software House</span>
+              <span class="tag">Apsy</span>
             </div>
-            <div class="part-box">
-              <h4>2. Architectural Intervention</h4>
-              <p>
-                Enforced an asynchronous OpenAPI 3.1 Contract-First Architecture. No user-facing story could be ingested without an approved, version-controlled schema merged into the repository registry.
-              </p>
-            </div>
-            <div class="part-box">
-              <h4>3. Decoupling Mechanism</h4>
-              <p>
-                Automated Prism containerized mock servers deployed directly via Confluence and CI webhooks. Client teams authored logic against live mocks on Day 1, while backend verified Schemathesis assertions.
-              </p>
-            </div>
-            <div class="part-box">
-              <h4>4. Verifiable Telemetry</h4>
-              <p>Frontend idle time eliminated to 0.0 days. Flow efficiency rose from 22.4% to 68.2%.</p>
-              <div class="metric-callout">-74.7% Lead Time</div>
-            </div>
+            <h3>Organizational Experience & Engineering Alignment</h3>
+            <p>
+              Spearheaded Agile facilitation and Scrum coordination across multi-squad architectures at <strong>Apsy</strong> (up to May 2024) and <strong>Innovative Future Software House</strong> (May 2024 – Present). Instituted sustainable engineering habits that bridge technical requirements with business goals:
+            </p>
           </div>
 
-          <!-- Terminal Inspector -->
-          <div class="terminal-inspector">
-            <div class="terminal-nav">
-              <div class="terminal-tabs">
-                <button class="term-tab active" onclick="switchTab(this, 'schema')">OpenAPI Schema</button>
-                <button class="term-tab" onclick="switchTab(this, 'mock')">Mock Server Response</button>
-              </div>
-              <span style="color: var(--text-graphite); font-size: 0.72rem;">status: validated_stub</span>
+          <div class="company-grid">
+            <div class="company-box">
+              <h5>20% Capacity Budgeting</h5>
+              <p>Reserved a dedicated 20% sprint buffer exclusively for technical debt refactoring, automated tests, and code health.</p>
             </div>
-            <div class="terminal-content" id="termBody">
-              <span class="t-dim">// OpenAPI 3.1 Contract Definition</span><br />
-              paths:<br />
-              &nbsp;&nbsp;/api/v2/therexnow/session/assign:<br />
-              &nbsp;&nbsp;&nbsp;&nbsp;post:<br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;summary: Asynchronous patient dispatch assignment<br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;responses:<br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'202': { description: <span class="t-light">"Contract Verified. Worker Dispatched."</span> }
+            <div class="company-box">
+              <h5>Blameless Retrospectives</h5>
+              <p>Fostered psychological safety using action-oriented retrospectives (Sailboat, 4Ls) focused on root causes, not finger-pointing.</p>
+            </div>
+            <div class="company-box">
+              <h5>Cross-Squad Cadence</h5>
+              <p>Synchronized parallel release schedules across frontend, backend, and QA to eliminate merge collisions.</p>
             </div>
           </div>
-        </article>
-
-        <!-- Dossier 2: SocialOrder -->
-        <article class="dossier-card">
-          <div class="dossier-meta">
-            <span>Dossier #02 // Transactional Commerce Engine</span>
-            <span>Stack: INVEST Story Slicing, Stripe API, Idempotency Gates</span>
-          </div>
-          <h3 class="dossier-title">SocialOrder: Atomic Batch Slicing & Boundary Governance</h3>
-          
-          <div class="four-part-grid">
-            <div class="part-box">
-              <h4>1. Systemic Constraint</h4>
-              <p>
-                Unbounded batch sizes generated extreme cycle-time tail latency (p95 exceeding 34 days). PRs frequently exceeded 1,200 LOC with multi-developer merge collisions and recurring checkout regressions.
-              </p>
-            </div>
-            <div class="part-box">
-              <h4>2. Architectural Intervention</h4>
-              <p>
-                Established rigid INVEST vertical story slicing capped at a strict 2-day active flow time. Deconstructed checkout into independent failure-boundary slices: execution, timeout, and webhook reconciliation.
-              </p>
-            </div>
-            <div class="part-box">
-              <h4>3. Decoupling Mechanism</h4>
-              <p>
-                Isolated cart UI from Stripe payment processors via asynchronous idempotency tokens (UUID deduplication). Feature branches merged continuously through feature flags without destabilizing funnels.
-              </p>
-            </div>
-            <div class="part-box">
-              <h4>4. Verifiable Telemetry</h4>
-              <p>Change failure rate collapsed from 19.4% down to 1.1%. Work-in-progress queue saturation dropped by 76.4%.</p>
-              <div class="metric-callout">p85: 3.5 Days</div>
-            </div>
-          </div>
-        </article>
-
-        <!-- Dossier 3: Innovative Future & Apsy -->
-        <article class="dossier-card">
-          <div class="dossier-meta">
-            <span>Dossier #03 // Multi-Squad Scale Architecture</span>
-            <span>Stack: Flow Framework, 20% Tech Debt Quota, Blameless RCA</span>
-          </div>
-          <h3 class="dossier-title">Innovative Future & Apsy: Structural Debt Quotas & Blameless Analysis</h3>
-          
-          <div class="four-part-grid">
-            <div class="part-box">
-              <h4>1. Systemic Constraint</h4>
-              <p>
-                Persistent product firefighting: technical debt accumulation caused 38.2% of all sprint capacity to be consumed by regressive defects. Outages led to defensive individual finger-pointing.
-              </p>
-            </div>
-            <div class="part-box">
-              <h4>2. Architectural Intervention</h4>
-              <p>
-                Instituted a non-negotiable 20% sprint capacity reserve quarantined exclusively for technical debt refactoring and automated testing, strictly protected from business feature preemption.
-              </p>
-            </div>
-            <div class="part-box">
-              <h4>3. Decoupling Mechanism</h4>
-              <p>
-                Categorized work items under the Flow Framework (Features, Defects, Debt, Risk). Replaced subjective retrospectives with blameless post-mortems generating automated integration tests within 24h.
-              </p>
-            </div>
-            <div class="part-box">
-              <h4>4. Verifiable Telemetry</h4>
-              <p>Mean Time to Restore (MTTR) reduced from 4.8 hours to 42 minutes. Deployment frequency scaled 42x.</p>
-              <div class="metric-callout">-83.2% Regressions</div>
-            </div>
-          </div>
-        </article>
+        </div>
 
       </div>
     </section>
 
     <!-- Capabilities Matrix Section -->
-    <section id="capabilities">
-      <div class="section-bar">
+    <section id="skills">
+      <div class="section-head">
         <div>
-          <div class="section-idx">03 / CAPABILITIES</div>
-          <h2 class="section-title">System Competencies & Tooling</h2>
+          <div class="section-num">SYSTEM MATRIX</div>
+          <h2 class="section-title">Capabilities & Technical Competencies</h2>
         </div>
-        <span style="font-family: var(--font-code); font-size: 0.78rem; color: var(--text-graphite);">SDLC ALIGNMENT MATRIX</span>
+        <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-dim);">CORE SKILLSET</span>
       </div>
 
-      <div class="capabilities-grid">
-        <div class="cap-column">
-          <h4>Queue & Cadence Control</h4>
-          <ul class="cap-list">
-            <li>Little's Law WIP Enforcement</li>
-            <li>Cycle-Time Distribution (p50/p85)</li>
-            <li>Cumulative Flow Diagram Analysis</li>
-            <li>Throughput Forecasting</li>
-            <li>Batch-Size Deconstruction</li>
+      <div class="matrix-grid">
+        <div class="matrix-col">
+          <h4>Agile & Scrum</h4>
+          <ul class="matrix-list">
+            <li>Scrum & Kanban Frameworks</li>
+            <li>Sprint Planning & Daily Standups</li>
+            <li>Backlog Refinement & INVEST</li>
+            <li>DoR & DoD Governance</li>
+            <li>Capacity & Velocity Planning</li>
           </ul>
         </div>
 
-        <div class="cap-column">
-          <h4>Interface Architecture</h4>
-          <ul class="cap-list">
-            <li>OpenAPI 3.1 Spec Authoring</li>
-            <li>Prism / Stoplight Mock Servers</li>
-            <li>Contract-First CI Assertions</li>
-            <li>Idempotent Stripe Integrations</li>
-            <li>Confluence System Schematics</li>
+        <div class="matrix-col">
+          <h4>Flow & Metrics</h4>
+          <ul class="matrix-list">
+            <li>Cycle Time & Lead Time</li>
+            <li>Cumulative Flow Diagrams (CFD)</li>
+            <li>WIP Limits Implementation</li>
+            <li>Burndown & Burnup Charts</li>
+            <li>Scope Trimming (MVP)</li>
           </ul>
         </div>
 
-        <div class="cap-column">
-          <h4>Engineering Governance</h4>
-          <ul class="cap-list">
-            <li>20% Technical Debt Budgeting</li>
-            <li>Blameless Post-Mortem Systems</li>
-            <li>Rigid DoR & DoD Quality Gates</li>
-            <li>Git Workflow & Trunk Alignment</li>
-            <li>CI/CD Telemetry Monitoring</li>
+        <div class="matrix-col">
+          <h4>Technical SDLC</h4>
+          <ul class="matrix-list">
+            <li>Jira Advanced Configuration</li>
+            <li>Confluence Architecture Specs</li>
+            <li>API Contracts & Mocking</li>
+            <li>Git Workflows & Branching</li>
+            <li>CI/CD Pipeline Awareness</li>
           </ul>
         </div>
 
-        <div class="cap-column">
-          <h4>Servant Leadership</h4>
-          <ul class="cap-list">
-            <li>Developer Cognitive Shielding</li>
-            <li>Cross-Squad Dependency Triage</li>
-            <li>1-on-1 Engineering Mentorship</li>
-            <li>Psychological Safety Assurance</li>
-            <li>Anti-Agile Theater Transformation</li>
+        <div class="matrix-col">
+          <h4>Team Facilitation</h4>
+          <ul class="matrix-list">
+            <li>Cross-Squad Coordination</li>
+            <li>Developer Shielding</li>
+            <li>Technical Debt Mediation</li>
+            <li>1-on-1 Mentorship</li>
+            <li>Psychological Safety</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- Inquiry & Contact Section -->
+    <!-- Contact Section -->
     <section id="contact">
-      <div class="inquiry-monolith">
+      <div class="contact-card">
         <h2>Initiate Technical Engagement.</h2>
         <p>
-          Available for Staff Technical Delivery Architect, Delivery Lead, or Flow Systems Engineering engagements where throughput, predictability, and decoupling matter.
+          Seeking a Technical Scrum Master or Delivery Coordinator to eliminate blockers, streamline cross-functional workflows, and build a predictable delivery rhythm? Let’s connect.
         </p>
-        <div class="inquiry-buttons">
+        <div class="contact-links">
           <a href="mailto:masoudvzii@gmail.com" class="btn btn-solid">masoudvzii@gmail.com</a>
-          <a href="https://linkedin.com/in/masoud-valizadeh" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn Profile</a>
-          <a href="Masoud_Valizadeh_Scrum_Master_CV.pdf" target="_blank" class="btn btn-ghost">Download Resume (PDF)</a>
+          <a href="https://linkedin.com/in/masoud-valizadeh" target="_blank" rel="noopener" class="btn btn-outline">LinkedIn Profile</a>
+          <a href="Masoud_Valizadeh_Scrum_Master_CV.pdf" target="_blank" class="btn btn-outline">Download CV (PDF)</a>
         </div>
       </div>
     </section>
 
-    <!-- Technical Footer -->
+    <!-- Footer -->
     <footer>
-      <div>© 2026 MASOUD VALIZADEH — STAFF SYSTEMS DELIVERY ARCHITECTURE</div>
-      <div>QUEUE THEORY // SWISS EDITORIAL PRECISION</div>
+      <div>© 2026 MASOUD VALIZADEH — TECHNICAL SCRUM MASTER & DELIVERY LEAD</div>
+      <div>BUILT WITH PRAGMATIC DELIVERY PRINCIPLES</div>
     </footer>
   </main>
 
   <script>
-    // Pure Monochrome Theme Engine
+    // Robust Dark / Light Mode Engine
     const themeBtn = document.getElementById('themeToggle');
     const root = document.documentElement;
 
     function initTheme() {
-      const savedTheme = localStorage.getItem('delivery-theme') || 'dark';
+      const savedTheme = localStorage.getItem('site-theme') || 'dark';
       root.setAttribute('data-theme', savedTheme);
       updateLabel(savedTheme);
     }
@@ -1015,58 +865,11 @@
       const current = root.getAttribute('data-theme') || 'dark';
       const next = current === 'dark' ? 'light' : 'dark';
       root.setAttribute('data-theme', next);
-      localStorage.setItem('delivery-theme', next);
+      localStorage.setItem('site-theme', next);
       updateLabel(next);
     });
 
-    // Little's Law Calculation Engine: W = L / λ
-    function calculateFlow() {
-      const L = parseFloat(document.getElementById('wipSlider').value);
-      const lambda = parseFloat(document.getElementById('throughputSlider').value);
-      
-      document.getElementById('wipValDisplay').textContent = `${L} Items`;
-      document.getElementById('throughputValDisplay').textContent = `${lambda.toFixed(1)} Items/Wk`;
-
-      const W = (L / lambda).toFixed(1);
-      const days = (W * 7).toFixed(1);
-
-      document.getElementById('leadTimeResult').textContent = `${W} Wks`;
-      document.getElementById('leadTimeDays').textContent = `~${days} Calendar Days`;
-    }
-
-    // Terminal Tab Switcher
-    function switchTab(btn, mode) {
-      document.querySelectorAll('.term-tab').forEach(t => t.classList.remove('active'));
-      btn.classList.add('active');
-      const body = document.getElementById('termBody');
-
-      if (mode === 'schema') {
-        body.innerHTML = `
-          <span class="t-dim">// OpenAPI 3.1 Contract Definition</span><br />
-          paths:<br />
-          &nbsp;&nbsp;/api/v2/therexnow/session/assign:<br />
-          &nbsp;&nbsp;&nbsp;&nbsp;post:<br />
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;summary: Asynchronous patient dispatch assignment<br />
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;responses:<br />
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'202': { description: <span class="t-light">"Contract Verified. Worker Dispatched."</span> }
-        `;
-      } else {
-        body.innerHTML = `
-          <span class="t-dim">// Prism Container Ephemeral Mock Output</span><br />
-          HTTP/1.1 202 Accepted<br />
-          Content-Type: application/json<br />
-          X-Prism-Mock: true<br />
-          {<br />
-          &nbsp;&nbsp;<span class="t-light">"session_id"</span>: "txn_89f02c44-b21",<br />
-          &nbsp;&nbsp;<span class="t-light">"state"</span>: "DISPATCHED_TO_THERAPIST",<br />
-          &nbsp;&nbsp;<span class="t-light">"unblocked_squads"</span>: ["mobile_client", "web_portal"]<br />
-          }
-        `;
-      }
-    }
-
     initTheme();
-    calculateFlow();
   </script>
 </body>
 </html>
