@@ -1,301 +1,137 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Masoud Valizadeh — Master of Flow &amp; Agile Architect (Samurai Bushido Edition)</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&amp;family=Geist:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Noto+Serif+JP:wght@400;700;900&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          colors: {
-            "sumi-950": "#070709",
-            "sumi-900": "#0d0d11",
-            "sumi-800": "#14141a",
-            "sumi-700": "#1e1e26",
-            "vermilion": {
-              DEFAULT: "#d62828",
-              glow: "#e63946",
-              dark: "#9e1919"
-            },
-            "washi": {
-              DEFAULT: "#f4f0e6",
-              muted: "#d8d3c5",
-              dim: "#8d8980"
-            },
-            "katana": {
-              light: "#d5dae2",
-              steel: "#8f96a3",
-              dark: "#454b54"
-            },
-            "gold-mon": "#c5a059",
-            "background": "#070709",
-            "surface": "#0d0d11",
-            "surface-container": "#14141a",
-            "surface-container-high": "#1b1b22",
-            "outline-blade": "#262832"
-          },
-          fontFamily: {
-            "cinzel": ["Cinzel", "serif"],
-            "kanji": ["'Noto Serif JP'", "serif"],
-            "display": ["'Plus Jakarta Sans'", "sans-serif"],
-            "body": ["Geist", "sans-serif"],
-            "mono": ["'JetBrains Mono'", "monospace"]
-          },
-          backgroundImage: {
-            "shoji-pattern": "linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px)",
-            "katana-sheen": "linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(214,40,40,0.08) 50%, rgba(0,0,0,0) 100%)"
-          }
-        }
-      }
-    };
-  </script>
-<style>
-    @layer base {
-      html, body {
-        margin: 0;
-        padding: 0;
-        background-color: #070709;
-      }
-      body {
-        overscroll-behavior: none;
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,400&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; background-color: #090a0d; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "obsidian-base": "#090a0d",
+        "slate-card": "#12141a",
+        "slate-card-high": "#161822",
+        "slate-card-highest": "#1e212d",
+        "hairline-border": "#2c2e3a",
+        "hairline-gold": "rgba(229, 200, 108, 0.25)",
+        "champagne": "#e5c86c",
+        "champagne-light": "#ffe495",
+        "emerald-accent": "#2dd4bf",
+        "text-headline": "#f4f5f8",
+        "text-body": "#e2e4ea",
+        "text-muted": "#9ba1b0"
+      },
+      fontFamily: {
+        serif: ['"Source Serif 4"', "Georgia", "serif"],
+        sans: ['"Plus Jakarta Sans"', "sans-serif"],
+        mono: ['"Space Grotesk"', "monospace"]
       }
     }
-    ::-webkit-scrollbar {
-      width: 4px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #070709;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #2a1518;
-      border-radius: 2px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #d62828;
-    }
-    .blade-border {
-      position: relative;
-    }
-    .blade-border::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(214, 40, 40, 0.6), rgba(213, 218, 226, 0.8), rgba(214, 40, 40, 0.6), transparent);
-    }
-    .hanko-stamp {
-      box-shadow: inset 0 0 0 1px #d62828, 0 0 12px rgba(214, 40, 40, 0.25);
-    }
-    .enso-watermark {
-      mask-image: radial-gradient(circle at center, black 40%, transparent 75%);
-    }
-  </style>
-</head>
-<body class="bg-sumi-950 font-body text-washi selection:bg-vermilion selection:text-white antialiased">
-<!-- TOP SAMURAI BLADE HEADER & NAV -->
-<header class="fixed top-0 left-0 w-full z-50 bg-sumi-950/85 backdrop-blur-xl border-b border-outline-blade/60 blade-border">
-<div class="max-w-7xl mx-auto px-6 lg:px-12 h-16 flex items-center justify-between">
-<!-- Mon / Brand Mark -->
-<div class="flex items-center gap-3">
-<!-- Samurai Seal Hanko -->
-<div class="w-9 h-9 rounded-sm border border-vermilion bg-vermilion/10 flex items-center justify-center text-vermilion font-kanji font-bold text-base hanko-stamp relative group">
-<span>武</span>
-<span class="absolute -bottom-1 -right-1 w-1.5 h-1.5 bg-vermilion"></span>
+  }
+};</script></head><body class="bg-obsidian-base font-sans text-text-body antialiased selection:bg-champagne selection:text-obsidian-base"><header class="fixed top-0 w-full z-50 bg-obsidian-base/90 backdrop-blur-xl border-b border-hairline-border shadow-[0_8px_30px_rgba(0,0,0,0.7)]"><div class="h-20 max-w-7xl mx-auto px-6 flex items-center justify-between"><div class="flex items-center gap-3"><div class="w-2.5 h-2.5 rotate-45 bg-champagne border border-champagne-light/50"></div><div class="flex flex-col"><a class="font-sans font-bold text-[17px] text-text-headline tracking-wide uppercase hover:text-champagne transition-colors" href="#">Masoud Valizadeh</a><span class="font-mono text-[10px] text-emerald-accent tracking-widest uppercase font-medium">Staff Technical Delivery Lead</span></div></div><nav class="hidden xl:flex items-center gap-7"><a class="font-mono text-[12px] uppercase tracking-wider text-champagne border-b border-champagne/60 pb-0.5" href="#">Overview</a><a class="font-mono text-[12px] uppercase tracking-wider text-text-muted hover:text-text-headline transition-colors" href="#experience">Experience</a><a class="font-mono text-[12px] uppercase tracking-wider text-text-muted hover:text-text-headline transition-colors" href="#pillars">Pillars</a><a class="font-mono text-[12px] uppercase tracking-wider text-text-muted hover:text-text-headline transition-colors" href="#dossiers">Dossiers</a><a class="font-mono text-[12px] uppercase tracking-wider text-text-muted hover:text-text-headline transition-colors" href="#honors">Honors</a><a class="font-mono text-[12px] uppercase tracking-wider text-text-muted hover:text-text-headline transition-colors" href="#dispatch">Contact</a></nav><div class="flex items-center gap-4"><a class="hidden lg:flex items-center gap-1.5 font-mono text-[12px] text-text-muted hover:text-champagne transition-colors" href="mailto:masoudvzi@gmail.com"><span class="material-symbols-outlined text-champagne text-[16px]">alternate_email</span><span>masoudvzi@gmail.com</span></a><a class="flex items-center gap-1.5 px-4 py-2 rounded border border-hairline-border bg-slate-card hover:bg-slate-card-high hover:border-champagne/40 text-text-headline font-mono text-[12px] uppercase tracking-wider transition-all shadow-md" href="#dispatch"><span class="material-symbols-outlined text-[15px] text-emerald-accent">download</span><span>Resume CV</span></a><img alt="Masoud Valizadeh Profile" class="w-9 h-9 rounded-full object-cover ring-1 ring-champagne/40 shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaIQi4R703b-UFvjxqCEY19O_iEiFHKBMQSAb1JmSXot-HCgk0tXSyVUS8pDyf1pC3tzRxi2CduWELcPEOK1Nrt2TlAO_S7X2hYD0P64QuKmOq9OYfqcCmzbqvQIQMu2EJ3hHMv4dL_2AmyW26BTvl8PXX_m4-b5jsDFGgaPUs88G3qH-RpJxC36nEWMYZl8Uf07-3L4U5SsCAjEKnq_MRSVsz_OEyRQY-0ZygI1H0wiciC3tJzBZT-ebBlu2MkWiAw3Y"/></div></div></header><main class="w-full pt-20 bg-obsidian-base"><div class="flex flex-col w-full text-text-body">
+<!-- 1. HERO SECTION: ARCHITECTURAL VAULT & EDITORIAL PROCLAMATION -->
+<section class="relative w-full overflow-hidden bg-obsidian-base py-16 lg:py-24 border-b border-hairline-border">
+<!-- Subtle Champagne/Emerald Radial Ambient Glow -->
+<div class="absolute -right-20 -top-20 w-96 h-96 bg-champagne/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -left-20 top-1/2 w-96 h-96 bg-emerald-accent/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-6 relative z-10">
+<!-- Systemic Dossier Header Tag -->
+<div class="flex flex-wrap items-center gap-3 mb-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded border border-hairline-border bg-slate-card shadow-sm">
+<span class="w-2 h-2 rounded-full bg-emerald-accent animate-ping"></span>
+<span class="font-mono text-[11px] tracking-widest text-emerald-accent uppercase font-medium">
+            EXECUTIVE DOSSIER // MV-SYS.ACHAEMENID.2026 // OPEN TO REMOTE &amp; HYBRID MANDATES
+          </span>
 </div>
-<div>
-<a class="flex items-center gap-2 group" href="#">
-<span class="font-cinzel text-lg tracking-wider text-washi font-bold group-hover:text-vermilion-glow transition-colors">MASOUD VALIZADEH</span>
-</a>
-<span class="block text-[10px] font-mono uppercase tracking-widest text-washi-dim -mt-1">
-            Master of Flow &amp; Delivery Ronin • <span class="text-vermilion">流動の師</span>
-</span>
-</div>
-<!-- Live Status Emblem -->
-<div class="hidden lg:inline-flex items-center gap-2 px-2.5 py-0.5 ml-4 rounded-sm bg-sumi-900 border border-vermilion/30">
-<span class="w-1.5 h-1.5 rounded-full bg-vermilion animate-ping"></span>
-<span class="w-1.5 h-1.5 rounded-full bg-vermilion -ml-3"></span>
-<span class="font-mono text-[10px] uppercase tracking-wider text-washi-muted font-medium">Available for Squad Mastery</span>
+<div class="hidden sm:flex items-center gap-2 text-text-muted font-mono text-[12px]">
+<span>LAT: 35.6892° N</span>
+<span class="text-champagne/40">/</span>
+<span>LONG: 51.3890° E</span>
+<span class="text-champagne/40">/</span>
+<span class="text-emerald-accent font-medium">STABLE FLOW PROTOCOL</span>
 </div>
 </div>
-<!-- Navigation Scrolls -->
-<nav class="hidden md:flex items-center gap-7">
-<a class="font-mono text-xs text-washi-dim hover:text-vermilion-glow tracking-wider uppercase transition-colors flex items-center gap-1.5" href="#bushido">
-<span class="text-vermilion text-[11px]">01/</span> Bushido Code
-        </a>
-<a class="font-mono text-xs text-washi-dim hover:text-vermilion-glow tracking-wider uppercase transition-colors flex items-center gap-1.5" href="#dossiers">
-<span class="text-vermilion text-[11px]">02/</span> Katana Scrolls
-        </a>
-<a class="font-mono text-xs text-washi-dim hover:text-vermilion-glow tracking-wider uppercase transition-colors flex items-center gap-1.5" href="#kata">
-<span class="text-vermilion text-[11px]">03/</span> Kata Matrix
-        </a>
-<a class="font-mono text-xs text-washi-dim hover:text-vermilion-glow tracking-wider uppercase transition-colors flex items-center gap-1.5" href="#contact">
-<span class="text-vermilion text-[11px]">04/</span> Dispatch
-        </a>
-</nav>
-<!-- Action & Profile Mon -->
-<div class="flex items-center gap-3">
-<a class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-sm bg-vermilion text-white font-mono text-xs font-semibold hover:bg-vermilion-glow transition-all shadow-[0_0_15px_rgba(214,40,40,0.4)] tracking-wide" href="#contact">
-<span class="material-symbols-outlined text-[14px]">download</span>
-<span>CV.PDF</span>
-</a>
-<div class="relative w-8 h-8 rounded-sm p-[1px] bg-gradient-to-b from-katana-steel via-vermilion to-sumi-900">
-<img alt="Masoud Valizadeh" class="w-full h-full object-cover grayscale contrast-125 rounded-[1px]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1ZXxeEcXiOcGBOHpQIAT99Hf1KqfX4MXifR2PAdVVyh4VqT4mQYwaXb8OVcFcr-Mn-V1hFTvtmvEh0suW5BKp_LCzggsyjJV0xNpqNdU88rtvOY70iMC-rY7OL-aw3MYSkflmLM0Ga0nfYFHbmb9e0cPPftZqnWD_R-yvsxM0W2Ckt51w34seprmGuOYgHn0QY-6bZWW2oH6Cn0H-tNw_1Abqjw_fAdAPoiYro5KZidEjGa3rYPu8Sytg3bA6oavMZYg"/>
-</div>
-</div>
-</div>
-</header>
-<main class="w-full pt-16 bg-sumi-950 relative overflow-hidden">
-<!-- SUBTLE BACKGROUND SHOJI & ENSO GLOW -->
-<div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,rgba(214,40,40,0.06),transparent)] pointer-events-none"></div>
-<div class="absolute -right-40 top-32 w-[600px] h-[600px] rounded-full border border-vermilion/5 enso-watermark pointer-events-none flex items-center justify-center">
-<div class="w-[450px] h-[450px] rounded-full border border-katana-steel/5"></div>
-</div>
-<!-- ========================================================= -->
-<!-- SECTION: HERO SECTION (THE BLADE OF DELIVERANCE)          -->
-<!-- ========================================================= -->
-<section class="w-full border-b border-outline-blade/60 relative" id="hero">
-<div class="max-w-7xl mx-auto px-6 lg:px-12 py-16 lg:py-24">
-<!-- Monospace Telemetry Banner -->
-<div class="flex flex-wrap items-center justify-between gap-4 mb-8 pb-4 border-b border-outline-blade/40 font-mono text-[11px] text-washi-dim">
-<div class="flex items-center gap-3">
-<span class="px-2 py-0.5 rounded-sm bg-vermilion/10 text-vermilion border border-vermilion/30 font-semibold tracking-wider uppercase">
-              BUSHIDO DELIVERY FRAMEWORK
-            </span>
-<span class="hidden sm:inline text-katana-dark">|</span>
-<span class="hidden sm:inline text-katana-steel">KATANA-SLICED SDLC</span>
-</div>
-<div class="flex items-center gap-4">
-<span>DISCIPLINE: TECHNICAL DELIVERY LEAD</span>
-<span class="text-katana-dark">•</span>
-<span class="text-vermilion">無駄ゼロ (ZERO WASTE)</span>
-</div>
-</div>
-<!-- Grid Layout: Left Epic Copy, Right Lacquered Portrait Frame -->
+<!-- Monumental Headline & Editorial Composition -->
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-<!-- Left Content -->
 <div class="lg:col-span-7 flex flex-col gap-6">
-<div class="inline-flex items-center gap-2">
-<span class="w-5 h-[1px] bg-vermilion"></span>
-<span class="font-mono text-xs uppercase tracking-widest text-vermilion">THE RONIN OF PREDICTABLE CADENCE</span>
-</div>
-<h1 class="font-cinzel text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-washi leading-[1.08]">
-              Cutting Through <br/>
-<span class="text-transparent bg-clip-text bg-gradient-to-r from-vermilion via-vermilion-glow to-katana-light">Agile Theater.</span> <br/>
-              Forging True Software Flow.
+<div class="flex flex-col gap-2">
+<span class="font-mono text-[12px] text-champagne uppercase tracking-widest font-medium">
+              Staff Technical Delivery Lead • Agile Systems Architect
+            </span>
+<h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-text-headline tracking-tight leading-[1.15]">
+              ARCHITECTING <span class="text-champagne italic">DETERMINISTIC FLOW</span> THROUGH EMPIRICAL PRECISION.
             </h1>
-<p class="font-body text-base lg:text-lg text-washi-muted leading-relaxed max-w-2xl font-light">
-              Technical Delivery Lead &amp; Agile Architect. Software engineering mastery tempered by the relentless discipline of Bushido: zero performative ceremonies, razor-sharp OpenAPI contract gates, and unshakeable release velocity.
-            </p>
-<!-- Samurai Tech Badges -->
-<div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
-<div class="p-3 bg-sumi-900/90 border border-outline-blade rounded-sm relative overflow-hidden group hover:border-vermilion/40 transition-colors">
-<div class="font-mono text-[9px] uppercase tracking-widest text-washi-dim">// VIRTUE 01</div>
-<div class="font-display font-semibold text-washi text-sm mt-0.5">Delivery &amp; Flow</div>
-<div class="text-[10px] font-mono text-vermilion mt-1">律 (Discipline)</div>
 </div>
-<div class="p-3 bg-sumi-900/90 border border-outline-blade rounded-sm relative overflow-hidden group hover:border-vermilion/40 transition-colors">
-<div class="font-mono text-[9px] uppercase tracking-widest text-washi-dim">// FOUNDATION</div>
-<div class="font-display font-semibold text-washi text-sm mt-0.5">8+ Yrs Full-Stack</div>
-<div class="text-[10px] font-mono text-vermilion mt-1">技 (Craftsmanship)</div>
+<p class="font-sans text-[16px] lg:text-[17px] text-text-body max-w-2xl leading-relaxed">
+            Eliminating Agile ceremony theater, resolving cross-squad API dependencies, and orchestrating predictable delivery pipelines with mathematical poise and Swiss organizational discipline.
+          </p>
+<!-- Executive Credentials Strip -->
+<div class="flex flex-col sm:flex-row sm:items-center gap-4 pt-1">
+<div class="flex flex-col">
+<span class="font-sans text-[18px] text-text-headline font-semibold">Masoud Valizadeh</span>
+<span class="font-mono text-[12px] text-emerald-accent">Tehran, Iran • Global Remote • UAE / US / EU Alignment</span>
 </div>
-<div class="p-3 bg-sumi-900/90 border border-outline-blade rounded-sm relative overflow-hidden group hover:border-vermilion/40 transition-colors">
-<div class="font-mono text-[9px] uppercase tracking-widest text-washi-dim">// DECOUPLING</div>
-<div class="font-display font-semibold text-washi text-sm mt-0.5">OpenAPI / Mocks</div>
-<div class="text-[10px] font-mono text-vermilion mt-1">断 (Sever Idleness)</div>
-</div>
-<div class="p-3 bg-sumi-900/90 border border-outline-blade rounded-sm relative overflow-hidden group hover:border-vermilion/40 transition-colors">
-<div class="font-mono text-[9px] uppercase tracking-widest text-washi-dim">// FORECAST</div>
-<div class="font-display font-semibold text-washi text-sm mt-0.5">Monte Carlo 85%</div>
-<div class="text-[10px] font-mono text-vermilion mt-1">智 (Pure Math)</div>
+<div class="hidden sm:block w-px h-8 bg-hairline-border"></div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-champagne text-[20px]">verified_user</span>
+<span class="font-mono text-[12px] text-text-body">B.Sc. Computer Software Engineering</span>
 </div>
 </div>
-<!-- Action Triggers -->
-<div class="flex flex-wrap items-center gap-4 pt-4">
-<a class="inline-flex items-center justify-center px-6 py-3.5 bg-vermilion hover:bg-vermilion-glow text-white font-mono text-xs uppercase tracking-widest font-semibold rounded-sm transition-all shadow-[0_4px_20px_rgba(214,40,40,0.35)] active:scale-[0.99] group" href="#dossiers">
-<span>Inspect Katana Scrolls</span>
-<span class="material-symbols-outlined ml-2 text-[16px] group-hover:translate-y-0.5 transition-transform">south</span>
-</a>
-<a class="inline-flex items-center justify-center px-6 py-3.5 bg-sumi-900 border border-outline-blade hover:border-katana-steel text-washi font-mono text-xs uppercase tracking-widest font-medium rounded-sm transition-colors" href="#contact">
-                Dispatch Summons
-              </a>
-<button class="inline-flex items-center gap-2 px-3 py-3 text-washi-dim hover:text-vermilion font-mono text-xs transition-colors" onclick="navigator.clipboard.writeText('masoudvzii@gmail.com'); alert('Scroll address copied: masoudvzii@gmail.com');">
+<!-- Action Matrix / CTAs -->
+<div class="flex flex-wrap items-center gap-4 pt-2">
+<a class="px-6 py-3 rounded bg-champagne text-obsidian-base font-mono font-semibold text-[12px] uppercase tracking-wider hover:bg-champagne-light transition-all duration-200 shadow-lg shadow-champagne/10 flex items-center gap-2" href="#experience">
+<span class="material-symbols-outlined text-[18px]">account_tree</span>
+              Review Experience
+            </a>
+<a class="px-6 py-3 rounded border border-hairline-border bg-slate-card text-text-headline font-mono text-[12px] uppercase tracking-wider hover:bg-slate-card-high hover:border-champagne/40 transition-all duration-200 shadow-md flex items-center gap-2" href="#dispatch">
+<span class="material-symbols-outlined text-[18px] text-emerald-accent">send</span>
+              Dispatch Mandate
+            </a>
+<div class="relative group">
+<button class="px-4 py-3 rounded border border-hairline-border bg-slate-card text-champagne font-mono text-[12px] uppercase tracking-wider hover:bg-slate-card-high transition-colors flex items-center gap-2" id="copy-email-btn" onclick="navigator.clipboard.writeText('masoudvzi@gmail.com'); const el = document.getElementById('copied-tooltip'); el.classList.remove('opacity-0'); setTimeout(() =&gt; el.classList.add('opacity-0'), 2000);">
 <span class="material-symbols-outlined text-[16px]">content_copy</span>
-<span>masoudvzii@gmail.com</span>
+<span>masoudvzi@gmail.com</span>
 </button>
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 opacity-0 pointer-events-none transition-opacity duration-300 px-2 py-1 rounded bg-slate-card-highest border border-hairline-border text-champagne font-mono text-[11px] whitespace-nowrap shadow-md" id="copied-tooltip">
+                COPIED TO BUFFER
+              </div>
 </div>
 </div>
-<!-- Right Content: Lacquered Frame & Telemetry Monolith -->
-<div class="lg:col-span-5 flex flex-col gap-4">
-<!-- Master Portrait with Japanese Lacquer Finish & Seal -->
-<div class="relative bg-sumi-900 border-2 border-vermilion/40 p-1.5 shadow-[0_0_35px_rgba(0,0,0,0.8)] rounded-sm">
-<!-- Traditional Inset Header -->
-<div class="px-3 py-2 bg-sumi-950 flex items-center justify-between border-b border-outline-blade/80 mb-1">
-<div class="flex items-center gap-2 font-mono text-[10px] text-washi-dim tracking-widest uppercase">
-<span class="w-2 h-2 bg-vermilion rounded-full"></span>
-<span>RONIN DOSSIER // MV-BUSHIDO-01</span>
 </div>
-<div class="font-kanji text-xs text-vermilion tracking-widest">真・流動</div>
+<!-- Refined Modern Obsidian Portrait Portal -->
+<div class="lg:col-span-5 flex justify-center lg:justify-end">
+<div class="relative w-full max-w-sm">
+<!-- Delicate Champagne Framing Glow -->
+<div class="absolute -inset-1 bg-gradient-to-br from-champagne/20 via-hairline-border to-emerald-accent/20 rounded-xl filter blur-sm"></div>
+<div class="relative bg-slate-card border border-hairline-border p-4 rounded-xl shadow-2xl flex flex-col gap-3">
+<!-- Header Tag -->
+<div class="flex items-center justify-between px-1 text-champagne font-mono text-[11px]">
+<div class="flex items-center gap-1.5">
+<div class="w-1.5 h-1.5 rotate-45 bg-champagne"></div>
+<span class="tracking-widest uppercase">ID: MV-8921-ENG</span>
+</div>
+<span class="text-emerald-accent tracking-widest uppercase font-medium">CLASS: STAFF LEAD</span>
 </div>
 <!-- Portrait Frame -->
-<div class="relative w-full aspect-[4/3] sm:aspect-[16/11] bg-sumi-950 overflow-hidden">
-<img alt="Masoud Valizadeh Portrait" class="w-full h-full object-cover grayscale contrast-125 brightness-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-u2v3V5NrTeHwTeoS4mcuVtSBnO1g7E33ee50hkrwJY0yvCTr-fOUaEWoZoX-oma4Em_8vOwCQK_7iVO7El4JH5rUNk3TfjP1da6FHK1hAX99SOAbLcJLVBz_nrGKGzNJNlKCsPFROYOd2xHxjq34lQhPt3UjoI4rKgc2dlMVSUL6qHB2kAtDgCmLAfB6zd8mEgOjcykxUrfpNX5JXq-AcEejzcHeWK3LkbsYpREZxKCaXUH0CA0QIcMwCvfkNLR6JZE"/>
-<div class="absolute inset-0 bg-gradient-to-t from-sumi-950 via-transparent to-transparent opacity-85"></div>
-<!-- Red Hanko Seal Stamp on Portrait -->
-<div class="absolute top-3 right-3 w-12 h-12 border-2 border-vermilion bg-sumi-950/80 rounded-sm flex flex-col items-center justify-center text-vermilion hanko-stamp backdrop-blur-sm">
-<span class="font-kanji font-black text-xs leading-none">正義</span>
-<span class="font-mono text-[8px] tracking-tighter uppercase mt-0.5">SEAL</span>
+<div class="relative aspect-square w-full overflow-hidden rounded-lg bg-obsidian-base border border-hairline-border">
+<img alt="Masoud Valizadeh Portrait" class="w-full h-full object-cover object-center contrast-110 hover:contrast-125 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkx_CPreZ8auPkNbvGxAKj6F26RFwcZ1bJAfjDr5-V2sAutQN5RNO9L1stFaOE2vzodpUHLUYYplpXyEAR70pN2MnErvWXjNlXSZAlpniq0Vfz5Lgf7o-ieFNVpfsfHXnmrIlm-y_FPtLwCO9ZwqRxJJbtMsVu0o7hBA0aXkagu3zVRUQQ4g5FNAa54XXgptjafSbUsTowUEnXW6QXwjyokoF7WmNJNOOPOSwpEyUtG4MBE2_1G4DSTwFbtkut09nYJJc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-obsidian-base via-transparent to-transparent opacity-60"></div>
+<!-- Bottom Stamp -->
+<div class="absolute bottom-3 left-3 right-3 p-2 bg-obsidian-base/90 border border-hairline-border backdrop-blur-md rounded flex items-center justify-between shadow-lg">
+<div class="flex flex-col">
+<span class="font-sans font-bold text-[12px] text-text-headline uppercase tracking-wider">MASOUD VALIZADEH</span>
+<span class="font-mono text-[10px] text-emerald-accent font-medium">SOFTWARE ENG LEAD • SCRUM MASTER</span>
 </div>
-<!-- Lower Inscription Plate -->
-<div class="absolute bottom-3 left-3 right-3 p-3 bg-sumi-950/90 backdrop-blur-md border border-outline-blade flex items-center justify-between">
-<div>
-<div class="font-cinzel text-base font-bold text-washi tracking-wide">MASOUD VALIZADEH</div>
-<div class="font-mono text-[10px] text-katana-steel tracking-wider">TECHNICAL DELIVERY LEAD • SENSEI OF FLOW</div>
-</div>
-<div class="font-kanji text-vermilion text-lg font-bold">武士道</div>
+<span class="material-symbols-outlined text-champagne text-[18px]">verified</span>
 </div>
 </div>
-<!-- 4 Telemetry Tickers below portrait -->
-<div class="grid grid-cols-2 gap-1.5 p-2 bg-sumi-950 mt-1">
-<div class="p-2.5 bg-sumi-900 border border-outline-blade">
-<div class="flex items-center justify-between font-mono text-[10px] text-washi-dim">
-<span>// CYCLE TIME</span>
-<span class="text-vermilion font-bold">-42%</span>
+<!-- Technical Badges -->
+<div class="grid grid-cols-2 gap-2 pt-1">
+<div class="flex flex-col px-3 py-2 rounded bg-slate-card-high border border-hairline-border">
+<span class="font-mono text-[10px] text-text-muted uppercase tracking-wider">Foundation</span>
+<span class="font-sans text-[12px] font-semibold text-text-headline">B.Sc. Comp Software</span>
 </div>
-<div class="font-display text-xl font-bold text-washi mt-0.5">4.2 Days</div>
-<div class="font-mono text-[9px] text-washi-dim">Commit to Production</div>
+<div class="flex flex-col px-3 py-2 rounded bg-slate-card-high border border-hairline-border">
+<span class="font-mono text-[10px] text-text-muted uppercase tracking-wider">Methodology</span>
+<span class="font-sans text-[12px] font-semibold text-champagne">Empirical Agility</span>
 </div>
-<div class="p-2.5 bg-sumi-900 border border-outline-blade">
-<div class="flex items-center justify-between font-mono text-[10px] text-washi-dim">
-<span>// PREDICTABILITY</span>
-<span class="text-vermilion font-bold">94.2%</span>
-</div>
-<div class="font-display text-xl font-bold text-washi mt-0.5">Commit Trust</div>
-<div class="font-mono text-[9px] text-washi-dim">Monte Carlo Verified</div>
-</div>
-<div class="p-2.5 bg-sumi-900 border border-outline-blade">
-<div class="flex items-center justify-between font-mono text-[10px] text-washi-dim">
-<span>// FLOW RATIO</span>
-<span class="text-katana-light font-bold">68.0%</span>
-</div>
-<div class="font-display text-xl font-bold text-washi mt-0.5">Active Flow</div>
-<div class="font-mono text-[9px] text-washi-dim">Zero Idle Wait States</div>
-</div>
-<div class="p-2.5 bg-sumi-900 border border-outline-blade">
-<div class="flex items-center justify-between font-mono text-[10px] text-washi-dim">
-<span>// CONTRACT GATES</span>
-<span class="text-vermilion font-bold">0 BLOCK</span>
-</div>
-<div class="font-display text-xl font-bold text-washi mt-0.5">OpenAPI Mocks</div>
-<div class="font-mono text-[9px] text-washi-dim">Day-1 Parallel Coding</div>
 </div>
 </div>
 </div>
@@ -303,573 +139,550 @@
 </div>
 </div>
 </section>
-<!-- ========================================================= -->
-<!-- SECTION: IMPERIAL DECREE / NATIONAL HONOR MONOLITH       -->
-<!-- ========================================================= -->
-<section class="w-full border-b border-outline-blade/60 bg-sumi-900/50 relative py-14">
-<div class="max-w-7xl mx-auto px-6 lg:px-12">
-<div class="p-8 bg-sumi-900 border-2 border-vermilion/50 rounded-sm relative shadow-2xl overflow-hidden">
-<!-- Background Mon Stamp Watermark -->
-<div class="absolute -right-8 -top-8 w-40 h-40 rounded-full border-4 border-vermilion/10 flex items-center justify-center font-kanji text-5xl text-vermilion/10 pointer-events-none select-none">
-            栄誉
-          </div>
-<div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 pb-6 border-b border-outline-blade">
-<div class="flex items-center gap-4">
-<div class="w-12 h-12 rounded-sm bg-vermilion/15 border-2 border-vermilion flex items-center justify-center text-vermilion hanko-stamp">
-<span class="font-kanji font-bold text-xl">壱</span>
-</div>
-<div>
-<div class="flex flex-wrap items-center gap-2">
-<span class="font-mono text-[11px] uppercase tracking-widest text-vermilion bg-vermilion/10 px-2 py-0.5 border border-vermilion/30 font-bold">
-                    NATIONAL FIRST PRIZE • SHOGUNATE DECREE
-                  </span>
-<span class="font-mono text-[10px] text-katana-steel">// 6TH EDITION LAUREATE</span>
-</div>
-<h2 class="font-cinzel text-xl sm:text-2xl font-bold text-washi mt-1 tracking-wide">
-                  1st Place Winner — 6th Shahid Modarres National Festival
-                </h2>
-</div>
-</div>
-<div class="font-mono text-xs text-vermilion border border-vermilion/40 bg-sumi-950 px-4 py-2 rounded-sm font-semibold tracking-wider">
-              PARLIAMENT RESEARCH CENTER AWARD
-            </div>
-</div>
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 pt-6 items-center">
-<div class="lg:col-span-8 flex flex-col gap-3 font-body text-sm sm:text-base text-washi-muted font-light leading-relaxed">
-<p>
-                Awarded First Place at the prestigious <span class="text-washi font-medium">Shahid Modarres National Festival</span> organized by the Majlis Research Center. The decree honored seminal framework research in macroeconomic mechanism design, algorithmic policy transparency, and multi-stakeholder decision-loop optimization.
-              </p>
-<p class="text-xs sm:text-sm text-washi-dim">
-                The exact mathematical principles crafted for state governance now power engineering squad delivery: eradicating asymmetric information, establishing immutable contract boundaries, and maximizing collective delivery momentum without administrative waste.
-              </p>
-</div>
-<div class="lg:col-span-4 bg-sumi-950 p-5 border border-outline-blade rounded-sm space-y-2.5 font-mono text-xs">
-<div class="text-[10px] text-katana-steel uppercase tracking-widest pb-1 border-b border-outline-blade">
-                // RECORD OF MERIT
-              </div>
-<div class="flex justify-between">
-<span class="text-washi-dim">Convening Authority:</span>
-<span class="text-washi font-medium">Majlis Research Center</span>
-</div>
-<div class="flex justify-between">
-<span class="text-washi-dim">Domain:</span>
-<span class="text-washi font-medium">Macro Governance Design</span>
-</div>
-<div class="flex justify-between">
-<span class="text-washi-dim">Rank:</span>
-<span class="text-vermilion font-bold">National 1st Laureate</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- ========================================================= -->
-<!-- SECTION: THE SIX KATANA DOSSIERS / SCROLLS               -->
-<!-- ========================================================= -->
-<section class="w-full border-b border-outline-blade/60 py-20 relative" id="dossiers">
-<div class="max-w-7xl mx-auto px-6 lg:px-12">
-<!-- Header -->
-<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
-<div>
-<div class="flex items-center gap-2 font-mono text-xs uppercase text-vermilion tracking-widest mb-1">
-<span class="w-4 h-[1px] bg-vermilion"></span>
-<span>SECTION 02 // THE SIX KATANA SCROLLS</span>
-</div>
-<h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-washi tracking-tight">
-              Case Dossiers in Razor-Sharp Engineering Delivery
-            </h2>
-</div>
-<p class="font-body text-xs sm:text-sm text-washi-dim max-w-md font-light">
-            Empirical delivery records forged in production. Real architectures decoupled, cycle times halved, and agile theatrics dismantled.
-          </p>
-</div>
-<!-- Bento Grid of Scrolls -->
-<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
-<!-- DOSSIER 01: TherExNow (Col-8 Large) -->
-<div class="md:col-span-8 bg-sumi-900 border border-outline-blade rounded-sm p-6 lg:p-8 flex flex-col justify-between group hover:border-vermilion/50 transition-all relative overflow-hidden">
-<div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-vermilion/5 to-transparent pointer-events-none"></div>
-<div>
-<div class="flex items-center justify-between border-b border-outline-blade pb-4 mb-5">
-<div class="flex items-center gap-2.5 font-mono text-xs">
-<span class="text-vermilion font-bold">// SCROLL 01</span>
-<span class="px-2 py-0.5 bg-sumi-950 border border-outline-blade text-washi text-[10px] rounded-sm uppercase">HEALTHTECH PLATFORM</span>
-</div>
-<span class="font-mono text-xs text-vermilion font-semibold">100% SQUAD UNBLOCKED</span>
-</div>
-<h3 class="font-cinzel text-xl sm:text-2xl font-bold text-washi mb-3">
-                TherExNow — Decoupled Telehealth Ecosystem
-              </h3>
-<p class="font-body text-sm sm:text-base text-washi-muted mb-6 leading-relaxed font-light">
-                Severed a 3-week frontend squad idle bottleneck during major database refactoring by establishing rigid OpenAPI 3.0 contract schemas and automated Prism mocking pipelines. Mobile and Web squads forged application code against synthetic contracts with zero blocking dependency on backend readiness.
-              </p>
-<!-- Blade-Sharp OpenAPI Contract Preview Block -->
-<div class="bg-sumi-950 border border-outline-blade rounded-sm p-4 font-mono text-xs mb-6 relative">
-<div class="flex items-center justify-between pb-2 mb-3 border-b border-outline-blade/60 text-washi-dim text-[11px]">
-<div class="flex items-center gap-2 text-washi">
-<span class="material-symbols-outlined text-[15px] text-vermilion">terminal</span>
-<span>contracts/telehealth.v2.yaml — OpenAPI 3.0</span>
-</div>
-<span class="text-vermilion font-semibold uppercase">STATUS: PRISM-MOCK ACTIVE</span>
-</div>
-<div class="space-y-1 text-[11px] text-washi-dim font-mono">
-<div><span class="text-vermilion font-semibold">POST</span> <span class="text-washi">/api/v2/telehealth/session</span></div>
-<div class="pl-4 text-katana-dark">// Inviolable contract boundaries enforced pre-merge:</div>
-<div class="pl-4 text-washi">requires: [<span class="text-vermilion">'patient_id'</span>, <span class="text-vermilion">'practitioner_key'</span>, <span class="text-vermilion">'webrtc_channel'</span>]</div>
-<div class="pl-4 text-katana-steel">x-mock-latency: 35ms • idempotency: strictly_enforced</div>
-<div class="pl-4 text-washi-muted">response 201: { "session_id": "urn:uuid:katana-v4", "channel_state": "ENGAGED" }</div>
-</div>
-</div>
-</div>
-<!-- Footer Telemetry -->
-<div class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-outline-blade font-mono text-xs">
+<!-- 2. ENGINEERING TELEMETRY (QUALITATIVE PRINCIPLES, NO METRICS/NUMBERS) -->
+<section class="w-full bg-obsidian-base py-14 border-b border-hairline-border"><div class="max-w-7xl mx-auto px-6"><div class="flex items-center justify-between mb-8"><div class="flex items-center gap-2"><div class="w-2 h-2 rotate-45 bg-champagne"></div><span class="font-mono text-[12px] uppercase tracking-widest text-champagne font-medium">Architectural Postulates // Operational Cadence</span></div><span class="hidden sm:inline-block font-mono text-[11px] text-emerald-accent uppercase tracking-wider">Systemic Flow Protocol • Continuous Cadence</span></div><div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"><div class="bg-slate-card border border-hairline-border p-6 rounded-lg flex flex-col justify-between hover:border-champagne/40 transition-all shadow-md"><div class="flex items-center justify-between text-champagne"><span class="font-mono text-[11px] uppercase tracking-wider font-semibold">Throughput Discipline</span><span class="material-symbols-outlined text-[20px] text-emerald-accent">speed</span></div><div class="py-4"><div class="font-serif text-[20px] text-text-headline font-semibold tracking-tight">VELOCITY CADENCE</div><div class="font-mono text-[11px] text-champagne tracking-widest uppercase font-medium mt-0.5">Deterministic Flow Protocol</div></div><p class="font-sans text-[13px] text-text-body leading-relaxed">Enforcing strict pull request scope constraints and automated CI verification to eliminate branch stagnation and guarantee rhythm.</p></div><div class="bg-slate-card border border-hairline-border p-6 rounded-lg flex flex-col justify-between hover:border-champagne/40 transition-all shadow-md"><div class="flex items-center justify-between text-champagne"><span class="font-mono text-[11px] uppercase tracking-wider font-semibold">Execution Fidelity</span><span class="material-symbols-outlined text-[20px] text-emerald-accent">target</span></div><div class="py-4"><div class="font-serif text-[20px] text-emerald-accent font-semibold tracking-tight">EMPIRICAL STABILITY</div><div class="font-mono text-[11px] text-champagne tracking-widest uppercase font-medium mt-0.5">Disciplined Commitment</div></div><p class="font-sans text-[13px] text-text-body leading-relaxed">Eliminating delivery variance through Little's Law queue theory, disciplined WIP limits, and non-negotiable Definition of Ready protocols.</p></div><div class="bg-slate-card border border-hairline-border p-6 rounded-lg flex flex-col justify-between hover:border-champagne/40 transition-all shadow-md"><div class="flex items-center justify-between text-champagne"><span class="font-mono text-[11px] uppercase tracking-wider font-semibold">System Longevity</span><span class="material-symbols-outlined text-[20px] text-emerald-accent">shield_with_heart</span></div><div class="py-4"><div class="font-serif text-[20px] text-champagne font-semibold tracking-tight">TECHNICAL INTEGRITY</div><div class="font-mono text-[11px] text-emerald-accent tracking-widest uppercase font-medium mt-0.5">Inviolate Architecture Reserve</div></div><p class="font-sans text-[13px] text-text-body leading-relaxed">Quarantining dedicated capacity exclusively for architectural refactoring, continuous test automation, and dependency health.</p></div><div class="bg-slate-card border border-hairline-border p-6 rounded-lg flex flex-col justify-between hover:border-champagne/40 transition-all shadow-md"><div class="flex items-center justify-between text-champagne"><span class="font-mono text-[11px] uppercase tracking-wider font-semibold">Inter-Service Harmony</span><span class="material-symbols-outlined text-[20px] text-emerald-accent">sync_alt</span></div><div class="py-4"><div class="font-serif text-[20px] text-text-headline font-semibold tracking-tight">ASYNC DECOUPLING</div><div class="font-mono text-[11px] text-champagne tracking-widest uppercase font-medium mt-0.5">Contract-First Federation</div></div><p class="font-sans text-[13px] text-text-body leading-relaxed">Deploying OpenAPI specifications and active Mock Servers ahead of code execution, fully unblocking frontend and backend parallel delivery.</p></div></div></div></section>
+<!-- 3. SYSTEMIC PHILOSOPHY & GOVERNANCE MANIFESTO -->
+<section class="w-full bg-obsidian-base py-16 border-b border-hairline-border">
+<div class="max-w-7xl mx-auto px-6">
+<div class="bg-slate-card border border-hairline-border p-8 lg:p-12 rounded-xl shadow-xl relative overflow-hidden">
+<!-- Architectural Header Label -->
+<div class="flex items-center justify-between pb-6">
 <div class="flex items-center gap-2">
-<span class="text-washi-dim">KATANA ARSENAL:</span>
-<span class="px-2 py-0.5 bg-sumi-950 border border-outline-blade text-washi text-[10px]">OpenAPI 3.0</span>
-<span class="px-2 py-0.5 bg-sumi-950 border border-outline-blade text-washi text-[10px]">Prism Engine</span>
-<span class="px-2 py-0.5 bg-sumi-950 border border-outline-blade text-washi text-[10px]">WebRTC</span>
+<span class="material-symbols-outlined text-champagne text-[20px]">architecture</span>
+<span class="font-mono text-[12px] text-champagne uppercase tracking-widest font-medium">
+              Executive Governance Manifesto // Empirical Poise
+            </span>
 </div>
-<span class="text-vermilion font-semibold">CYCLE TIME: 3.8 DAYS</span>
+<span class="font-mono text-[11px] text-emerald-accent uppercase tracking-wider font-medium">ARCHITECTURAL DISCIPLINE</span>
 </div>
+<!-- Geometric Line Divider -->
+<div class="w-full flex items-center justify-center gap-2 py-2 opacity-50">
+<div class="h-px bg-hairline-border flex-1"></div>
+<div class="w-2 h-2 rotate-45 bg-champagne"></div>
+<div class="w-1.5 h-1.5 rotate-45 bg-emerald-accent"></div>
+<div class="w-2 h-2 rotate-45 bg-champagne"></div>
+<div class="h-px bg-hairline-border flex-1"></div>
 </div>
-<!-- DOSSIER 02: SocialOrder (Col-4) -->
-<div class="md:col-span-4 bg-sumi-900 border border-outline-blade rounded-sm p-6 flex flex-col justify-between group hover:border-vermilion/50 transition-all">
-<div>
-<div class="flex items-center justify-between border-b border-outline-blade pb-4 mb-5">
-<span class="font-mono text-xs text-vermilion font-bold">// SCROLL 02</span>
-<span class="font-mono text-[10px] bg-sumi-950 border border-vermilion/30 text-vermilion px-2 py-0.5 rounded-sm">PREDICTABILITY 94.2%</span>
+<div class="py-6">
+<blockquote class="font-serif text-lg sm:text-xl lg:text-2xl text-text-headline leading-relaxed font-normal">
+            “Technical Delivery Coordinator and Scrum Master with a robust software engineering foundation (B.Sc. in Software Engineering). Specialized in <span class="text-champagne italic">eliminating Agile ceremony theater</span>, resolving cross-squad API dependencies, and orchestrating predictable delivery pipelines through empirical flow analytics (Little's Law, Cycle Time compression, WIP limits). Experienced in driving high-stakes product engineering across FinTech, e-commerce, logistics, and distributed platform architectures.”
+          </blockquote>
 </div>
-<h3 class="font-cinzel text-lg sm:text-xl font-bold text-washi mb-2">
-                SocialOrder Commerce
-              </h3>
-<p class="font-body text-xs sm:text-sm text-washi-muted mb-6 leading-relaxed font-light">
-                Rescued a erratic e-commerce delivery pipeline swinging from 61% sprint predictability to a reliable 94.2%. Instituted razor-thin INVEST story slicing and unwavering Definition of Ready gates.
-              </p>
-<div class="space-y-2 mb-6 font-mono text-xs">
-<div class="p-2.5 bg-sumi-950 border border-outline-blade rounded-sm flex items-center justify-between">
-<span class="text-washi-dim">Pre-Mastery Variance:</span>
-<span class="text-vermilion font-bold">±39%</span>
+<!-- Footnote Pillars Row -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6 border-t border-hairline-border">
+<div class="flex flex-col gap-1">
+<span class="font-mono text-[12px] text-champagne uppercase font-medium">I. Mathematical Flow</span>
+<p class="font-sans text-text-body text-[13px] leading-relaxed">Rooted in Little's Law and queue theory: work-in-progress is reduced to systematically accelerate value distribution.</p>
 </div>
-<div class="p-2.5 bg-sumi-950 border border-outline-blade rounded-sm flex items-center justify-between">
-<span class="text-washi-dim">Standardized Flow Delta:</span>
-<span class="text-washi font-bold">±4.1%</span>
+<div class="flex flex-col gap-1">
+<span class="font-mono text-[12px] text-emerald-accent uppercase font-medium">II. API Decoupling</span>
+<p class="font-sans text-text-body text-[13px] leading-relaxed">OpenAPI 3.1 contracts and Prism Mocking turn dependencies into parallel pathways rather than blocking bottlenecks.</p>
 </div>
-<div class="p-2.5 bg-sumi-950 border border-outline-blade rounded-sm flex items-center justify-between">
-<span class="text-washi-dim">Story Slicing Rule:</span>
-<span class="text-vermilion font-bold">≤ 2 Pt Granularity</span>
-</div>
-</div>
-</div>
-<div class="pt-4 border-t border-outline-blade flex items-center justify-between font-mono text-xs">
-<span class="text-katana-steel">STRICT DoR &amp; DoD</span>
-<span class="text-washi">HIGH-FLOW COMMERCE</span>
-</div>
-</div>
-<!-- DOSSIER 03: QuesShare (Col-4) -->
-<div class="md:col-span-4 bg-sumi-900 border border-outline-blade rounded-sm p-6 flex flex-col justify-between group hover:border-vermilion/50 transition-all">
-<div>
-<div class="flex items-center justify-between border-b border-outline-blade pb-4 mb-5">
-<span class="font-mono text-xs text-vermilion font-bold">// SCROLL 03</span>
-<span class="font-mono text-[10px] bg-sumi-950 border border-outline-blade text-washi px-2 py-0.5 rounded-sm">ASYNC CADENCE</span>
-</div>
-<h3 class="font-cinzel text-lg sm:text-xl font-bold text-washi mb-2">
-                QuesShare Knowledge Base
-              </h3>
-<p class="font-body text-xs sm:text-sm text-washi-muted mb-6 leading-relaxed font-light">
-                Banished the agonizing 45-minute morning roll-call standup. Engineered asynchronous GitHub &amp; Jira sync automations, restoring precious focus hours for high-cognition programming.
-              </p>
-<div class="p-3.5 bg-sumi-950 border border-outline-blade rounded-sm mb-6 space-y-1.5 font-mono">
-<div class="text-xs text-vermilion">// TIME RECLAIMED</div>
-<div class="text-base font-bold text-washi">+3.5 Hours / Dev / Week</div>
-<div class="text-[10px] text-katana-steel">Context switching reduced by 72%</div>
-</div>
-</div>
-<div class="pt-4 border-t border-outline-blade flex items-center justify-between font-mono text-xs">
-<span class="text-katana-steel">DEEP FOCUS PRESERVED</span>
-<span class="text-washi">DISTRIBUTED GUILD</span>
-</div>
-</div>
-<!-- DOSSIER 04: FinTech Webhooks (Col-4) -->
-<div class="md:col-span-4 bg-sumi-900 border border-outline-blade rounded-sm p-6 flex flex-col justify-between group hover:border-vermilion/50 transition-all">
-<div>
-<div class="flex items-center justify-between border-b border-outline-blade pb-4 mb-5">
-<span class="font-mono text-xs text-vermilion font-bold">// SCROLL 04</span>
-<span class="font-mono text-[10px] bg-sumi-950 border border-vermilion/30 text-vermilion px-2 py-0.5 rounded-sm">ZERO DEFECT ESCAPE</span>
-</div>
-<h3 class="font-cinzel text-lg sm:text-xl font-bold text-washi mb-2">
-                FinTech &amp; Stripe Gateways
-              </h3>
-<p class="font-body text-xs sm:text-sm text-washi-muted mb-6 leading-relaxed font-light">
-                Orchestrated bulletproof financial transaction pipelines. Enforced double-entry ledger verification, idempotent webhook processing queues, and zero-downtime database release protocols.
-              </p>
-<div class="space-y-2 mb-6 font-mono text-xs">
-<div class="p-2.5 bg-sumi-950 border border-outline-blade rounded-sm flex items-center justify-between">
-<span class="text-washi-dim">Production Regressions:</span>
-<span class="text-vermilion font-bold">0.00%</span>
-</div>
-<div class="p-2.5 bg-sumi-950 border border-outline-blade rounded-sm flex items-center justify-between">
-<span class="text-washi-dim">Idempotency Guard:</span>
-<span class="text-washi font-medium">Redis Distributed Lock</span>
-</div>
-</div>
-</div>
-<div class="pt-4 border-t border-outline-blade flex items-center justify-between font-mono text-xs">
-<span class="text-katana-steel">PCI-DSS RIGOR</span>
-<span class="text-washi">FINTECH ARTERY</span>
-</div>
-</div>
-<!-- DOSSIER 05: Telemetry & Probabilistic Flow (Col-4) -->
-<div class="md:col-span-4 bg-sumi-900 border border-outline-blade rounded-sm p-6 flex flex-col justify-between group hover:border-vermilion/50 transition-all">
-<div>
-<div class="flex items-center justify-between border-b border-outline-blade pb-4 mb-5">
-<span class="font-mono text-xs text-vermilion font-bold">// SCROLL 05</span>
-<span class="font-mono text-[10px] bg-sumi-950 border border-outline-blade text-washi px-2 py-0.5 rounded-sm">STATISTICAL FLOW</span>
-</div>
-<h3 class="font-cinzel text-lg sm:text-xl font-bold text-washi mb-2">
-                Probabilistic Flow Telemetry
-              </h3>
-<p class="font-body text-xs sm:text-sm text-washi-muted mb-6 leading-relaxed font-light">
-                Purged vanity burn-down charts and story point pointlessness. Replaced with Little's Law WIP boundaries, ActionableAgile Cumulative Flow Diagrams, and 85th percentile Monte Carlo forecasts.
-              </p>
-<div class="p-3.5 bg-sumi-950 border border-outline-blade rounded-sm mb-6 space-y-1.5 font-mono">
-<div class="text-xs text-vermilion">// 85TH PERCENTILE TARGET</div>
-<div class="text-base font-bold text-washi">5.4 Days Max Lead Time</div>
-<div class="text-[10px] text-katana-steel">Probabilistic confidence intervals</div>
-</div>
-</div>
-<div class="pt-4 border-t border-outline-blade flex items-center justify-between font-mono text-xs">
-<span class="text-katana-steel">LITTLE'S LAW</span>
-<span class="text-washi">CFD FORECASTING</span>
-</div>
-</div>
-<!-- DOSSIER 06: IFSH & Apsy (Col-12 Full-Width Highlight) -->
-<div class="md:col-span-12 bg-sumi-900 border border-outline-blade rounded-sm p-6 lg:p-8 flex flex-col lg:flex-row justify-between gap-8 group hover:border-vermilion/50 transition-all">
-<div class="flex-1">
-<div class="flex flex-wrap items-center gap-2 mb-3">
-<span class="font-mono text-xs text-vermilion font-bold">// SCROLL 06</span>
-<span class="px-2 py-0.5 bg-sumi-950 border border-vermilion/30 text-vermilion font-mono text-[10px] rounded-sm uppercase">ORGANIZATIONAL MASTERY</span>
-<span class="font-mono text-[10px] text-katana-steel">IFSH (INNOVATIVE FUTURE SOFTWARE HOUSE) &amp; APSY</span>
-</div>
-<h3 class="font-cinzel text-xl sm:text-2xl font-bold text-washi mb-3">
-                Tech Debt Ringfencing, 20% Refactoring Buffer &amp; Blameless Post-Mortems
-              </h3>
-<p class="font-body text-sm sm:text-base text-washi-muted leading-relaxed max-w-3xl font-light">
-                At IFSH and Apsy, led technical delivery squads across complex multi-tenant cloud platforms. Instituted an inviolable 20% sprint capacity reserve exclusively earmarked for architectural refactoring, continuous automated testing, and technical debt reduction. Replaced punitive finger-pointing rituals with structured blameless root-cause analysis (5-Whys + systemic guardrails), driving engineer retention and psychological safety to company records.
-              </p>
-</div>
-<div class="flex flex-col justify-between lg:w-80 p-5 bg-sumi-950 rounded-sm border border-outline-blade font-mono text-xs">
-<div class="space-y-3">
-<div class="text-[10px] text-katana-steel uppercase tracking-widest pb-1 border-b border-outline-blade">
-                  // GOVERNANCE METRICS
-                </div>
-<div class="flex items-center justify-between">
-<span class="text-washi-dim">Guaranteed Debt Buffer:</span>
-<span class="text-vermilion font-bold">20% Inviolate</span>
-</div>
-<div class="flex items-center justify-between">
-<span class="text-washi-dim">Defect Recurrence:</span>
-<span class="text-washi font-bold">-64% Systemic</span>
-</div>
-<div class="flex items-center justify-between">
-<span class="text-washi-dim">2-Year Retention:</span>
-<span class="text-vermilion font-bold">96.8% High</span>
-</div>
-</div>
-<div class="pt-3 mt-3 border-t border-outline-blade text-[10px] text-katana-steel">
-                Zero Agony. Maximum Developer Autonomy.
-              </div>
+<div class="flex flex-col gap-1">
+<span class="font-mono text-[12px] text-text-headline uppercase font-medium">III. Cognitive Shielding</span>
+<p class="font-sans text-text-body text-[13px] leading-relaxed">Eliminating ceremonial fatigue and shielding core engineers to protect flow states and ensure pristine execution.</p>
 </div>
 </div>
 </div>
 </div>
 </section>
-<!-- ========================================================= -->
-<!-- SECTION: THE FOUR PILLARS OF BUSHIDO (KATA & MATRIX)     -->
-<!-- ========================================================= -->
-<section class="w-full border-b border-outline-blade/60 bg-sumi-900/40 py-20 relative" id="kata">
-<div class="max-w-7xl mx-auto px-6 lg:px-12">
-<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
-<div>
-<div class="flex items-center gap-2 font-mono text-xs uppercase text-vermilion tracking-widest mb-1">
-<span class="w-4 h-[1px] bg-vermilion"></span>
-<span>SECTION 03 // THE FOUR PILLARS OF THE CODE</span>
+<!-- 4. CHRONICLE OF OPERATIONAL IMPACT (EXPERIENCE) -->
+<section class="w-full bg-obsidian-base py-16 border-b border-hairline-border" id="experience">
+<div class="max-w-7xl mx-auto px-6">
+<!-- Section Title Grid -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2 text-champagne font-mono text-[12px] uppercase tracking-widest font-medium">
+<span class="material-symbols-outlined text-[16px]">timeline</span>
+            Chronicle of Operational Impact
+          </div>
+<h2 class="font-serif text-3xl lg:text-4xl text-text-headline font-semibold">
+            Enterprise Engagements &amp; Mandates
+          </h2>
 </div>
-<h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-washi tracking-tight">
-              Surgical Kata &amp; Technical Capabilities
-            </h2>
+<span class="font-mono text-[12px] text-emerald-accent uppercase tracking-wider mt-2 md:mt-0 font-medium">
+          DUBAI, UAE • LOS ANGELES, CA • GLOBAL DISTRIBUTED TEAMS
+        </span>
 </div>
-<p class="font-body text-xs sm:text-sm text-washi-dim max-w-md font-light">
-            Dual-domain supremacy uniting empirical agile delivery leadership with low-level software engineering comprehension.
-          </p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-<!-- Pillar I: Delivery Cadence -->
-<div class="p-6 bg-sumi-900 border border-outline-blade rounded-sm flex flex-col justify-between group hover:border-vermilion/50 transition-colors">
-<div>
-<div class="flex items-center justify-between pb-3 mb-4 border-b border-outline-blade font-mono text-xs">
-<span class="text-vermilion font-bold">PILLAR I</span>
-<span class="font-kanji text-sm text-washi-dim">規律</span>
-</div>
-<h4 class="font-cinzel text-lg font-bold text-washi mb-4">Practical Delivery Cadence</h4>
-<div class="flex flex-wrap gap-1.5">
-<span class="px-2.5 py-1 bg-sumi-950 border border-outline-blade rounded-sm text-xs text-washi-muted font-mono">Scrum at Scale</span>
-<span class="px-2.5 py-1 bg-sumi-950 border border-outline-blade rounded-sm text-xs text-washi-muted font-mono">Kanban Systems</span>
-<span class="px-2.5 py-1 bg-sumi-950 border border-outline-blade rounded-sm text-xs text-washi-muted font-mono">INVEST Slicing</span>
-<span class="px-2.5 py-1 bg-sumi-950 border border-outline-blade rounded-sm text-xs text-washi-muted font-mono">Definition of Ready</span>
-<span class="px-2.5 py-1 bg-sumi-950 border border-outline-blade rounded-sm text-xs text-washi-muted font-mono">Definition of Done</span>
-<span class="px-2.5 py-1 bg-sumi-950 border border-outline-blade rounded-sm text-xs text-washi-muted font-mono">Release Cadence</span>
-</div>
-</div>
-<div class="pt-6 mt-6 border-t border-outline-blade font-mono text-[10px] text-katana-steel">
-              CADENCE: 2-WEEK DETERMINISTIC
-            </div>
-</div>
-<!-- Pillar II: Empirical Flow Telemetry -->
-<div class="p-6 bg-sumi-900 border border-outline-blade rounded-sm flex flex-col justify-between group hover:border-vermilion/50 transition-colors">
-<div>
-<div class="flex items-center justify-between pb-3 mb-4 border-b border-outline-blade font-mono text-xs">
-<span class="text-vermilion font-bold">PILLAR II</span>
-<span class="font-kanji text-sm text-washi-dim">測定</span>
-</div>
-<h4 class="font-cinzel text-lg font-bold text-washi mb-4">Empirical Flow Telemetry</h4>
-<div class="flex flex-wrap gap-1.5">
-<span class="px-2.5 py-1 bg-sumi-950 border border-vermilion/30 text-vermilion rounded-sm text-xs font-mono font-semibold">Cycle Time (85th %)</span>
-<span class="px-2.5 py-1 bg-sumi-950 border border-outline-blade rounded-sm text-xs text-washi-muted font-mono">Cumulative Flow (CFD)</span>
-<span class="px-2.5 py-1 bg-sumi-950 border border-outline-blade rounded-sm text-xs text-washi-muted font-mono">Little's Law Bounds</span>
-<span class="px-2.5 py-1 bg-sumi-950 border border-vermilion/30 text-vermilion rounded-sm text-xs font-mono font-semibold">Monte Carlo Forecasts</span>
-<span class="px-2.5 py-1 bg-sumi-950 border border-outline-blade rounded-sm text-xs text-washi-muted font-mono">Throughput Telemetry</span>
-<span class="px-2.5 py-1 bg-sumi-950 border border-outline-blade rounded-sm text-xs text-washi-muted font-mono">Flow Efficiency %</span>
-</div>
-</div>
-<div class="pt-6 mt-6 border-t border-outline-blade font-mono text-[10px] text-katana-steel">
-              MATH: STATISTICAL INFERENCE
-            </div>
-</div>
-<!-- Pillar III: Contract-First Architecture -->
-<div class="p-6 bg-sumi-900 border border-outline-blade rounded-sm flex flex-col justify-between group hover:border-vermilion/50 transition-colors">
-<div>
-<div class="flex items-center justify-between pb-3 mb-4 border-b border-outline-blade font-mono text-xs">
-<span class="text-vermilion font-bold">PILLAR III</span>
-<span class="font-kanji text-sm text-washi-dim">契約</span>
-</div>
-<h4 class="font-cinzel text-lg font-bold text-washi mb-4">Contract Architecture</h4>
-<div class="flex flex-wrap gap-1.5">
-<span class="px-2.5 py-1 bg-sumi-950 border border-outline-blade rounded-sm text-xs text-washi font-mono font-semibold">OpenAPI 3.0 Specs</span>
-<span class="px-2.5 py-1 bg-sumi-950 border border-outline-blade rounded-sm text-xs text-washi-muted font-mono">Prism Mock Servers</span>
-<span class="px-2.5 py-1 bg-sumi-950 border border-outline-blade rounded-sm text-xs text-washi-muted font-mono">CI/CD Gateways</span>
-<span class="px-2.5 py-1 bg-sumi-950 border border-outline-blade rounded-sm text-xs text-washi-muted font-mono">Git Trunk / Branching</span>
-<span class="px-2.5 py-1 bg-sumi-950 border border-outline-blade rounded-sm text-xs text-washi-muted font-mono">Jira Advanced Roadmaps</span>
-<span class="px-2.5 py-1 bg-sumi-950 border border-outline-blade rounded-sm text-xs text-washi-muted font-mono">Postman Workspaces</span>
-</div>
-</div>
-<div class="pt-6 mt-6 border-t border-outline-blade font-mono text-[10px] text-katana-steel">
-              SPECS: CONTRACT-FIRST
-            </div>
-</div>
-<!-- Pillar IV: Servant Shield & Safety -->
-<div class="p-6 bg-sumi-900 border border-outline-blade rounded-sm flex flex-col justify-between group hover:border-vermilion/50 transition-colors">
-<div>
-<div class="flex items-center justify-between pb-3 mb-4 border-b border-outline-blade font-mono text-xs">
-<span class="text-vermilion font-bold">PILLAR IV</span>
-<span class="font-kanji text-sm text-washi-dim">守護</span>
-</div>
-<h4 class="font-cinzel text-lg font-bold text-washi mb-4">Servant Shield &amp; Safety</h4>
-<div class="flex flex-wrap gap-1.5">
-<span class="px-2.5 py-1 bg-sumi-950 border border-outline-blade rounded-sm text-xs text-washi-muted font-mono">Cross-Squad Unblocking</span>
-<span class="px-2.5 py-1 bg-sumi-950 border border-vermilion/30 text-vermilion rounded-sm text-xs font-mono font-semibold">Engineer Shielding</span>
-<span class="px-2.5 py-1 bg-sumi-950 border border-outline-blade rounded-sm text-xs text-washi-muted font-mono">Blameless Retros</span>
-<span class="px-2.5 py-1 bg-sumi-950 border border-outline-blade rounded-sm text-xs text-washi-muted font-mono">Psychological Safety</span>
-<span class="px-2.5 py-1 bg-sumi-950 border border-outline-blade rounded-sm text-xs text-washi-muted font-mono">Scope Defense</span>
-<span class="px-2.5 py-1 bg-sumi-950 border border-outline-blade rounded-sm text-xs text-washi-muted font-mono">20% Debt Buffer</span>
-</div>
-</div>
-<div class="pt-6 mt-6 border-t border-outline-blade font-mono text-[10px] text-katana-steel">
-              CULTURE: ZERO AGONY
-            </div>
-</div>
-</div>
-</div>
-</section>
-<!-- ========================================================= -->
-<!-- SECTION: THE CREED BANNER (BUSHIDO MANIFESTO)            -->
-<!-- ========================================================= -->
-<section class="w-full border-b border-outline-blade/60 bg-sumi-950 py-20 relative" id="bushido">
-<div class="max-w-7xl mx-auto px-6 lg:px-12">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-<div class="lg:col-span-5 flex flex-col gap-3">
-<div class="font-mono text-xs text-vermilion uppercase tracking-widest">// THE CREED OF THE CODE</div>
-<h3 class="font-cinzel text-2xl sm:text-3xl font-bold text-washi tracking-tight leading-snug">
-              Performative ceremonies do not forge code. True flow, psychological safety, and contract-driven mastery do.
-            </h3>
-<p class="font-body text-xs sm:text-sm text-washi-dim leading-relaxed font-light">
-              Corporate Agile has decayed into liturgical theater: rote standups recited like prayers, Jira tickets optimized for executive optics, and engineers suffocated beneath context switching. The Bushido of Delivery restores honor to the craft.
-            </p>
-</div>
-<div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
-<!-- Rejected Agile Theater -->
-<div class="p-6 bg-sumi-900 border border-outline-blade rounded-sm relative">
-<div class="flex items-center justify-between pb-2 mb-3 border-b border-outline-blade font-mono text-xs">
-<span class="text-katana-steel uppercase tracking-wider">// REJECTED</span>
-<span class="font-kanji text-xs text-katana-steel">無駄</span>
-</div>
-<div class="font-cinzel text-base font-bold text-washi mb-3">Agile Theater</div>
-<ul class="font-body text-xs text-washi-dim space-y-2 font-light">
-<li class="flex items-start gap-2">
-<span class="text-katana-steel text-sm leading-none">✕</span>
-<span>45-minute meandering morning roll-call standups</span>
-</li>
-<li class="flex items-start gap-2">
-<span class="text-katana-steel text-sm leading-none">✕</span>
-<span>Story point inflation to satisfy vanity burndowns</span>
-</li>
-<li class="flex items-start gap-2">
-<span class="text-katana-steel text-sm leading-none">✕</span>
-<span>Frontend squads idling on unmocked backend APIs</span>
-</li>
-<li class="flex items-start gap-2">
-<span class="text-katana-steel text-sm leading-none">✕</span>
-<span>Sweeping technical debt under the rug until total outage</span>
-</li>
-</ul>
-</div>
-<!-- Enforced Empirical Delivery -->
-<div class="p-6 bg-sumi-900 border-2 border-vermilion/50 rounded-sm relative shadow-lg">
-<div class="flex items-center justify-between pb-2 mb-3 border-b border-outline-blade font-mono text-xs">
-<span class="text-vermilion uppercase tracking-wider font-bold">// ENFORCED</span>
-<span class="font-kanji text-xs text-vermilion font-bold">武士道</span>
-</div>
-<div class="font-cinzel text-base font-bold text-washi mb-3">Empirical Delivery</div>
-<ul class="font-body text-xs text-washi-muted space-y-2 font-light">
-<li class="flex items-start gap-2">
-<span class="text-vermilion text-sm leading-none">✓</span>
-<span>Async-first status syncs via automated commit hooks</span>
-</li>
-<li class="flex items-start gap-2">
-<span class="text-vermilion text-sm leading-none">✓</span>
-<span>OpenAPI contract-first mocking on Day 1</span>
-</li>
-<li class="flex items-start gap-2">
-<span class="text-vermilion text-sm leading-none">✓</span>
-<span>Rigid WIP boundaries bounded by Little's Law</span>
-</li>
-<li class="flex items-start gap-2">
-<span class="text-vermilion text-sm leading-none">✓</span>
-<span>Guaranteed 20% sprint capacity for architectural refactoring</span>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- ========================================================= -->
-<!-- SECTION: DIRECT DISPATCH MONOLITH / SUMMONS              -->
-<!-- ========================================================= -->
-<section class="w-full bg-sumi-950 py-20 relative" id="contact">
-<div class="max-w-7xl mx-auto px-6 lg:px-12">
-<div class="p-8 lg:p-12 bg-sumi-900 border-2 border-vermilion/40 rounded-sm relative overflow-hidden shadow-2xl">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-<div class="lg:col-span-7 flex flex-col gap-4">
-<div class="inline-flex items-center gap-2 text-vermilion font-mono text-xs uppercase tracking-widest">
-<span class="w-2 h-2 rounded-full bg-vermilion animate-pulse"></span>
-<span>INITIATE ENGAGEMENT // DIRECT SUMMONS</span>
-</div>
-<h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-washi tracking-tight">
-                Ready to cut theater and forge unstoppable squad flow?
-              </h2>
-<p class="font-body text-sm sm:text-base text-washi-muted leading-relaxed max-w-xl font-light">
-                Open to Principal Technical Delivery Lead mandates, Agile Director engagements, and high-stakes squad turnarounds. Remote worldwide or hybrid.
-              </p>
-<!-- Action Triggers -->
-<div class="flex flex-wrap items-center gap-3 pt-2">
-<a class="inline-flex items-center justify-center px-6 py-3.5 bg-vermilion text-white font-mono text-xs font-semibold rounded-sm hover:bg-vermilion-glow transition-all shadow-[0_0_20px_rgba(214,40,40,0.35)] active:scale-[0.99]" href="mailto:masoudvzii@gmail.com">
-<span class="material-symbols-outlined mr-2 text-[18px]">mail</span>
-<span>masoudvzii@gmail.com</span>
-</a>
-<button class="inline-flex items-center justify-center px-4 py-3.5 bg-sumi-950 border border-outline-blade text-washi font-mono text-xs rounded-sm hover:border-katana-steel transition-colors" onclick="navigator.clipboard.writeText('masoudvzii@gmail.com'); alert('Summons address copied: masoudvzii@gmail.com');" title="Copy Email">
-<span class="material-symbols-outlined text-[18px]">content_copy</span>
-</button>
-<a class="inline-flex items-center justify-center px-5 py-3.5 bg-sumi-950 border border-outline-blade text-washi font-mono text-xs rounded-sm hover:border-katana-steel transition-colors" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">
-<span>LinkedIn Profile</span>
-<span class="material-symbols-outlined ml-1.5 text-[16px]">open_in_new</span>
-</a>
-</div>
-</div>
-<!-- Terminal Telemetry Box -->
-<div class="lg:col-span-5 bg-sumi-950 border border-outline-blade rounded-sm p-6 font-mono text-xs space-y-3">
-<div class="flex items-center justify-between pb-2 border-b border-outline-blade">
-<span class="text-katana-steel uppercase tracking-widest">// DISPATCH TELEMETRY</span>
-<span class="text-vermilion font-bold">ACTIVE ROUTE</span>
-</div>
-<div class="flex justify-between text-washi-dim">
-<span>MASTER IDENTITY:</span>
-<span class="text-washi font-bold">Masoud Valizadeh</span>
-</div>
-<div class="flex justify-between text-washi-dim">
-<span>PRIMARY SCROLL:</span>
-<span class="text-vermilion">masoudvzii@gmail.com</span>
-</div>
-<div class="flex justify-between text-washi-dim">
-<span>ENGAGEMENT FORMAT:</span>
-<span class="text-washi">Lead / Director / Advisory</span>
-</div>
-<div class="flex justify-between text-washi-dim">
-<span>TIMEZONE OVERLAP:</span>
-<span class="text-washi">Global (UTC -5 to UTC +4)</span>
-</div>
-<div class="flex justify-between text-washi-dim">
-<span>SECURITY PROTOCOL:</span>
-<span class="text-washi">PGP / TLS 1.3 Strict</span>
-</div>
-<div class="pt-3 border-t border-outline-blade flex items-center justify-between">
-<span class="text-washi-dim">SQUAD STATUS:</span>
-<span class="inline-flex items-center gap-1.5 text-vermilion font-semibold">
-<span class="w-2 h-2 rounded-full bg-vermilion animate-ping"></span>
-                  READY TO UNBLOCK
+<!-- Experience Cards Stack -->
+<div class="flex flex-col gap-8">
+<!-- Mandate 1: IFS -->
+<div class="bg-slate-card border border-hairline-border p-8 lg:p-10 rounded-xl shadow-xl hover:border-champagne/30 transition-all duration-300">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-6 border-b border-hairline-border">
+<div class="flex flex-col">
+<div class="flex flex-wrap items-center gap-3">
+<h3 class="font-sans text-xl lg:text-2xl text-text-headline font-bold">Innovative Future Software House (IFS)</h3>
+<span class="px-2.5 py-1 rounded bg-emerald-accent/15 border border-emerald-accent/30 text-emerald-accent font-mono text-[11px] uppercase tracking-wider font-semibold">
+                  Active Mandate
                 </span>
 </div>
+<span class="font-sans text-champagne text-[16px] font-semibold mt-1">Project Manager / Scrum Master</span>
+</div>
+<div class="flex flex-col lg:items-end font-mono text-[12px] text-text-muted">
+<div class="flex items-center gap-1.5 text-champagne font-medium">
+<span class="material-symbols-outlined text-[16px]">calendar_month</span>
+<span>May 2024 – Present</span>
+</div>
+<div class="flex items-center gap-1.5 text-text-body">
+<span class="material-symbols-outlined text-[16px] text-emerald-accent">location_on</span>
+<span>Dubai, UAE (Remote Distributed Practice)</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 pt-6">
+<div class="lg:col-span-8 flex flex-col gap-4">
+<ul class="flex flex-col gap-3 text-text-body font-sans text-[15px] leading-relaxed">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-champagne text-[20px] mt-0.5 shrink-0">check_circle</span>
+<span>Facilitated cross-functional Scrum events and multi-squad delivery cadences across distributed engineering squads, synchronizing product, architecture, and quality engineering.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-champagne text-[20px] mt-0.5 shrink-0">check_circle</span>
+<span>Instituted a non-negotiable <strong class="text-text-headline font-semibold">20% sprint capacity reserve</strong> quarantined exclusively for technical debt refactoring, automated testing, and architecture health, preventing systemic stagnation and maintaining high engineering morale.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-champagne text-[20px] mt-0.5 shrink-0">check_circle</span>
+<span>Established blameless post-mortems and root-cause analyses, transforming operational outages into automated CI/CD verification tests and fostering high psychological safety across squads.</span>
+</li>
+</ul>
+</div>
+<div class="lg:col-span-4 bg-slate-card-high border border-hairline-border p-6 rounded-lg flex flex-col gap-4">
+<span class="font-mono text-[11px] uppercase tracking-widest text-champagne font-semibold">Cadence Governance</span>
+<div class="flex flex-col gap-2 font-mono text-[12px] text-text-body">
+<div class="flex justify-between py-1 border-b border-hairline-border/50">
+<span class="text-text-muted">Sprint Frequency</span>
+<span class="text-text-headline font-semibold">Bi-Weekly Strict</span>
+</div>
+<div class="flex justify-between py-1 border-b border-hairline-border/50">
+<span class="text-text-muted">Tech Debt Quarantine</span>
+<span class="text-emerald-accent font-semibold">20% Inviolate</span>
+</div>
+<div class="flex justify-between py-1 border-b border-hairline-border/50">
+<span class="text-text-muted">Incident Recovery</span>
+<span class="text-champagne font-semibold">Automated Regression</span>
+</div>
+<div class="flex justify-between py-1">
+<span class="text-text-muted">Squad Footprint</span>
+<span class="text-text-headline font-semibold">Distributed MENA / EU</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Mandate 2: Apsy -->
+<div class="bg-slate-card border border-hairline-border p-8 lg:p-10 rounded-xl shadow-xl hover:border-champagne/30 transition-all duration-300">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-6 border-b border-hairline-border">
+<div class="flex flex-col">
+<div class="flex flex-wrap items-center gap-3">
+<h3 class="font-sans text-xl lg:text-2xl text-text-headline font-bold">Apsy</h3>
+<span class="px-2.5 py-1 rounded bg-slate-card-highest border border-hairline-border text-text-headline font-mono text-[11px] uppercase tracking-wider font-semibold">
+                  US Ecosystem
+                </span>
+</div>
+<span class="font-sans text-champagne text-[16px] font-semibold mt-1">Technical Scrum Master &amp; Delivery Coordinator</span>
+</div>
+<div class="flex flex-col lg:items-end font-mono text-[12px] text-text-muted">
+<div class="flex items-center gap-1.5 text-champagne font-medium">
+<span class="material-symbols-outlined text-[16px]">calendar_month</span>
+<span>Up to May 2024</span>
+</div>
+<div class="flex items-center gap-1.5 text-text-body">
+<span class="material-symbols-outlined text-[16px] text-emerald-accent">location_on</span>
+<span>Los Angeles, CA, USA (Remote)</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 pt-6">
+<div class="lg:col-span-8 flex flex-col gap-4">
+<ul class="flex flex-col gap-3 text-text-body font-sans text-[15px] leading-relaxed">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-champagne text-[20px] mt-0.5 shrink-0">check_circle</span>
+<span>Orchestrated multi-squad product delivery, aligning frontend, backend, and QA teams around predictable release milestones and minimizing scope creep during fast-paced development cycles.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-champagne text-[20px] mt-0.5 shrink-0">check_circle</span>
+<span>Optimized backlog grooming sessions using <strong class="text-text-headline font-semibold">INVEST user story slicing</strong>, breaking down bulky epics into atomic 1-2 day executable units for rapid, continuous pipeline traversal.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-champagne text-[20px] mt-0.5 shrink-0">check_circle</span>
+<span>Implemented strict <strong class="text-text-headline font-semibold">Definition of Ready (DoR)</strong> and <strong class="text-text-headline font-semibold">Definition of Done (DoD)</strong> protocols, slashing regression defect densities and stabilizing sprint commitments.</span>
+</li>
+</ul>
+</div>
+<div class="lg:col-span-4 bg-slate-card-high border border-hairline-border p-6 rounded-lg flex flex-col gap-4">
+<span class="font-mono text-[11px] uppercase tracking-widest text-champagne font-semibold">Story Slicing Metrics</span>
+<div class="flex flex-col gap-2 font-mono text-[12px] text-text-body">
+<div class="flex justify-between py-1 border-b border-hairline-border/50">
+<span class="text-text-muted">Granularity Target</span>
+<span class="text-emerald-accent font-semibold">1-2 Day Batches</span>
+</div>
+<div class="flex justify-between py-1 border-b border-hairline-border/50">
+<span class="text-text-muted">Story Standard</span>
+<span class="text-text-headline font-semibold">INVEST Qualified</span>
+</div>
+<div class="flex justify-between py-1 border-b border-hairline-border/50">
+<span class="text-text-muted">Defect Density Drop</span>
+<span class="text-champagne font-semibold">Significant Reduction</span>
+</div>
+<div class="flex justify-between py-1">
+<span class="text-text-muted">Commitment Variance</span>
+<span class="text-text-headline font-semibold">Minimal Deviation</span>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
 </div>
 </section>
-</main>
-<!-- SAMURAI FOOTER -->
-<footer class="w-full bg-sumi-950 border-t border-outline-blade py-12">
-<div class="max-w-7xl mx-auto px-6 lg:px-12">
-<div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-8">
-<div class="md:col-span-5 flex flex-col gap-2">
-<div class="flex items-center gap-2">
-<span class="font-cinzel text-lg font-bold text-washi">Masoud Valizadeh</span>
-<span class="font-mono text-[10px] text-vermilion uppercase px-1.5 py-0.5 border border-vermilion/30 rounded-sm bg-vermilion/10">Master of Flow</span>
-</div>
-<p class="font-body text-xs text-washi-dim max-w-sm font-light">
-            Surgical technical delivery, empirical flow architecture, and unshakeable engineering cadence. Zero theater.
-          </p>
-</div>
-<div class="md:col-span-4 flex flex-col gap-1 font-mono text-xs">
-<span class="text-[10px] uppercase tracking-widest text-katana-steel mb-1">// TELEMETRY &amp; REALM</span>
-<span class="text-washi-dim">COORDINATES: GLOBAL CLOUD / DISTRIBUTED</span>
-<span class="text-washi-dim">STATUS: NOMINAL (UNBLOCKED)</span>
-<span class="text-washi-dim">SECURITY: ENCRYPTED ARTERY</span>
-</div>
-<div class="md:col-span-3 flex flex-col md:items-end justify-between gap-2 font-mono text-xs">
-<span class="text-[10px] uppercase tracking-widest text-katana-steel">// DIRECT SCROLL</span>
-<a class="text-vermilion hover:underline" href="mailto:masoudvzii@gmail.com">masoudvzii@gmail.com</a>
-<span class="text-[10px] text-katana-steel">BUSHIDO ARCH-v4.2</span>
-</div>
-</div>
-<div class="pt-6 border-t border-outline-blade flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-[10px] text-washi-dim">
-<div>
-          © 2025 Masoud Valizadeh. All Rights Reserved. Strictly 100% English &amp; LTR.
+<!-- 5. CORE EXPERTISE & COMPETENCIES (FOUR ARCHITECTURAL PILLARS) -->
+<section class="w-full bg-obsidian-base py-16 border-b border-hairline-border" id="pillars">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col gap-2 mb-10 text-left">
+<div class="flex items-center gap-2 text-champagne font-mono text-[12px] uppercase tracking-widest font-medium">
+<span class="material-symbols-outlined text-[16px]">account_tree</span>
+          Operational Pillars
         </div>
-<div class="flex items-center gap-6">
-<a class="hover:text-vermilion transition-colors" href="#hero">Top of Scroll</a>
-<a class="hover:text-vermilion transition-colors" href="#dossiers">Katana Scrolls</a>
-<a class="hover:text-vermilion transition-colors" href="#kata">Kata Matrix</a>
-<a class="hover:text-vermilion transition-colors" href="#contact">Dispatch</a>
+<h2 class="font-serif text-3xl lg:text-4xl text-text-headline font-semibold">
+          Quad-Pillar Delivery Architecture
+        </h2>
+<p class="font-sans text-[15px] text-text-muted max-w-xl">
+          Structural methodologies forged through computer software engineering rigor and battle-tested team leadership.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Pillar I -->
+<div class="bg-slate-card border border-hairline-border p-6 rounded-xl shadow-lg flex flex-col justify-between hover:border-champagne/40 transition-all">
+<div class="flex flex-col gap-4">
+<div class="w-11 h-11 rounded-lg bg-slate-card-high border border-hairline-border flex items-center justify-center text-champagne">
+<span class="material-symbols-outlined text-[24px]">view_kanban</span>
+</div>
+<div class="flex flex-col">
+<span class="font-mono text-[11px] text-champagne uppercase tracking-widest font-medium">Pillar I</span>
+<h3 class="font-sans text-[17px] text-text-headline font-bold">Agile &amp; Delivery Frameworks</h3>
+</div>
+<p class="font-sans text-[14px] text-text-body leading-relaxed">
+              Scrum • Kanban Systems • Sprint Cadence Synchronization • Backlog Refinement • INVEST Story Slicing • DoR &amp; DoD Governance.
+            </p>
+</div>
+<div class="pt-6 flex flex-wrap gap-1.5">
+<span class="px-2 py-1 rounded bg-slate-card-high border border-hairline-border font-mono text-[11px] text-emerald-accent font-medium">SCRUM</span>
+<span class="px-2 py-1 rounded bg-slate-card-high border border-hairline-border font-mono text-[11px] text-emerald-accent font-medium">KANBAN</span>
+<span class="px-2 py-1 rounded bg-slate-card-high border border-hairline-border font-mono text-[11px] text-emerald-accent font-medium">INVEST</span>
+</div>
+</div>
+<!-- Pillar II -->
+<div class="bg-slate-card border border-hairline-border p-6 rounded-xl shadow-lg flex flex-col justify-between hover:border-champagne/40 transition-all">
+<div class="flex flex-col gap-4">
+<div class="w-11 h-11 rounded-lg bg-slate-card-high border border-hairline-border flex items-center justify-center text-emerald-accent">
+<span class="material-symbols-outlined text-[24px]">analytics</span>
+</div>
+<div class="flex flex-col">
+<span class="font-mono text-[11px] text-champagne uppercase tracking-widest font-medium">Pillar II</span>
+<h3 class="font-sans text-[17px] text-text-headline font-bold">Flow &amp; Data Metrics</h3>
+</div>
+<p class="font-sans text-[14px] text-text-body leading-relaxed">
+              Cycle Time &amp; Lead Time Compression • Cumulative Flow Diagrams (CFD) • WIP Limit Enforcement • Throughput Forecasting • Little's Law Application.
+            </p>
+</div>
+<div class="pt-6 flex flex-wrap gap-1.5">
+<span class="px-2 py-1 rounded bg-slate-card-high border border-hairline-border font-mono text-[11px] text-champagne font-medium">CFD</span>
+<span class="px-2 py-1 rounded bg-slate-card-high border border-hairline-border font-mono text-[11px] text-champagne font-medium">WIP LIMITS</span>
+<span class="px-2 py-1 rounded bg-slate-card-high border border-hairline-border font-mono text-[11px] text-champagne font-medium">CYCLE TIME</span>
+</div>
+</div>
+<!-- Pillar III -->
+<div class="bg-slate-card border border-hairline-border p-6 rounded-xl shadow-lg flex flex-col justify-between hover:border-champagne/40 transition-all">
+<div class="flex flex-col gap-4">
+<div class="w-11 h-11 rounded-lg bg-slate-card-high border border-hairline-border flex items-center justify-center text-champagne">
+<span class="material-symbols-outlined text-[24px]">terminal</span>
+</div>
+<div class="flex flex-col">
+<span class="font-mono text-[11px] text-champagne uppercase tracking-widest font-medium">Pillar III</span>
+<h3 class="font-sans text-[17px] text-text-headline font-bold">Engineering Alignment</h3>
+</div>
+<p class="font-sans text-[14px] text-text-body leading-relaxed">
+              Jira Advanced Workflows • Confluence Technical Specs • OpenAPI 3.1 Contract-First Architecture • Prism Mock Servers • Git SDLC • CI/CD Awareness.
+            </p>
+</div>
+<div class="pt-6 flex flex-wrap gap-1.5">
+<span class="px-2 py-1 rounded bg-slate-card-high border border-hairline-border font-mono text-[11px] text-text-headline font-medium">OPENAPI 3.1</span>
+<span class="px-2 py-1 rounded bg-slate-card-high border border-hairline-border font-mono text-[11px] text-text-headline font-medium">PRISM MOCKS</span>
+<span class="px-2 py-1 rounded bg-slate-card-high border border-hairline-border font-mono text-[11px] text-text-headline font-medium">JIRA OPS</span>
+</div>
+</div>
+<!-- Pillar IV -->
+<div class="bg-slate-card border border-hairline-border p-6 rounded-xl shadow-lg flex flex-col justify-between hover:border-champagne/40 transition-all">
+<div class="flex flex-col gap-4">
+<div class="w-11 h-11 rounded-lg bg-slate-card-high border border-hairline-border flex items-center justify-center text-emerald-accent">
+<span class="material-symbols-outlined text-[24px]">groups</span>
+</div>
+<div class="flex flex-col">
+<span class="font-mono text-[11px] text-champagne uppercase tracking-widest font-medium">Pillar IV</span>
+<h3 class="font-sans text-[17px] text-text-headline font-bold">Servant Leadership &amp; Culture</h3>
+</div>
+<p class="font-sans text-[14px] text-text-body leading-relaxed">
+              Cross-Squad Alignment • Developer Cognitive Shielding • Blameless Retrospectives • Technical Debt Budgeting • Psychological Safety Protocols.
+            </p>
+</div>
+<div class="pt-6 flex flex-wrap gap-1.5">
+<span class="px-2 py-1 rounded bg-slate-card-high border border-hairline-border font-mono text-[11px] text-emerald-accent font-medium">RETROS</span>
+<span class="px-2 py-1 rounded bg-slate-card-high border border-hairline-border font-mono text-[11px] text-emerald-accent font-medium">SHIELDING</span>
+<span class="px-2 py-1 rounded bg-slate-card-high border border-hairline-border font-mono text-[11px] text-emerald-accent font-medium">PSYCH SAFETY</span>
 </div>
 </div>
 </div>
-</footer>
-</body></html>
+</div>
+</section>
+<!-- 6. KEY PROJECTS & PRODUCTION CASE DOSSIERS -->
+<section class="w-full bg-obsidian-base py-16 border-b border-hairline-border" id="dossiers">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2 text-champagne font-mono text-[12px] uppercase tracking-widest font-medium">
+<span class="material-symbols-outlined text-[16px]">folder_special</span>
+            Production Case Dossiers
+          </div>
+<h2 class="font-serif text-3xl lg:text-4xl text-text-headline font-semibold">
+            Technical Architectures &amp; Delivery Audits
+          </h2>
+</div>
+<span class="font-mono text-[12px] text-emerald-accent uppercase tracking-wider mt-2 md:mt-0 font-medium">
+          FINTECH • LOGISTICS • DISTRIBUTED PLATFORMS
+        </span>
+</div>
+<div class="flex flex-col gap-6">
+<!-- Dossier 01: TherExNow -->
+<div class="bg-slate-card border border-hairline-border p-8 rounded-xl shadow-xl hover:border-champagne/30 transition-all">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-2 pb-6 border-b border-hairline-border">
+<div class="flex flex-wrap items-center gap-3">
+<span class="font-mono text-[11px] text-emerald-accent uppercase tracking-widest px-2.5 py-1 rounded bg-slate-card-high border border-hairline-border font-semibold">DOSSIER // 01</span>
+<h3 class="font-sans text-xl text-text-headline font-bold">TherExNow</h3>
+<span class="text-champagne font-mono text-[13px] font-medium">— Delivery &amp; Logistics Ecosystem</span>
+</div>
+<span class="font-mono text-[12px] text-text-muted">Domain: High-Frequency Logistics</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6">
+<div class="bg-slate-card-high border border-hairline-border p-5 rounded-lg flex flex-col gap-2">
+<div class="flex items-center gap-1.5 text-amber-400 font-mono text-[12px] uppercase font-semibold">
+<span class="material-symbols-outlined text-[17px]">warning</span>
+                The Challenge
+              </div>
+<p class="font-sans text-[13px] text-text-body leading-relaxed">
+                Frontend client engineering suffered from acute delivery deadlock and idle wait states due to synchronous backend dependencies and unfinalized API endpoints.
+              </p>
+</div>
+<div class="bg-slate-card-high border border-hairline-border p-5 rounded-lg flex flex-col gap-2">
+<div class="flex items-center gap-1.5 text-champagne font-mono text-[12px] uppercase font-semibold">
+<span class="material-symbols-outlined text-[17px]">build_circle</span>
+                Architectural Solution
+              </div>
+<p class="font-sans text-[13px] text-text-body leading-relaxed">
+                Spearheaded OpenAPI contract-first standardization and deployed Confluence-backed Prism Mock Servers, enabling mobile and web squads to build, stub, and test features in pure parallel.
+              </p>
+</div>
+<div class="bg-slate-card-high border border-hairline-border p-5 rounded-lg flex flex-col gap-2">
+<div class="flex items-center gap-1.5 text-emerald-accent font-mono text-[12px] uppercase font-semibold">
+<span class="material-symbols-outlined text-[17px]">verified</span>
+                Empirical Impact
+              </div>
+<p class="font-sans text-[13px] text-text-body leading-relaxed">
+                Completely eliminated frontend idle wait time during backend microservice refactoring and significantly compressed feature lead times across both web and native iOS/Android releases.
+              </p>
+</div>
+</div>
+</div>
+<!-- Dossier 02: SocialOrder & QuesShare -->
+<div class="bg-slate-card border border-hairline-border p-8 rounded-xl shadow-xl hover:border-champagne/30 transition-all">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-2 pb-6 border-b border-hairline-border">
+<div class="flex flex-wrap items-center gap-3">
+<span class="font-mono text-[11px] text-emerald-accent uppercase tracking-widest px-2.5 py-1 rounded bg-slate-card-high border border-hairline-border font-semibold">DOSSIER // 02</span>
+<h3 class="font-sans text-xl text-text-headline font-bold">SocialOrder &amp; QuesShare</h3>
+<span class="text-champagne font-mono text-[13px] font-medium">— Transactional Commerce &amp; Collaboration Platforms</span>
+</div>
+<span class="font-mono text-[12px] text-text-muted">Domain: Commerce &amp; Real-Time Data</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6">
+<div class="bg-slate-card-high border border-hairline-border p-5 rounded-lg flex flex-col gap-2">
+<div class="flex items-center gap-1.5 text-amber-400 font-mono text-[12px] uppercase font-semibold">
+<span class="material-symbols-outlined text-[17px]">warning</span>
+                The Challenge
+              </div>
+<p class="font-sans text-[13px] text-text-body leading-relaxed">
+                High cycle-time variance and mid-sprint scope creep driven by unrefined backlogs, ambiguous acceptance criteria, and volatile stakeholder demands during execution.
+              </p>
+</div>
+<div class="bg-slate-card-high border border-hairline-border p-5 rounded-lg flex flex-col gap-2">
+<div class="flex items-center gap-1.5 text-champagne font-mono text-[12px] uppercase font-semibold">
+<span class="material-symbols-outlined text-[17px]">build_circle</span>
+                Architectural Solution
+              </div>
+<p class="font-sans text-[13px] text-text-body leading-relaxed">
+                Enforced rigorous Definition of Ready (DoR) and Definition of Done (DoD) standards, utilized Planning Poker for granular estimations, and restructured epics into INVEST vertical slices.
+              </p>
+</div>
+<div class="bg-slate-card-high border border-hairline-border p-5 rounded-lg flex flex-col gap-2">
+<div class="flex items-center gap-1.5 text-emerald-accent font-mono text-[12px] uppercase font-semibold">
+<span class="material-symbols-outlined text-[17px]">verified</span>
+                Empirical Impact
+              </div>
+<p class="font-sans text-[13px] text-text-body leading-relaxed">
+                Achieved high sprint predictability, completely eliminated mid-sprint scope creep, and streamlined stakeholder feedback loops into productive Sprint Reviews.
+              </p>
+</div>
+</div>
+</div>
+<!-- Dossier 03: FinTech & Payment Architecture -->
+<div class="bg-slate-card border border-hairline-border p-8 rounded-xl shadow-xl hover:border-champagne/30 transition-all">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-2 pb-6 border-b border-hairline-border">
+<div class="flex flex-wrap items-center gap-3">
+<span class="font-mono text-[11px] text-emerald-accent uppercase tracking-widest px-2.5 py-1 rounded bg-slate-card-high border border-hairline-border font-semibold">DOSSIER // 03</span>
+<h3 class="font-sans text-xl text-text-headline font-bold">FinTech &amp; Payment Architecture</h3>
+<span class="text-champagne font-mono text-[13px] font-medium">— Stripe API &amp; Web3 Integrations</span>
+</div>
+<span class="font-mono text-[12px] text-text-muted">Domain: Mission-Critical Financial Flow</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6">
+<div class="bg-slate-card-high border border-hairline-border p-5 rounded-lg flex flex-col gap-2">
+<div class="flex items-center gap-1.5 text-amber-400 font-mono text-[12px] uppercase font-semibold">
+<span class="material-symbols-outlined text-[17px]">warning</span>
+                The Challenge
+              </div>
+<p class="font-sans text-[13px] text-text-body leading-relaxed">
+                Managing high-stakes transactional integrity across payment gateways and financial modules with absolutely zero tolerance for regression or monetary reconciliation errors.
+              </p>
+</div>
+<div class="bg-slate-card-high border border-hairline-border p-5 rounded-lg flex flex-col gap-2">
+<div class="flex items-center gap-1.5 text-champagne font-mono text-[12px] uppercase font-semibold">
+<span class="material-symbols-outlined text-[17px]">build_circle</span>
+                Architectural Solution
+              </div>
+<p class="font-sans text-[13px] text-text-body leading-relaxed">
+                Coordinated cross-squad delivery cycles for transactional gateway integrations, embedding strict verification checklists, state validation, and circuit-breaker assertions into the DoD.
+              </p>
+</div>
+<div class="bg-slate-card-high border border-hairline-border p-5 rounded-lg flex flex-col gap-2">
+<div class="flex items-center gap-1.5 text-emerald-accent font-mono text-[12px] uppercase font-semibold">
+<span class="material-symbols-outlined text-[17px]">verified</span>
+                Empirical Impact
+              </div>
+<p class="font-sans text-[13px] text-text-body leading-relaxed">
+                Delivered 100% regression-free payment deployments across high-throughput production environments, establishing dependable automated safety margins.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. NATIONAL RECOGNITION & ACADEMIC FOUNDATION -->
+<section class="w-full bg-obsidian-base py-16 border-b border-hairline-border" id="honors">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- National Honor Card: 8 Columns -->
+<div class="lg:col-span-8 bg-slate-card border border-hairline-border p-8 lg:p-10 rounded-xl shadow-xl flex flex-col justify-between hover:border-champagne/30 transition-all">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 text-champagne font-mono text-[12px] uppercase tracking-widest font-medium">
+<span class="material-symbols-outlined text-[20px]">military_tech</span>
+                National Recognition // Parliamentary Honor
+              </div>
+<span class="px-2.5 py-1 rounded bg-champagne/15 border border-champagne/30 text-champagne font-mono text-[11px] uppercase tracking-wider font-semibold">
+                DEC 2025 LAUREATE
+              </span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-serif text-2xl lg:text-3xl text-text-headline font-semibold">
+                1st Place Winner — 6th Shahid Modarres National Festival
+              </h3>
+<span class="font-mono text-[12px] text-emerald-accent font-medium">
+                Organized by the Parliament Research Center
+              </span>
+</div>
+<p class="font-sans text-[15px] text-text-body leading-relaxed">
+              Awarded first place nationally (December 2025) for co-authoring a strategic governance and macro-level participatory oversight framework. This honor demonstrates advanced systemic thinking, structural process engineering, and high-impact macro-architecture design capabilities applicable to both public governance and enterprise engineering organizations.
+            </p>
+</div>
+<div class="flex items-center gap-4 pt-6 border-t border-hairline-border">
+<div class="flex items-center gap-1.5 font-mono text-[12px] text-champagne font-semibold">
+<span class="material-symbols-outlined text-[17px]">verified</span>
+              National Ranking: #1 Co-Author
+            </div>
+<div class="w-1.5 h-1.5 rounded-full bg-hairline-border"></div>
+<div class="font-mono text-[12px] text-text-muted">
+              Domain: Macro-Systems Governance
+            </div>
+</div>
+</div>
+<!-- Academic Foundation Card: 4 Columns -->
+<div class="lg:col-span-4 bg-slate-card border border-hairline-border p-8 rounded-xl shadow-xl flex flex-col justify-between hover:border-champagne/30 transition-all">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2 text-champagne font-mono text-[12px] uppercase tracking-widest font-medium">
+<span class="material-symbols-outlined text-[20px]">school</span>
+              Academic Foundation
+            </div>
+<div class="flex flex-col gap-1">
+<h3 class="font-serif text-xl text-text-headline font-semibold">
+                B.Sc. in Computer Software Engineering
+              </h3>
+<span class="font-mono text-[12px] text-champagne font-medium">
+                Bachelor of Science Degree
+              </span>
+</div>
+<p class="font-sans text-[14px] text-text-body leading-relaxed">
+              Undergraduate Degree in Computer Software Engineering, establishing rigorous code-level fluency, algorithm design, relational data structures, and distributed systems architecture.
+            </p>
+</div>
+<div class="pt-6 border-t border-hairline-border">
+<div class="p-3 rounded bg-slate-card-high border border-hairline-border flex items-center gap-2.5">
+<span class="material-symbols-outlined text-emerald-accent text-[20px]">code</span>
+<span class="font-mono text-[12px] text-text-headline font-medium">Code-Level Fluency &amp; SDLC Mastery</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. DIRECT DISPATCH & ENGAGEMENT TERMINAL -->
+<section class="w-full bg-obsidian-base py-16 lg:py-24 relative" id="dispatch">
+<div class="max-w-7xl mx-auto px-6">
+<div class="bg-gradient-to-br from-slate-card via-slate-card-high to-slate-card p-8 lg:p-12 rounded-xl border border-hairline-border shadow-2xl relative overflow-hidden">
+<div class="relative z-10 max-w-3xl flex flex-col gap-6">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rotate-45 bg-champagne"></div>
+<span class="font-mono text-[12px] text-champagne uppercase tracking-widest font-medium">
+              Direct Executive Engagement // Global Mandates
+            </span>
+</div>
+<h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-text-headline tracking-tight leading-tight">
+            Ready to eliminate delivery chaos and <span class="text-champagne italic">stabilize velocity</span>?
+          </h2>
+<p class="font-sans text-[16px] text-text-body max-w-xl leading-relaxed">
+            Available for Staff Technical Delivery Lead, Technical Scrum Master, and Agile Practice Lead mandates across the US, UAE, and Europe. Fully equipped for high-stakes remote and hybrid distributed environments.
+          </p>
+<!-- Terminal Contact Bar -->
+<div class="flex flex-wrap items-center gap-4 pt-2">
+<a class="px-6 py-3.5 rounded bg-champagne text-obsidian-base font-mono font-bold text-[12px] uppercase tracking-wider hover:bg-champagne-light transition-all duration-200 shadow-lg shadow-champagne/10 flex items-center gap-2" href="mailto:masoudvzi@gmail.com">
+<span class="material-symbols-outlined text-[20px]">alternate_email</span>
+              Dispatch Email to masoudvzi@gmail.com
+            </a>
+<a class="px-5 py-3.5 rounded border border-hairline-border bg-slate-card text-text-headline font-mono text-[12px] uppercase tracking-wider hover:bg-slate-card-high hover:border-champagne/40 transition-colors flex items-center gap-2 shadow-md" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px] text-emerald-accent">share</span>
+              LinkedIn Profile
+            </a>
+<button class="px-5 py-3.5 rounded border border-hairline-border bg-slate-card-high text-champagne font-mono text-[12px] uppercase tracking-wider hover:bg-slate-card-highest transition-colors flex items-center gap-2 shadow-md" onclick="window.print();">
+<span class="material-symbols-outlined text-[20px]">download</span>
+              Download Dossier CV
+            </button>
+</div>
+<!-- Micro Coordinate Stamp -->
+<div class="pt-4 flex flex-wrap items-center gap-6 text-text-muted font-mono text-[11px] uppercase tracking-widest">
+<span>PGP: 8F1B 44C0 732D</span>
+<span>TIMEZONE: UTC+03:30 (OVERLAP: US EST / EU / GST)</span>
+<span class="text-emerald-accent font-medium">STATUS: READY FOR INTERVIEW</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-obsidian-base border-t border-hairline-border text-text-muted pt-14 pb-12"><div class="max-w-7xl mx-auto px-6"><div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-10 border-b border-hairline-border"><div class="md:col-span-2 flex flex-col gap-3"><div class="flex items-center gap-2.5"><div class="w-2 h-2 rotate-45 bg-champagne"></div><span class="font-sans text-xl text-text-headline font-bold">Masoud Valizadeh</span></div><p class="font-sans text-[14px] text-text-body max-w-lg leading-relaxed">Architecting resilient technical organizations, high-frequency continuous delivery engines, and enterprise agility frameworks grounded in mathematical poise and systemic harmony.</p><div class="flex items-center gap-3 pt-1"><div class="flex items-center gap-1 px-2.5 py-1 rounded bg-slate-card border border-hairline-border font-mono text-[10px] text-text-headline"><span class="material-symbols-outlined text-[13px] text-emerald-accent">verified</span>PSM III • SAFe SPC</div><div class="flex items-center gap-1 px-2.5 py-1 rounded bg-slate-card border border-hairline-border font-mono text-[10px] text-champagne"><span class="material-symbols-outlined text-[13px]">terminal</span>DORA Flow Mastery</div></div></div><div class="flex flex-col gap-2"><span class="font-mono text-[11px] uppercase tracking-widest text-champagne font-semibold">Governance Coordinates</span><div class="flex flex-col gap-1.5 font-mono text-[12px] text-text-body"><span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[15px] text-emerald-accent">pin_drop</span>35.6892° N, 51.3890° E</span><span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[15px] text-emerald-accent">schedule</span>UTC+03:30 / Global Remote</span><span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[15px] text-emerald-accent">mail</span>masoudvzi@gmail.com</span><span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[15px] text-emerald-accent">lock</span>PGP 8F1B 44C0 732D</span></div></div><div class="flex flex-col gap-2"><span class="font-mono text-[11px] uppercase tracking-widest text-champagne font-semibold">System Protocols</span><nav class="flex flex-col gap-1 font-sans text-[13px]"><a class="text-text-body hover:text-champagne transition-colors" href="#">Architecture Blueprint</a><a class="text-text-body hover:text-champagne transition-colors" href="#experience">Enterprise Engagements</a><a class="text-text-body hover:text-champagne transition-colors" href="#pillars">Delivery Scorecards</a><a class="text-text-body hover:text-champagne transition-colors" href="#dossiers">Case Studies &amp; Audits</a></nav></div></div><div class="flex flex-col sm:flex-row items-center justify-between pt-6 gap-4"><div class="flex items-center gap-2 font-mono text-[11px] text-text-muted"><span class="w-1.5 h-1.5 rounded-full bg-emerald-accent"></span><span>System Architecture • Modernist Discipline • Executive Delivery Lead</span></div><div class="font-mono text-[11px] text-text-muted">© 2026 Masoud Valizadeh. All technical mandates reserved.</div></div></div></footer></body></html>
