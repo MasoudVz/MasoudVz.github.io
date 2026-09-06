@@ -1,746 +1,1128 @@
-<!DOCTYPE html><html class="dark scroll-smooth" lang="en"><head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Masoud Valizadeh — Staff Technical Delivery Lead &amp; Scrum Master</title>
-<link href="https://fonts.googleapis.com" rel="preconnect">
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!DOCTYPE html>
+
+<html class="dark scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Masoud Valizadeh — Staff Technical Delivery Lead | Agile Systems Architect</title>
+<meta content="Staff Technical Delivery Lead and Agile Systems Architect focused on predictable engineering delivery, technical alignment, API coordination and cross-functional execution." name="description"/>
+<!-- Open Graph -->
+<meta content="website" property="og:type"/>
+<meta content="Masoud Valizadeh — Staff Technical Delivery Lead | Agile Systems Architect" property="og:title"/>
+<meta content="Staff Technical Delivery Lead and Agile Systems Architect focused on predictable engineering delivery, technical alignment, API coordination and cross-functional execution." property="og:description"/>
+<meta content="https://masoudvalizadeh.ir" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Masoud Valizadeh — Staff Technical Delivery Lead" name="twitter:title"/>
+<meta content="Predictable engineering delivery, API coordination, and agile systems architecture." name="twitter:description"/>
+<!-- JSON-LD Schema -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Masoud Valizadeh",
+    "jobTitle": "Staff Technical Delivery Lead",
+    "description": "Staff Technical Delivery Lead and Agile Systems Architect focused on predictable engineering delivery, technical alignment, and cross-team execution.",
+    "url": "https://masoudvalizadeh.ir",
+    "sameAs": [
+      "https://github.com/MasoudVz",
+      "https://linkedin.com/in/masoud-valizadeh-agile"
+    ]
+  }
+  </script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script>
-  tailwind.config = {
-    darkMode: "class",
-    theme: {
-      extend: {
-        fontFamily: {
-          sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
-          mono: ['JetBrains Mono', 'SF Mono', 'ui-monospace', 'monospace']
-        },
-        colors: {
-          brand: {
-            pitch: "#000000",
-            base: "#050505",
-            card: "#09090b",
-            elevated: "#121215",
-            border: "rgba(255, 255, 255, 0.08)",
-            borderBright: "rgba(255, 255, 255, 0.2)"
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+            mono: ['JetBrains Mono', 'SF Mono', 'ui-monospace', 'monospace']
+          },
+          colors: {
+            brand: {
+              pitch: "#000000",
+              base: "#050505",
+              card: "#09090b",
+              surface: "#0e0e11",
+              elevated: "#121215",
+              border: "rgba(255, 255, 255, 0.08)",
+              borderBright: "rgba(255, 255, 255, 0.22)"
+            }
+          },
+          maxWidth: {
+            'content': '74rem',
           }
-        },
-        maxWidth: {
-          'content': '72rem',
         }
       }
     }
-  }
-</script>
+  </script>
 <style>
-  html {
-    scroll-behavior: smooth;
-  }
-
-  body {
-    background-color: #000000;
-    color: #ededed;
-    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
-    -webkit-font-smoothing: antialiased;
-    perspective: 1200px;
-  }
-
-  /* Resend Ambient Cursor Spotlight */
-  #mouse-glow {
-    pointer-events: none;
-    position: fixed;
-    width: 650px;
-    height: 650px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.045) 0%, rgba(255, 255, 255, 0.015) 30%, transparent 70%);
-    transform: translate(-50%, -50%);
-    transition: opacity 0.4s ease;
-    z-index: 1;
-  }
-
-  /* Resend Precision Spotlight & 3D Tilt Card */
-  .tilt-card-container {
-    perspective: 1000px;
-  }
-
-  .interactive-card {
-    --mouse-x: -500px;
-    --mouse-y: -500px;
-    position: relative;
-    background: linear-gradient(180deg, rgba(16, 16, 20, 0.75) 0%, rgba(9, 9, 11, 0.98) 100%);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.9), 0 10px 30px -10px rgba(0, 0, 0, 0.7);
-    transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), 
-                border-color 0.3s ease, 
-                box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-                background 0.35s ease;
-    transform-style: preserve-3d;
-    will-change: transform, border-color;
-  }
-
-  .interactive-card::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(550px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.08), transparent 45%);
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.35s ease;
-    border-radius: inherit;
-    z-index: 1;
-  }
-
-  /* Moving Metallic Border Shimmer */
-  .interactive-card::after {
-    content: '';
-    position: absolute;
-    inset: -1px;
-    border-radius: inherit;
-    padding: 1px;
-    background: radial-gradient(420px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.12) 35%, transparent 65%);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.35s ease;
-    z-index: 2;
-  }
-
-  .interactive-card:hover {
-    border-color: rgba(255, 255, 255, 0.22);
-    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12), 0 24px 48px -12px rgba(0, 0, 0, 0.85);
-    background: linear-gradient(180deg, rgba(24, 24, 30, 0.85) 0%, rgba(13, 13, 16, 0.98) 100%);
-  }
-
-  .interactive-card:hover::before,
-  .interactive-card:hover::after {
-    opacity: 1;
-  }
-
-  /* Tactile Magnetic Buttons with Light Beam */
-  .btn-tactile {
-    position: relative;
-    overflow: hidden;
-    transition: all 0.24s cubic-bezier(0.16, 1, 0.3, 1);
-    will-change: transform, box-shadow;
-  }
-
-  .btn-tactile:hover {
-    transform: translateY(-2px) scale(1.015);
-  }
-
-  .btn-tactile:active {
-    transform: scale(0.95) translateY(0);
-  }
-
-  /* Button Shimmer Beam */
-  .btn-tactile-shimmer::after {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -150%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(
-      115deg,
-      transparent 0%,
-      rgba(255, 255, 255, 0) 38%,
-      rgba(255, 255, 255, 0.35) 50%,
-      rgba(255, 255, 255, 0) 62%,
-      transparent 100%
-    );
-    transform: rotate(25deg);
-    transition: all 0.75s ease;
-    pointer-events: none;
-  }
-
-  .btn-tactile-shimmer:hover::after {
-    left: 100%;
-  }
-
-  .metallic-pill {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(8px);
-    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-
-  .metallic-pill:hover {
-    border-color: rgba(255, 255, 255, 0.3);
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.05) 100%);
-    box-shadow: 0 6px 20px -4px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.2);
-    transform: translateY(-1px) scale(1.02);
-  }
-
-  /* Dual Expanding Radar Pulse */
-  @keyframes radar-ring-1 {
-    0% {
-      transform: scale(0.9);
-      opacity: 0.95;
+    html {
+      scroll-behavior: smooth;
     }
-    65% {
-      transform: scale(2.8);
+
+    body {
+      background-color: #000000;
+      color: #ededed;
+      font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+      -webkit-font-smoothing: antialiased;
+      perspective: 1200px;
+    }
+
+    /* Ambient Spotlight Cursor */
+    #mouse-glow {
+      pointer-events: none;
+      position: fixed;
+      width: 750px;
+      height: 750px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.008) 42%, transparent 70%);
+      transform: translate(-50%, -50%);
+      transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 1;
+    }
+
+    /* Interactive Resend Metallic Cards with Spotlight Sheen */
+    .interactive-card {
+      --mouse-x: -800px;
+      --mouse-y: -800px;
+      position: relative;
+      background: linear-gradient(180deg, rgba(14, 14, 17, 0.88) 0%, rgba(8, 8, 10, 0.98) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.95), 0 12px 32px -12px rgba(0, 0, 0, 0.85);
+      transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), 
+                  border-color 0.28s ease, 
+                  box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+                  background 0.3s ease;
+      will-change: transform, border-color;
+    }
+
+    /* Radial Spotlight Inner Sheen */
+    .interactive-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: radial-gradient(550px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 255, 255, 0.06), transparent 45%);
+      pointer-events: none;
       opacity: 0;
+      transition: opacity 0.35s ease;
+      z-index: 1;
     }
-    100% {
-      transform: scale(2.8);
+
+    /* Border Spotlight Highlight */
+    .interactive-card::after {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      border-radius: inherit;
+      padding: 1px;
+      background: radial-gradient(400px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.12) 32%, transparent 65%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
       opacity: 0;
+      transition: opacity 0.35s ease;
+      z-index: 2;
     }
-  }
 
-  @keyframes radar-ring-2 {
-    0% {
-      transform: scale(0.9);
-      opacity: 0.8;
+    .interactive-card:hover {
+      border-color: rgba(255, 255, 255, 0.22);
+      transform: translateY(-3px);
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.14), 0 22px 42px -12px rgba(0, 0, 0, 0.9);
+      background: linear-gradient(180deg, rgba(20, 20, 25, 0.94) 0%, rgba(10, 10, 13, 0.99) 100%);
     }
-    50% {
-      opacity: 0.5;
-    }
-    85% {
-      transform: scale(3.8);
-      opacity: 0;
-    }
-    100% {
-      transform: scale(3.8);
-      opacity: 0;
-    }
-  }
 
-  .status-radar-1 {
-    animation: radar-ring-1 2.4s cubic-bezier(0, 0, 0.2, 1) infinite;
-  }
+    .interactive-card:active {
+      transform: translateY(-1px) scale(0.995);
+    }
 
-  .status-radar-2 {
-    animation: radar-ring-2 2.4s cubic-bezier(0, 0, 0.2, 1) infinite 0.65s;
-  }
-
-  @keyframes pulse-glow {
-    0%, 100% {
+    .interactive-card:hover::before,
+    .interactive-card:hover::after {
       opacity: 1;
-      box-shadow: 0 0 8px 2px rgba(16, 185, 129, 0.65);
     }
-    50% {
-      opacity: 0.7;
-      box-shadow: 0 0 18px 3px rgba(16, 185, 129, 0.9);
+
+    /* Tactile Magnetic Buttons & Light Sweeps */
+    .btn-tactile {
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, background-color 0.2s ease, border-color 0.2s ease;
+      will-change: transform, box-shadow;
     }
-  }
 
-  .status-glow {
-    animation: pulse-glow 2.4s ease-in-out infinite;
-  }
-
-  /* Shimmer text */
-  @keyframes shimmer {
-    0% { background-position: 200% center; }
-    100% { background-position: -200% center; }
-  }
-
-  .metallic-text-shimmer {
-    background: linear-gradient(
-      90deg,
-      #ffffff 0%,
-      #f4f4f5 25%,
-      #ffffff 45%,
-      #a1a1aa 65%,
-      #ffffff 85%
-    );
-    background-size: 200% auto;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: shimmer 10s ease-in-out infinite;
-  }
-
-  /* Scroll Reveal Stagger Choreography */
-  .reveal-on-scroll {
-    opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-    will-change: opacity, transform;
-  }
-
-  .reveal-on-scroll.is-revealed {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* Tech Pill Hover Accent */
-  .tech-pill-interactive {
-    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  .tech-pill-interactive:hover {
-    transform: translateY(-2px) scale(1.04);
-    border-color: rgba(255, 255, 255, 0.35);
-    background: rgba(255, 255, 255, 0.09);
-    color: #ffffff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-  }
-
-  /* Interactive Pill Tag micro-lift */
-  .skill-item-interactive {
-    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  .skill-item-interactive:hover {
-    color: #ffffff;
-    transform: translateX(4px);
-  }
-
-  /* Scanline effect on portrait card */
-  .scanline-overlay {
-    background: linear-gradient(
-      to bottom,
-      rgba(255,255,255,0),
-      rgba(255,255,255,0) 50%,
-      rgba(0, 255, 170, 0.03) 50%,
-      rgba(0, 255, 170, 0.03)
-    );
-    background-size: 100% 4px;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    *, ::before, ::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
-      scroll-behavior: auto !important;
+    .btn-tactile:hover {
+      transform: translateY(-2px);
     }
+
+    .btn-tactile:active {
+      transform: scale(0.98) translateY(0);
+    }
+
+    .btn-tactile-shimmer::after {
+      content: '';
+      position: absolute;
+      top: -60%;
+      left: -160%;
+      width: 220%;
+      height: 220%;
+      background: linear-gradient(
+        115deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0) 38%,
+        rgba(255, 255, 255, 0.38) 50%,
+        rgba(255, 255, 255, 0) 62%,
+        transparent 100%
+      );
+      transform: rotate(25deg);
+      transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+      pointer-events: none;
+    }
+
+    .btn-tactile-shimmer:hover::after {
+      transform: translateX(180%) rotate(25deg);
+    }
+
+    .metallic-pill {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      transition: all 0.24s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .metallic-pill:hover {
+      border-color: rgba(255, 255, 255, 0.3);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.09) 0%, rgba(255, 255, 255, 0.03) 100%);
+      transform: translateY(-1.5px);
+    }
+
+    .metallic-pill:active {
+      transform: scale(0.98);
+    }
+
+    /* Radar Pulse Animations */
+    @keyframes radar-ring-1 {
+      0% { transform: scale(0.85); opacity: 0.9; }
+      70% { transform: scale(2.6); opacity: 0; }
+      100% { transform: scale(2.6); opacity: 0; }
+    }
+    @keyframes radar-ring-2 {
+      0% { transform: scale(0.85); opacity: 0.75; }
+      50% { opacity: 0.35; }
+      90% { transform: scale(3.6); opacity: 0; }
+      100% { transform: scale(3.6); opacity: 0; }
+    }
+
+    .status-radar-1 {
+      animation: radar-ring-1 2.8s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+    .status-radar-2 {
+      animation: radar-ring-2 2.8s cubic-bezier(0, 0, 0.2, 1) infinite 0.8s;
+    }
+
+    @keyframes pulse-glow {
+      0%, 100% { opacity: 1; filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.85)); }
+      50% { opacity: 0.65; filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.4)); }
+    }
+    .status-glow {
+      animation: pulse-glow 2.6s ease-in-out infinite;
+    }
+
+    /* Staggered Entrance Keyframes (fadeInUp 16px) */
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-hero-badge {
+      opacity: 0;
+      animation: fadeInUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+    }
+    .animate-hero-title {
+      opacity: 0;
+      animation: fadeInUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.22s forwards;
+    }
+    .animate-hero-bio {
+      opacity: 0;
+      animation: fadeInUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.34s forwards;
+    }
+    .animate-hero-cta {
+      opacity: 0;
+      animation: fadeInUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.46s forwards;
+    }
+    .animate-hero-stack {
+      opacity: 0;
+      animation: fadeInUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.58s forwards;
+    }
+    .animate-hero-photo {
+      opacity: 0;
+      animation: fadeInUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.28s forwards;
+    }
+
+    /* Scroll Reveal */
     .reveal-on-scroll {
-      opacity: 1 !important;
-      transform: none !important;
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
     }
-  }
-</style>
+
+    .reveal-on-scroll.is-revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Scanline overlay */
+    .scanline-overlay {
+      background: linear-gradient(
+        to bottom,
+        rgba(255,255,255,0),
+        rgba(255,255,255,0) 50%,
+        rgba(255, 255, 255, 0.02) 50%,
+        rgba(255, 255, 255, 0.02)
+      );
+      background-size: 100% 4px;
+    }
+
+    /* Details styling */
+    details summary::-webkit-details-marker {
+      display: none;
+    }
+
+    /* Respect reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, ::before, ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .reveal-on-scroll,
+      .animate-hero-badge,
+      .animate-hero-title,
+      .animate-hero-bio,
+      .animate-hero-cta,
+      .animate-hero-stack,
+      .animate-hero-photo {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+      .interactive-card:hover {
+        transform: none !important;
+      }
+      .btn-tactile:hover {
+        transform: none !important;
+      }
+    }
+  </style>
 </head>
 <body class="selection:bg-white selection:text-black min-h-screen bg-black text-neutral-200 relative overflow-x-hidden">
-<!-- Ambient Mouse Spotlight Layer -->
+<!-- Ambient Mouse Spotlight -->
 <div class="hidden md:block" id="mouse-glow"></div>
 <!-- STICKY TOP NAVIGATION -->
-<header class="sticky top-0 z-50 w-full backdrop-blur-xl bg-black/80 border-b border-white/[0.08] transition-all duration-300">
-<div class="max-w-content mx-auto px-6 md:px-8 h-16 flex items-center justify-between gap-6">
+<header class="sticky top-0 z-50 w-full backdrop-blur-xl bg-black/85 border-b border-white/[0.08] transition-all duration-300">
+<div class="max-w-content mx-auto px-5 sm:px-8 h-16 flex items-center justify-between gap-4">
 <!-- Brand Title -->
-<a class="flex flex-col group text-left transition-transform duration-200 hover:translate-x-0.5" href="#">
-<span class="font-mono text-xs font-semibold text-white tracking-wider group-hover:text-neutral-200 transition-colors flex items-center gap-1.5">
-        MASOUD VALIZADEH
-        <span class="relative flex h-2 w-2 ml-1">
-<span class="status-radar-1 absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-<span class="status-radar-2 absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-50"></span>
-<span class="status-glow relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+<a class="flex items-center gap-3 group text-left transition-transform duration-200 hover:translate-x-0.5" href="#">
+<div class="flex flex-col">
+<span class="font-mono text-xs font-semibold text-white tracking-wider flex items-center gap-2">
+          MASOUD VALIZADEH
+          <span class="text-zinc-600 font-normal">·</span>
+<span class="text-zinc-300 font-normal hidden sm:inline text-[11px] tracking-widest">STAFF LEAD</span>
+<span class="relative flex h-2 w-2">
+<span class="status-radar-1 absolute inline-flex h-full w-full rounded-full bg-white opacity-70"></span>
+<span class="status-glow relative inline-flex rounded-full h-2 w-2 bg-white"></span>
 </span>
 </span>
 <span class="font-mono text-[10px] text-zinc-400 tracking-widest uppercase">STAFF TECHNICAL DELIVERY LEAD</span>
+</div>
 </a>
 <!-- Center Navigation Links -->
-<nav class="hidden md:flex items-center gap-7 text-xs font-medium text-zinc-400">
-<a class="hover:text-white transition-colors duration-200 relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-white after:transition-all hover:after:w-full" href="#experience">Experience</a>
-<a class="hover:text-white transition-colors duration-200 relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-white after:transition-all hover:after:w-full" href="#pillars">Methodology</a>
-<a class="hover:text-white transition-colors duration-200 relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-white after:transition-all hover:after:w-full" href="#skills">Skills</a>
-<a class="hover:text-white transition-colors duration-200 relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-white after:transition-all hover:after:w-full" href="#projects">Projects</a>
-<a class="hover:text-white transition-colors duration-200 relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-white after:transition-all hover:after:w-full" href="#honors">Honors</a>
-<a class="hover:text-white transition-colors duration-200 relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-white after:transition-all hover:after:w-full" href="#contact">Contact</a>
+<nav class="hidden lg:flex items-center gap-6 text-xs font-medium text-zinc-400 font-mono">
+<a class="hover:text-white transition-colors duration-200 py-1" href="#about">About</a>
+<a class="hover:text-white transition-colors duration-200 py-1" href="#experience">Experience</a>
+<a class="hover:text-white transition-colors duration-200 py-1" href="#case-studies">Case Studies</a>
+<a class="hover:text-white transition-colors duration-200 py-1" href="#recognition">Recognition</a>
+<a class="hover:text-white transition-colors duration-200 py-1" href="#skills">Skills</a>
+<a class="hover:text-white transition-colors duration-200 py-1" href="#contact">Contact</a>
 </nav>
-<!-- Right Profile / Action -->
-<div class="flex items-center gap-3">
-<a class="w-8 h-8 rounded-full border border-white/20 overflow-hidden bg-zinc-900 block hover:border-white/60 hover:scale-105 transition-all duration-200 shadow-sm" href="#contact">
-<img alt="Masoud Valizadeh" class="w-full h-full object-cover grayscale contrast-125 hover:contrast-100 transition-all duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7MfvI5g-6fGjTdjFcaJ1cCCptA1iFk05BZuFnVgIqb9Yey33iQHnS1iNwV3I2u1agjkKkxhyEuDsYJVNo9k_pCHCPAea10dgtWb6zUfFMpKPLFKCeiQOKwRYdKRIfh1bmHKjsiuZtyIXFY2L_-EADzPnksdmETuVQWKwb1tf9a4PppXbFmRE95yLghy6tC8gqw_aJdEfAvtkZ47-J_T7b1mYK7hhEgfiJtK8xIDvgL4hELl9-zTgrfhoEz9JuCaDoglY">
+<!-- Right Action Buttons -->
+<div class="flex items-center gap-2.5">
+<a class="btn-tactile inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md metallic-pill text-zinc-300 hover:text-white text-xs font-mono transition-all" href="https://linkedin.com/in/masoud-valizadeh-agile" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[15px]">open_in_new</span>
+<span class="hidden sm:inline">LinkedIn</span>
 </a>
-<a class="btn-tactile btn-tactile-shimmer inline-flex items-center justify-center px-3.5 py-1.5 rounded-md bg-white hover:bg-neutral-100 text-black text-xs font-semibold tracking-tight transition-all duration-200 shadow-[0_0_15px_rgba(255,255,255,0.15)] hover:shadow-[0_0_24px_rgba(255,255,255,0.3)]" href="#contact">
-        Get in Touch
-      </a>
+<a class="btn-tactile btn-tactile-shimmer inline-flex items-center justify-center gap-1.5 px-3.5 py-1.5 rounded-md bg-white hover:bg-neutral-200 text-black text-xs font-semibold font-mono tracking-tight transition-all duration-200 shadow-[0_0_15px_rgba(255,255,255,0.15)]" download="" href="https://raw.githubusercontent.com/MasoudVz/MasoudVz.github.io/main/Masoud_Valizadeh_Scrum_Master_CV.pdf" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span class="">Download CV</span>
+</a>
 </div>
 </div>
 </header>
-<!-- AMBIENT BACKGROUND GLOW -->
+<!-- AMBIENT BACKGROUND GLOW GRID -->
 <div class="relative w-full overflow-hidden">
 <div class="absolute inset-0 pointer-events-none bg-[radial-gradient(#ffffff0a_1px,transparent_1px)] [background-size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-70"></div>
-<div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[520px] pointer-events-none bg-[radial-gradient(ellipse_80%_60%_at_50%_-20%,rgba(120,119,198,0.14),rgba(255,255,255,0.03)_40%,transparent_75%)]"></div>
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[520px] pointer-events-none bg-[radial-gradient(ellipse_80%_60%_at_50%_-20%,rgba(255,255,255,0.08),rgba(255,255,255,0.02)_40%,transparent_75%)]"></div>
 <!-- MAIN WRAPPER -->
-<main class="relative z-10 max-w-content mx-auto px-6 md:px-8 pt-12 pb-24 flex flex-col gap-24">
-<!-- 1. HERO SECTION -->
-<section class="reveal-on-scroll pt-4 pb-2 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-12 is-revealed">
-<!-- Left Hero Column -->
-<div class="flex-1 flex flex-col items-start gap-6 max-w-2xl">
-<!-- Status Indicator Pill with Shimmer and Dual Radar Pulse -->
-<div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full metallic-pill text-xs shadow-[0_0_22px_rgba(16,185,129,0.18)] cursor-default transition-all duration-300 hover:border-emerald-500/40">
-<span class="relative flex h-2.5 w-2.5">
-<span class="status-radar-1 absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-80"></span>
-<span class="status-radar-2 absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-50"></span>
-<span class="status-glow relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+<main class="relative z-10 max-w-content mx-auto px-5 sm:px-8 pt-10 pb-24 flex flex-col gap-20">
+<!-- 01. HERO SECTION -->
+<section class="flex flex-col lg:flex-row items-center justify-between gap-12 sm:gap-16 pt-6 pb-4 relative">
+<div class="absolute -top-12 -left-12 w-96 h-96 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.07)_0%,rgba(255,255,255,0.02)_40%,transparent_70%)] pointer-events-none blur-2xl"></div>
+<div class="flex-1 flex flex-col items-start gap-6 max-w-2xl relative z-10">
+<div class="animate-hero-badge inline-flex items-center gap-2.5 px-3 py-1 rounded-full bg-white/[0.04] border border-white/15 text-xs text-zinc-300 font-mono tracking-wide backdrop-blur-md shadow-[0_0_12px_rgba(255,255,255,0.04)]">
+<span class="relative flex h-2 w-2">
+<span class="status-radar-1 absolute inline-flex h-full w-full rounded-full bg-white opacity-70"></span>
+<span class="status-glow relative inline-flex rounded-full h-2 w-2 bg-white"></span>
 </span>
-<span class="font-mono text-[11px] text-zinc-300 uppercase tracking-wider font-medium">OPEN TO WORK • REMOTE, HYBRID &amp; ON-SITE MANDATES</span>
+<span class="text-[11px] text-zinc-300 uppercase tracking-wider font-medium">OPEN TO REMOTE CONTRACTS &amp; MANDATES</span>
 </div>
-<!-- Hero Headline -->
-<h1 class="text-4xl sm:text-5xl lg:text-[56px] font-bold text-white tracking-tight leading-[1.08]">
-<span class="metallic-text-shimmer">Architecting Predictable Delivery &amp; Engineering Flow.</span>
-</h1>
-<!-- Subtitle Paragraph -->
-<p class="text-sm sm:text-[15.5px] text-zinc-400 leading-relaxed font-normal">Technical Delivery Lead &amp; Scrum Master with a Software Engineering background. Specializing in streamling Agile ceremonies, aligning cross-squad API dependencies, and accelerating engineering velocity across distributed teams.</p>
-<!-- CTA Buttons -->
-<div class="flex flex-wrap items-center gap-3 pt-1 w-full sm:w-auto">
-<button class="copy-email-btn btn-tactile btn-tactile-shimmer group relative inline-flex items-center justify-center gap-2 px-5 h-10 rounded-md bg-white hover:bg-neutral-100 text-black text-xs font-semibold tracking-tight shadow-[0_0_20px_rgba(255,255,255,0.18)] hover:shadow-[0_0_32px_rgba(255,255,255,0.4)] cursor-pointer" data-email="masoudivzi@gmail.com" type="button">
-<span class="material-symbols-outlined text-[17px] text-black group-hover:rotate-6 transition-transform btn-icon">mail</span>
-<span class="btn-text">Email masoudivzi@gmail.com</span>
-<span class="copied-tooltip pointer-events-none absolute -top-9 px-2.5 py-1 rounded bg-zinc-900 border border-white/20 text-white font-mono text-[10px] uppercase opacity-0 scale-95 transition-all duration-200 shadow-xl">Copied to clipboard!</span>
-</button>
-<a class="btn-tactile btn-tactile-shimmer inline-flex items-center justify-center gap-2 px-4 h-10 rounded-md bg-white/[0.06] hover:bg-white/[0.12] border border-white/15 hover:border-white/30 text-neutral-200 hover:text-white text-xs font-medium shadow-sm group" href="https://github.com/MasoudVz/MasoudVz.github.io/raw/main/Masoud_Valizadeh_Scrum_Master_CV.pdf" target="_blank" rel="noopener noreferrer" download="Masoud_Valizadeh_Scrum_Master_CV.pdf">
-<svg class="w-4 h-4 text-zinc-400 group-hover:text-white group-hover:translate-y-0.5 transition-all" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
+<div class="animate-hero-title flex flex-col gap-3 relative">
+<div class="absolute -inset-x-4 -inset-y-2 bg-[radial-gradient(ellipse_80%_50%_at_20%_40%,rgba(255,255,255,0.05),transparent)] pointer-events-none"></div>
+<h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.08] relative z-10">Architecting Predictable <br class="hidden sm:inline"/><span class="text-zinc-400">Delivery &amp; Engineering Flow.</span></h1>
+<p class="animate-hero-bio text-sm sm:text-base text-zinc-400 leading-relaxed max-w-xl font-normal relative z-10">Technical Delivery Lead &amp; Scrum Master with a Software Engineering background (B.Sc. in Computer Software Engineering). Specializing in eliminating Agile ceremony overhead, resolving cross-squad API dependencies, and aligning engineering velocity across distributed teams.</p>
+</div>
+<div class="animate-hero-cta flex flex-wrap items-center gap-3 pt-1">
+<a class="btn-tactile btn-tactile-shimmer inline-flex items-center justify-center gap-2 px-4 h-10 rounded-md bg-white hover:bg-neutral-200 text-black text-xs font-semibold font-mono tracking-tight shadow-[0_0_20px_rgba(255,255,255,0.18)]" href="mailto:Masoudivzi@gmail.com">
+<span class="material-symbols-outlined text-[16px]">mail</span>
+<span class="">Email Masoudivzi@gmail.com</span>
+</a>
+<a class="btn-tactile btn-tactile-shimmer inline-flex items-center justify-center gap-2 px-4 h-10 rounded-md bg-white/[0.05] hover:bg-white/[0.1] border border-white/15 text-white text-xs font-mono transition-all" download="" href="https://raw.githubusercontent.com/MasoudVz/MasoudVz.github.io/main/Masoud_Valizadeh_Scrum_Master_CV.pdf" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px] text-zinc-400">download</span>
 <span class="">Download Resume CV</span>
 </a>
+<a class="btn-tactile inline-flex items-center justify-center gap-1.5 px-3 h-10 rounded-md text-zinc-400 hover:text-white text-xs font-mono transition-colors" href="https://linkedin.com/in/masoud-valizadeh-agile" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[15px]">open_in_new</span>
+<span class="">LinkedIn</span>
+</a>
 </div>
-<!-- Tech Stack & Tools Bar -->
-<div class="flex flex-wrap items-center gap-2 pt-2 text-xs font-mono">
-<span class="text-zinc-500 uppercase tracking-wider text-[11px] pr-1">Stack &amp; Tools:</span>
-<span class="tech-pill-interactive px-2.5 py-1 rounded-md bg-white/[0.04] border border-white/[0.08] text-zinc-300">Jira</span>
-<span class="tech-pill-interactive px-2.5 py-1 rounded-md bg-white/[0.04] border border-white/[0.08] text-zinc-300">Confluence</span>
-<span class="tech-pill-interactive px-2.5 py-1 rounded-md bg-white/[0.04] border border-white/[0.08] text-zinc-300">OpenAPI</span>
-<span class="tech-pill-interactive px-2.5 py-1 rounded-md bg-white/[0.04] border border-white/[0.08] text-zinc-300">CI/CD</span>
-<span class="tech-pill-interactive px-2.5 py-1 rounded-md bg-white/[0.04] border border-white/[0.08] text-zinc-300">Agile / Scrum</span>
-<span class="tech-pill-interactive px-2.5 py-1 rounded-md bg-white/[0.04] border border-white/[0.08] text-zinc-300">SDLC</span>
-<span class="tech-pill-interactive px-2.5 py-1 rounded-md bg-white/[0.04] border border-white/[0.08] text-zinc-300">Azure DevOps</span>
+<div class="animate-hero-stack flex flex-wrap items-center gap-2 pt-2 text-[11px] font-mono text-zinc-500">
+<span class="">Stack &amp; Tools:</span>
+<span class="px-2 py-0.5 rounded bg-white/[0.04] border border-white/[0.08] text-zinc-300">Jira</span>
+<span class="px-2 py-0.5 rounded bg-white/[0.04] border border-white/[0.08] text-zinc-300">Confluence</span>
+<span class="px-2 py-0.5 rounded bg-white/[0.04] border border-white/[0.08] text-zinc-300">Agile/Scrum</span>
+<span class="px-2 py-0.5 rounded bg-white/[0.04] border border-white/[0.08] text-zinc-300">SDLC</span>
+<span class="px-2 py-0.5 rounded bg-white/[0.04] border border-white/[0.08] text-zinc-300">Azure</span>
 </div>
 </div>
-<!-- Right Portrait Visual with Resend Corner Brackets & Scanlines -->
-<div class="shrink-0 w-full lg:w-auto flex justify-center">
-<div class="relative p-2.5 rounded-2xl bg-zinc-950 border border-zinc-800 group shadow-2xl transition-all duration-300 hover:border-white/30">
-<!-- Corner Metallic Precision Brackets -->
-<div class="absolute top-1.5 left-1.5 w-3 h-3 border-t border-l border-white/40 pointer-events-none transition-all duration-300 group-hover:border-white/80 group-hover:scale-110"></div>
-<div class="absolute top-1.5 right-1.5 w-3 h-3 border-t border-r border-white/40 pointer-events-none transition-all duration-300 group-hover:border-white/80 group-hover:scale-110"></div>
-<div class="absolute bottom-1.5 left-1.5 w-3 h-3 border-b border-l border-white/40 pointer-events-none transition-all duration-300 group-hover:border-white/80 group-hover:scale-110"></div>
-<div class="absolute bottom-1.5 right-1.5 w-3 h-3 border-b border-r border-white/40 pointer-events-none transition-all duration-300 group-hover:border-white/80 group-hover:scale-110"></div>
-<div class="relative w-64 h-76 sm:w-72 sm:h-84 rounded-xl overflow-hidden bg-zinc-900 border border-white/[0.08]">
-<img alt="Masoud Valizadeh" class="w-full h-full object-cover grayscale contrast-125 transition-all duration-700 group-hover:scale-[1.03] group-hover:contrast-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1yhJLPg2b2Qaad5Wq6H6RAvXgR3kFDqhE30cfh_AJQjNWuyeU7dQV2PcNW1OR9nDGxpXsfoey5SPGl6Fzyoz01HwgGRSPvEbpsBw0tQbzPaFx_gP29Fj-6VNVgL4qzIEtgysvtSvwJY7pj44KwjMn_DQCK5pLOkOblEGnIPr1iPd_rwOQQ1pUuyZoen4CmEhvBEqn7kApUctsjsXgKJbFaFZuBETdZkzmqaPS8Pxv0BSLzBECsDVu6-xzW6TL2CLRar4">
-<div class="absolute inset-0 scanline-overlay pointer-events-none opacity-40 group-hover:opacity-20 transition-opacity"></div>
-<div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent pointer-events-none"></div>
-<!-- Telemetry Badges -->
-<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between z-10 font-mono text-[10px]">
-<span class="text-white bg-black/80 px-2.5 py-1 rounded border border-white/15 backdrop-blur-md flex items-center gap-1.5 shadow-sm group-hover:border-emerald-500/40 transition-colors">
+<div class="animate-hero-photo shrink-0 w-full lg:w-auto flex justify-center relative z-10">
+<div class="relative p-2.5 rounded-2xl bg-zinc-950/90 border border-zinc-800 shadow-2xl transition-all duration-300 hover:border-zinc-600 max-w-xs sm:max-w-none group">
+<div class="absolute top-2 left-2 w-3 h-3 border-t border-l border-white/50 pointer-events-none transition-colors group-hover:border-white"></div>
+<div class="absolute top-2 right-2 w-3 h-3 border-t border-r border-white/50 pointer-events-none transition-colors group-hover:border-white"></div>
+<div class="absolute bottom-2 left-2 w-3 h-3 border-b border-l border-white/50 pointer-events-none transition-colors group-hover:border-white"></div>
+<div class="absolute bottom-2 right-2 w-3 h-3 border-b border-r border-white/50 pointer-events-none transition-colors group-hover:border-white"></div>
+<div class="relative w-64 h-76 sm:w-72 sm:h-80 rounded-xl overflow-hidden bg-zinc-900 border border-white/[0.12]">
+<img alt="Masoud Valizadeh" class="w-full h-full object-cover grayscale contrast-125 hover:contrast-105 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9vi00qDkTLtVABsL8v4rl9J0UD56XUt4uQ98mMiKxL5RhVQLnjkt2fALPze145hsetX3WFENRvdGiv0_Sm7Bk_XuSaDetVUlfpcxTISjZEwhvbX2Zkz0bLNBdZhDsvrG1-tPJbLGONdxyTMuILS_VB1uWHnefXq7-N8XKYzD8pQKC_ayHEp0rA4hmF8iX4p-TFBvZnpE45iWt3RjtxOM0PSAJKu4NBpMBEM2MgXbuPEAf6yyAw4y6XLFblHZunf5kljE"/>
+<div class="absolute inset-0 scanline-overlay pointer-events-none opacity-30"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
+<div class="absolute bottom-3 left-3 flex items-center font-mono text-[10px]">
+<span class="text-white bg-black/85 px-2.5 py-1 rounded border border-white/20 backdrop-blur-md flex items-center gap-1.5 shadow-sm">
 <span class="relative flex h-1.5 w-1.5">
-<span class="status-radar-1 absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-<span class="status-glow relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-400"></span>
+<span class="status-radar-1 absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+<span class="status-glow relative inline-flex rounded-full h-1.5 w-1.5 bg-white"></span>
 </span>
 SYS: ACTIVE
 </span>
-<span class="text-zinc-300 bg-black/70 px-2.5 py-1 rounded backdrop-blur-sm border border-white/10 uppercase tracking-wider group-hover:border-white/25 transition-colors">
-DUBAI &amp; US OVERLAP
-</span>
+</div>
+<div class="absolute bottom-3 right-3 font-mono text-[10px]">
+<span class="text-zinc-300 bg-black/85 px-2.5 py-1 rounded border border-white/15 backdrop-blur-md">DUBAI &amp; US OVERLAP</span>
 </div>
 </div>
 </div>
 </div>
 </section>
-<!-- 2. CORE DELIVERY PILLARS (METHODOLOGY) -->
-<section class="reveal-on-scroll pt-8 border-t border-zinc-800/80 flex flex-col gap-8 scroll-mt-24 is-revealed" id="pillars">
-<div class="flex flex-col gap-2">
+<!-- 02. RECRUITER SNAPSHOT ("AT A GLANCE") -->
+<section class="reveal-on-scroll pt-4 border-t border-zinc-900 flex flex-col gap-4">
 <div class="flex items-center gap-2 font-mono text-xs text-zinc-400 uppercase tracking-wider">
-<span class="w-1.5 h-1.5 rounded-sm bg-white/40"></span>
-<span class="">// SYSTEMIC ARCHITECTURE &amp; OPERATIONAL FRAMEWORKS</span>
+<span class="w-1.5 h-1.5 rounded-sm bg-white"></span>
+<span class="">// RECRUITER SNAPSHOT · VERIFIED AT A GLANCE</span>
 </div>
-<h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
-          Core Delivery Pillars
-        </h2>
-<p class="text-xs sm:text-sm text-zinc-400 max-w-2xl">Disciplined operational frameworks designed to eliminate cross-team friction, synchronize distributed squads, and establish reliable software delivery.</p>
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+<div class="interactive-card rounded-lg p-3.5 flex flex-col gap-1 border border-white/10 bg-zinc-950/80">
+<span class="font-mono text-xs text-white font-bold tracking-tight">7+ YEARS</span>
+<span class="font-mono text-[11px] text-zinc-200 font-medium">Engineering &amp; Delivery</span>
+<span class="text-[11px] text-zinc-400 leading-tight">Verified career span from 2018–Present</span>
 </div>
-<!-- 6 Balanced Cards (3 Columns) with Equal Heights and Tactile 3D Tilt Physics -->
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-<div class="interactive-card rounded-xl p-6 flex flex-col justify-between h-full group"><div class="flex flex-col gap-3 relative z-10"><div class="flex items-center justify-between"><span class="font-mono text-[11px] font-medium text-zinc-400 group-hover:text-zinc-200 transition-colors uppercase tracking-wider">Rituals</span><span class="material-symbols-outlined text-[20px] text-zinc-400 group-hover:text-white transition-all duration-300 group-hover:rotate-45 group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]">cached</span></div><h3 class="font-semibold text-white text-base leading-snug">Agile &amp; Scrum Ceremonies</h3><p class="text-xs text-zinc-400 leading-relaxed">Facilitating purposeful Sprint Planning, Daily Scrums, Sprint Reviews, and outcome-driven Retrospectives. Maintaining a refined backlog centered on user value.</p></div><div class="pt-4 mt-6 border-t border-white/[0.06] font-mono text-[11px] text-zinc-400 flex items-center justify-between relative z-10"><span class="">Yield</span><span class="text-zinc-200 group-hover:text-white transition-colors">Outcome-Driven Cadence</span></div></div>
-<div class="interactive-card rounded-xl p-6 flex flex-col justify-between h-full group"><div class="flex flex-col gap-3 relative z-10"><div class="flex items-center justify-between"><span class="font-mono text-[11px] font-medium text-zinc-400 group-hover:text-zinc-200 transition-colors uppercase tracking-wider">Architecture</span><span class="material-symbols-outlined text-[20px] text-zinc-400 group-hover:text-white transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]">schema</span></div><h3 class="font-semibold text-white text-base leading-snug">Technical Coordination</h3><p class="text-xs text-zinc-400 leading-relaxed">Resolving cross-squad dependencies with contract-first API specifications and mock data servers to unblock frontend engineering ahead of backend readiness.</p></div><div class="pt-4 mt-6 border-t border-white/[0.06] font-mono text-[11px] text-zinc-400 flex items-center justify-between relative z-10"><span class="">Interface</span><span class="text-zinc-200 group-hover:text-white transition-colors">API Contracts &amp; Mocks</span></div></div>
-<div class="interactive-card rounded-xl p-6 flex flex-col justify-between h-full group"><div class="flex flex-col gap-3 relative z-10"><div class="flex items-center justify-between"><span class="font-mono text-[11px] font-medium text-zinc-400 group-hover:text-zinc-200 transition-colors uppercase tracking-wider">Releases</span><span class="material-symbols-outlined text-[20px] text-zinc-400 group-hover:text-white transition-all duration-300 group-hover:-translate-y-0.5 group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]">rocket_launch</span></div><h3 class="font-semibold text-white text-base leading-snug">Multi-Platform Orchestration</h3><p class="text-xs text-zinc-400 leading-relaxed">Synchronizing release cycles across Web, PWA, and Mobile ecosystems while maintaining reliable staging environments and deployment hygiene.</p></div><div class="pt-4 mt-6 border-t border-white/[0.06] font-mono text-[11px] text-zinc-400 flex items-center justify-between relative z-10"><span class="">Platforms</span><span class="text-zinc-200 group-hover:text-white transition-colors">Web • PWA • Mobile</span></div></div>
-<div class="interactive-card rounded-xl p-6 flex flex-col justify-between h-full group"><div class="flex flex-col gap-3 relative z-10"><div class="flex items-center justify-between"><span class="font-mono text-[11px] font-medium text-zinc-400 group-hover:text-zinc-200 transition-colors uppercase tracking-wider">Telemetry</span><span class="material-symbols-outlined text-[20px] text-zinc-400 group-hover:text-white transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]">monitoring</span></div><h3 class="font-semibold text-white text-base leading-snug">Workflow &amp; Delivery Transparency</h3><p class="text-xs text-zinc-400 leading-relaxed">Configuring clear Jira boards, custom queries, and Confluence documentation to give stakeholders real-time visibility into cycle time and delivery progress.</p></div><div class="pt-4 mt-6 border-t border-white/[0.06] font-mono text-[11px] text-zinc-400 flex items-center justify-between relative z-10"><span class="">Instrumentation</span><span class="text-zinc-200 group-hover:text-white transition-colors">Jira &amp; Confluence Dashboards</span></div></div>
-<div class="interactive-card rounded-xl p-6 flex flex-col justify-between h-full group"><div class="flex flex-col gap-3 relative z-10"><div class="flex items-center justify-between"><span class="font-mono text-[11px] font-medium text-zinc-400 group-hover:text-zinc-200 transition-colors uppercase tracking-wider">Integrity</span><span class="material-symbols-outlined text-[20px] text-zinc-400 group-hover:text-white transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]">verified</span></div><h3 class="font-semibold text-white text-base leading-snug">Agile Discipline &amp; Debt Control</h3><p class="text-xs text-zinc-400 leading-relaxed">Eliminating vanity reporting and empty process overhead while securing protected sprint capacity dedicated to code refactoring and automated testing.</p></div><div class="pt-4 mt-6 border-t border-white/[0.06] font-mono text-[11px] text-zinc-400 flex items-center justify-between relative z-10"><span class="">Protected</span><span class="text-zinc-200 group-hover:text-white transition-colors">Dedicated Debt Capacity</span></div></div>
-<div class="interactive-card rounded-xl p-6 flex flex-col justify-between h-full group"><div class="flex flex-col gap-3 relative z-10"><div class="flex items-center justify-between"><span class="font-mono text-[11px] font-medium text-zinc-400 group-hover:text-zinc-200 transition-colors uppercase tracking-wider">Intelligence</span><span class="material-symbols-outlined text-[20px] text-zinc-400 group-hover:text-white transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]">psychology</span></div><h3 class="font-semibold text-white text-base leading-snug">AI-Assisted Coordination</h3><p class="text-xs text-zinc-400 leading-relaxed">Leveraging AI tools to accelerate requirements drafting, draft atomic acceptance criteria, summarize technical discussions, and track team action items.</p></div><div class="pt-4 mt-6 border-t border-white/[0.06] font-mono text-[11px] text-zinc-400 flex items-center justify-between relative z-10"><span class="">Capability</span><span class="text-zinc-200 group-hover:text-white transition-colors">Automated Requirements Drafting</span></div></div>
+<div class="interactive-card rounded-lg p-3.5 flex flex-col gap-1 border border-white/10 bg-zinc-950/80">
+<span class="font-mono text-xs text-white font-bold tracking-tight">STAFF-LEVEL</span>
+<span class="font-mono text-[11px] text-zinc-200 font-medium">Technical Delivery</span>
+<span class="text-[11px] text-zinc-400 leading-tight">Systems architecture &amp; agile governance</span>
+</div>
+<div class="interactive-card rounded-lg p-3.5 flex flex-col gap-1 border border-white/10 bg-zinc-950/80">
+<span class="font-mono text-xs text-white font-bold tracking-tight">CROSS-FUNCTIONAL</span>
+<span class="font-mono text-[11px] text-zinc-200 font-medium">Engineering + Product</span>
+<span class="text-[11px] text-zinc-400 leading-tight">Unified constraint-based alignment</span>
+</div>
+<div class="interactive-card rounded-lg p-3.5 flex flex-col gap-1 border border-white/10 bg-zinc-950/80">
+<span class="font-mono text-xs text-white font-bold tracking-tight">REMOTE / HYBRID</span>
+<span class="font-mono text-[11px] text-zinc-200 font-medium">International Ready</span>
+<span class="text-[11px] text-zinc-400 leading-tight">Global async &amp; sync work cadences</span>
+</div>
+<div class="interactive-card rounded-lg p-3.5 flex flex-col gap-1 col-span-2 sm:col-span-1 border border-white/10 bg-zinc-950/80">
+<span class="font-mono text-xs text-white font-bold tracking-tight">GLOBAL</span>
+<span class="font-mono text-[11px] text-zinc-200 font-medium">US &amp; UAE Engineering</span>
+<span class="text-[11px] text-zinc-400 leading-tight">Distributed cross-timezone squads</span>
+</div>
 </div>
 </section>
-<!-- 3. SKILLS MATRIX & TAXONOMY -->
-<section class="reveal-on-scroll pt-8 border-t border-zinc-800/80 flex flex-col gap-8 scroll-mt-24 is-revealed" id="skills">
-<div class="flex flex-col gap-2">
+<!-- 03. WHAT I SOLVE -->
+<section class="reveal-on-scroll pt-6 border-t border-zinc-800/80 flex flex-col gap-6" id="about">
+<div class="flex flex-col gap-1.5">
 <div class="flex items-center gap-2 font-mono text-xs text-zinc-400 uppercase tracking-wider">
-<span class="w-1.5 h-1.5 rounded-sm bg-white/40"></span>
-<span class="">// TECHNICAL CAPABILITIES &amp; TAXONOMY</span>
+<span class="w-1.5 h-1.5 rounded-sm bg-white/60 border border-white/30 shadow-[0_0_8px_rgba(255,255,255,0.4)]"></span>
+<span class="">// CORE VALUE PROPOSITION &amp; PROBLEM DOMAIN</span>
 </div>
-<h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
-          Skills Matrix &amp; Operational Tooling
-        </h2>
+<h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">What I Solve</h2>
 <p class="text-xs sm:text-sm text-zinc-400 max-w-2xl">
-          A comprehensive breakdown of frameworks, toolchains, empirical metrics, and leadership protocols practiced across cross-functional engineering organizations.
+          Addressing systemic software delivery breakdowns with empirical rigor, transparent technical telemetry, and structured execution frameworks.
         </p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-<div class="interactive-card rounded-xl p-5 flex flex-col gap-4 h-full"><div class="flex items-center justify-between border-b border-white/[0.08] pb-3"><div class="flex items-center gap-2 text-white font-semibold text-xs"><span class="material-symbols-outlined text-[17px] text-emerald-400">sync_alt</span><span class="">Agile &amp; Delivery</span></div><span class="font-mono text-[9px] text-zinc-400">FRAMEWORKS</span></div><ul class="flex flex-col gap-2 font-mono text-xs text-zinc-400"><li class="skill-item-interactive flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>Scrum Framework</li><li class="skill-item-interactive flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>Kanban Principles</li><li class="skill-item-interactive flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>Sprint Planning &amp; Standups</li><li class="skill-item-interactive flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>Sprint Review &amp; Demos</li><li class="skill-item-interactive flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>Actionable Retrospectives</li><li class="skill-item-interactive flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>Backlog Refinement</li><li class="skill-item-interactive flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>User Story Slicing</li><li class="skill-item-interactive flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>INVEST Criteria Decomposition</li><li class="skill-item-interactive flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>Definition of Ready (DoR)</li><li class="skill-item-interactive flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>Definition of Done (DoD)</li><li class="skill-item-interactive flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>Pragmatic Agile Guardrails</li></ul></div>
-<div class="interactive-card rounded-xl p-5 flex flex-col gap-4 h-full"><div class="flex items-center justify-between border-b border-white/[0.08] pb-3"><div class="flex items-center gap-2 text-white font-semibold text-xs"><span class="material-symbols-outlined text-[17px] text-cyan-400">terminal</span><span class="">Software &amp; Tech</span></div><span class="font-mono text-[9px] text-zinc-400">TOOLCHAINS</span></div><ul class="flex flex-col gap-2 font-mono text-xs text-zinc-400"><li class="skill-item-interactive flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>Atlassian Jira</li><li class="skill-item-interactive flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>Atlassian Confluence</li><li class="skill-item-interactive flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>Azure DevOps &amp; TFS</li><li class="skill-item-interactive flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>SDLC Governance</li><li class="skill-item-interactive flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>API Contracts &amp; Mocking</li><li class="skill-item-interactive flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>Git Version Control</li><li class="skill-item-interactive flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>CI/CD Staging &amp; Releases</li><li class="skill-item-interactive flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>QA &amp; Regression Cycles</li><li class="skill-item-interactive flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>Technical Debt Management</li></ul></div>
-<div class="interactive-card rounded-xl p-5 flex flex-col gap-4 h-full"><div class="flex items-center justify-between border-b border-white/[0.08] pb-3"><div class="flex items-center gap-2 text-white font-semibold text-xs"><span class="material-symbols-outlined text-[17px] text-purple-400">insights</span><span class="">Flow &amp; Empirical</span></div><span class="font-mono text-[9px] text-zinc-400">METRICS</span></div><ul class="flex flex-col gap-2 font-mono text-xs text-zinc-400"><li class="skill-item-interactive flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span>Cycle Time &amp; Lead Time</li><li class="skill-item-interactive flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span>Cumulative Flow</li><li class="skill-item-interactive flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>Velocity &amp; Predictability</li><li class="skill-item-interactive flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>Burndown &amp; Burnup Tracking</li><li class="skill-item-interactive flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>Work in Progress (WIP Limits)</li><li class="skill-item-interactive flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>Capacity Planning</li><li class="skill-item-interactive flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>Scope Trimming &amp; MVP Focus</li></ul></div>
-<div class="interactive-card rounded-xl p-5 flex flex-col gap-4 h-full"><div class="flex items-center justify-between border-b border-white/[0.08] pb-3"><div class="flex items-center gap-2 text-white font-semibold text-xs"><span class="material-symbols-outlined text-[17px] text-amber-400">groups</span><span class="">Leadership &amp; Product</span></div><span class="font-mono text-[9px] text-zinc-400">GOVERNANCE</span></div><ul class="flex flex-col gap-2 font-mono text-xs text-zinc-400"><li class="skill-item-interactive flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>Servant Leadership</li><li class="skill-item-interactive flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>Stakeholder Alignment</li><li class="skill-item-interactive flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>Developer Focus Shielding</li><li class="skill-item-interactive flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>Psychological Safety</li><li class="skill-item-interactive flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>Conflict Mediation</li><li class="skill-item-interactive flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>Roadmap Execution</li><li class="skill-item-interactive flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>Continuous Improvement</li></ul></div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="interactive-card rounded-xl p-5 flex flex-col justify-between h-full group border border-white/10">
+<div class="flex flex-col gap-3 relative z-10">
+<div class="w-9 h-9 rounded-lg bg-white/[0.05] border border-white/15 flex items-center justify-center text-white group-hover:border-white/30 transition-colors">
+<span class="material-symbols-outlined text-[20px]">alt_route</span>
+</div>
+<h3 class="font-semibold text-white text-base tracking-tight">Delivery Complexity</h3>
+<p class="text-xs text-zinc-400 leading-relaxed">Turning ambiguous technical initiatives into structured, executable delivery plans with INVEST story decomposition and clear milestone gates.</p>
+</div>
+<div class="pt-3 mt-4 border-t border-white/[0.06] font-mono text-[10px] text-zinc-400 flex items-center justify-between relative z-10">
+<span class="">Result</span>
+<span class="text-white font-medium">De-risked Execution</span>
+</div>
+</div>
+<div class="interactive-card rounded-xl p-5 flex flex-col justify-between h-full group border border-white/10">
+<div class="flex flex-col gap-3 relative z-10">
+<div class="w-9 h-9 rounded-lg bg-white/[0.05] border border-white/15 flex items-center justify-center text-white group-hover:border-white/30 transition-colors">
+<span class="material-symbols-outlined text-[20px]">hub</span>
+</div>
+<h3 class="font-semibold text-white text-base tracking-tight">Cross-Team Alignment</h3>
+<p class="text-xs text-zinc-400 leading-relaxed">Connecting engineering, product and business teams around clear technical constraints, realistic capacities, and unambiguous trade-offs.</p>
+</div>
+<div class="pt-3 mt-4 border-t border-white/[0.06] font-mono text-[10px] text-zinc-400 flex items-center justify-between relative z-10">
+<span class="">Result</span>
+<span class="text-white font-medium">Unified Squad Velocity</span>
+</div>
+</div>
+<div class="interactive-card rounded-xl p-5 flex flex-col justify-between h-full group border border-white/10">
+<div class="flex flex-col gap-3 relative z-10">
+<div class="w-9 h-9 rounded-lg bg-white/[0.05] border border-white/15 flex items-center justify-center text-white group-hover:border-white/30 transition-colors">
+<span class="material-symbols-outlined text-[20px]">speed</span>
+</div>
+<h3 class="font-semibold text-white text-base tracking-tight">Engineering Flow</h3>
+<p class="text-xs text-zinc-400 leading-relaxed">Reducing blockers, eliminating API dependency idle time via contract mocking, and shielding developers from ad-hoc cognitive fragmentation.</p>
+</div>
+<div class="pt-3 mt-4 border-t border-white/[0.06] font-mono text-[10px] text-zinc-400 flex items-center justify-between relative z-10">
+<span class="">Result</span>
+<span class="text-white font-medium">Zero Idle Wait States</span>
+</div>
+</div>
+<div class="interactive-card rounded-xl p-5 flex flex-col justify-between h-full group border border-white/10">
+<div class="flex flex-col gap-3 relative z-10">
+<div class="w-9 h-9 rounded-lg bg-white/[0.05] border border-white/15 flex items-center justify-center text-white group-hover:border-white/30 transition-colors">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+</div>
+<h3 class="font-semibold text-white text-base tracking-tight">Technical Governance</h3>
+<p class="text-xs text-zinc-400 leading-relaxed">Creating lightweight systems for predictable delivery, technical quality, automated regression criteria, and continuous blameless improvement.</p>
+</div>
+<div class="pt-3 mt-4 border-t border-white/[0.06] font-mono text-[10px] text-zinc-400 flex items-center justify-between relative z-10">
+<span class="">Result</span>
+<span class="text-white font-medium">20% Debt Reserve</span>
+</div>
+</div>
 </div>
 </section>
-<!-- 4. PROFESSIONAL WORK EXPERIENCE -->
-<section class="reveal-on-scroll pt-8 border-t border-zinc-800/80 flex flex-col gap-8 scroll-mt-24 is-revealed" id="experience">
-<div class="flex flex-col gap-2">
+<!-- 04. PROFESSIONAL WORK EXPERIENCE -->
+<section class="reveal-on-scroll pt-6 border-t border-zinc-800/80 flex flex-col gap-6 scroll-mt-24" id="experience">
+<div class="flex flex-col gap-1.5">
 <div class="flex items-center gap-2 font-mono text-xs text-zinc-400 uppercase tracking-wider">
 <span class="w-1.5 h-1.5 rounded-sm bg-white/40"></span>
-<span class="">// VERIFIED TRACK RECORD &amp; CAREER MILESTONES</span>
+<span class="">// VERIFIED TRACK RECORD &amp; CAREER TIMELINE</span>
 </div>
-<h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
-          Professional Work Experience
-        </h2>
+<h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Professional Work Experience</h2>
 <p class="text-xs sm:text-sm text-zinc-400 max-w-2xl">
-          A battle-tested leadership trajectory spanning high-growth fintech startups, enterprise consultancies, and US/UAE remote cross-functional engineering teams.
+          Detailed breakdown of impact, actions, and technical governance instituted across enterprise software houses, fintech ecosystems, and high-velocity engineering teams.
         </p>
 </div>
 <div class="flex flex-col gap-5">
-<!-- Mandate 1: IFS -->
-<div class="interactive-card rounded-xl p-6 sm:p-7 flex flex-col md:flex-row gap-6 md:gap-8">
-<div class="md:w-64 shrink-0 flex flex-col gap-2 relative z-10">
+<div class="relative flex flex-col gap-6 pl-4 sm:pl-6 border-l border-zinc-800/80 ml-2">
+<div class="interactive-card rounded-xl p-6 sm:p-7 flex flex-col lg:flex-row gap-6 lg:gap-8 relative border border-white/10">
+<div class="absolute -left-[23px] sm:-left-[31px] top-7 w-3 h-3 rounded-full bg-black border-2 border-white flex items-center justify-center">
+<span class="w-1 h-1 rounded-full bg-white animate-ping"></span>
+</div>
+<div class="lg:w-72 shrink-0 flex flex-col gap-2 relative z-10">
 <div class="flex items-center gap-2">
 <span class="relative flex h-2 w-2">
-<span class="status-radar-1 absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-<span class="status-glow relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+<span class="status-radar-1 absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+<span class="status-glow relative inline-flex rounded-full h-2 w-2 bg-white"></span>
 </span>
-<span class="font-mono text-[11px] text-emerald-400 font-semibold tracking-wider uppercase">ACTIVE MANDATE</span>
+<span class="font-mono text-[11px] text-white font-semibold tracking-wider uppercase">ACTIVE MANDATE</span>
 </div>
-<h3 class="font-bold text-white text-base leading-tight">
-              Innovative Future Software House (IFS)
-            </h3>
+<h3 class="font-bold text-white text-base sm:text-lg leading-tight">Innovative Future Software House (IFS)</h3>
 <span class="text-xs text-zinc-400">Dubai, UAE (Remote International)</span>
 <span class="font-mono text-xs text-zinc-500">May 2024 – Present</span>
-</div>
-<div class="flex-1 flex flex-col gap-3 md:border-l md:border-white/[0.08] md:pl-8 relative z-10">
-<div class="inline-flex items-center self-start px-2.5 py-1 rounded bg-white/[0.05] border border-white/[0.08] font-mono text-xs text-white">
-              Technical Project Coordinator &amp; Scrum Master
-            </div>
-<ul class="flex flex-col gap-2 text-[13px] text-zinc-300 leading-relaxed list-disc list-outside pl-4 pt-1"><li class="transition-colors hover:text-white">Facilitate Agile ceremonies for <strong class="text-white font-medium">Cross-functional squads</strong> (Frontend, Backend, Design, QA).</li><li class="transition-colors hover:text-white">Coordinate sprint backlogs and <strong class="text-white font-medium">Release Cycles</strong> across Web, PWA, and Mobile platforms.</li><li class="transition-colors hover:text-white">Build clear <strong class="text-white font-medium">Workflow Telemetry</strong> and dashboards for executive delivery visibility.</li><li class="transition-colors hover:text-white">Actively unblock delivery risks and maintain clear alignment with <strong class="text-white font-medium">Sprint Goals</strong>.</li><li class="transition-colors hover:text-white">Enforce a <strong class="text-white font-medium">Dedicated Debt Guardrail</strong> within sprints for refactoring and test automation.</li><li class="transition-colors hover:text-white">Integrate <strong class="text-white font-medium">AI-Assisted Workflows</strong> to streamline technical documentation and user story clarity.</li></ul>
+<div class="pt-2">
+<span class="inline-flex items-center px-2.5 py-1 rounded bg-white/[0.05] border border-white/[0.08] font-mono text-[11px] text-white">Technical Project Coordinator &amp; Scrum Master</span>
 </div>
 </div>
-<!-- Mandate 2: Apsy -->
-<div class="interactive-card rounded-xl p-6 sm:p-7 flex flex-col md:flex-row gap-6 md:gap-8">
-<div class="md:w-64 shrink-0 flex flex-col gap-2 relative z-10">
+<div class="flex-1 flex flex-col gap-3.5 lg:border-l lg:border-white/[0.08] lg:pl-8 relative z-10">
+<div class="flex flex-col gap-1">
+<span class="font-mono text-[10px] uppercase text-zinc-500 tracking-wider font-semibold">Context</span>
+<p class="text-xs sm:text-[13px] text-zinc-300 leading-relaxed">Fast-paced multi-platform fintech &amp; enterprise software house delivering complex solutions across Web, PWA, and Mobile (Android/iOS) ecosystems.</p>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-mono text-[10px] uppercase text-zinc-500 tracking-wider font-semibold">Action &amp; Delivery Framework</span>
+<ul class="flex flex-col gap-1.5 text-xs sm:text-[13px] text-zinc-300 leading-relaxed list-disc list-outside pl-4">
+<li class="">Coordinated cross-functional engineering delivery across frontend, backend, UI/UX, and QA teams.</li>
+<li class="">Instituted contract-first API specs and automated Jira sprint telemetry for real-time delivery visibility.</li>
+<li class="">Enforced an inviolable 20% capacity reserve dedicated strictly to technical debt reduction and refactoring.</li>
+</ul>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-mono text-[10px] uppercase text-zinc-500 tracking-wider font-semibold">Outcome &amp; Key Impact</span>
+<p class="text-xs sm:text-[13px] text-zinc-300 leading-relaxed">Eliminated cross-squad blocker stagnation and stabilized multi-platform release cycles with zero unvetted regression releases.</p>
+</div>
+<div class="pt-2">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-white/[0.05] border border-white/20 text-zinc-200 font-mono text-[11px]">
+<span class="material-symbols-outlined text-[14px] text-white">verified</span>
+<span class="">KEY IMPACT: Multi-platform release stabilization &amp; protected 20% debt reserve</span>
+</div>
+</div>
+</div>
+</div>
+<div class="interactive-card rounded-xl p-6 sm:p-7 flex flex-col lg:flex-row gap-6 lg:gap-8 relative border border-white/10">
+<div class="absolute -left-[23px] sm:-left-[31px] top-7 w-3 h-3 rounded-full bg-black border-2 border-zinc-400 flex items-center justify-center">
+<span class="w-1 h-1 rounded-full bg-zinc-300"></span>
+</div>
+<div class="lg:w-72 shrink-0 flex flex-col gap-2 relative z-10">
 <div class="flex items-center gap-2">
-<span class="w-2 h-2 rounded-full bg-zinc-600"></span>
-<span class="font-mono text-[11px] text-zinc-400 font-medium tracking-wider uppercase">COMPLETED MANDATE</span>
+<span class="w-2 h-2 rounded-full bg-zinc-400"></span>
+<span class="font-mono text-[11px] text-zinc-300 font-medium tracking-wider uppercase">COMPLETED MANDATE</span>
 </div>
-<h3 class="font-bold text-white text-base leading-tight">
-              Apsy Technology
-            </h3>
+<h3 class="font-bold text-white text-base sm:text-lg leading-tight">Apsy Technology</h3>
 <span class="text-xs text-zinc-400">Los Angeles, CA, USA (Remote International)</span>
 <span class="font-mono text-xs text-zinc-500">April 2023 – May 2024</span>
-</div>
-<div class="flex-1 flex flex-col gap-3 md:border-l md:border-white/[0.08] md:pl-8 relative z-10">
-<div class="inline-flex items-center self-start px-2.5 py-1 rounded bg-white/[0.05] border border-white/[0.08] font-mono text-xs text-white">
-              Technical Project Coordinator &amp; Scrum Master
-            </div>
-<ul class="flex flex-col gap-2 text-[13px] text-zinc-300 leading-relaxed list-disc list-outside pl-4 pt-1"><li class="transition-colors hover:text-white">Coordinated alignment between <strong class="text-white font-medium">Product &amp; Engineering</strong> teams to balance roadmaps with technical feasibility.</li><li class="transition-colors hover:text-white">Facilitated backlog grooming, breaking down complex epics with <strong class="text-white font-medium">INVEST Story Slicing</strong>.</li><li class="transition-colors hover:text-white">Partnered with backend and mobile engineers to establish <strong class="text-white font-medium">API Contracts &amp; Mocks</strong>, eliminating cross-team wait times.</li><li class="transition-colors hover:text-white">Established clear <strong class="text-white font-medium">Definition of Ready &amp; Done</strong> criteria, stabilizing delivery commitments.</li><li class="transition-colors hover:text-white">Led blameless post-mortems and retrospectives to continuously improve team flow and safety.</li></ul>
+<div class="pt-2">
+<span class="inline-flex items-center px-2.5 py-1 rounded bg-white/[0.05] border border-white/[0.08] font-mono text-[11px] text-white">Technical Project Coordinator &amp; Scrum Master</span>
 </div>
 </div>
-<!-- Mandate 3: SatraPay -->
-<div class="interactive-card rounded-xl p-6 sm:p-7 flex flex-col md:flex-row gap-6 md:gap-8">
-<div class="md:w-64 shrink-0 flex flex-col gap-2 relative z-10">
+<div class="flex-1 flex flex-col gap-3.5 lg:border-l lg:border-white/[0.08] lg:pl-8 relative z-10">
+<div class="flex flex-col gap-1">
+<span class="font-mono text-[10px] uppercase text-zinc-500 tracking-wider font-semibold">Context</span>
+<p class="text-xs sm:text-[13px] text-zinc-300 leading-relaxed">High-velocity US engineering environment delivering healthtech, social commerce, and AI mobile ecosystems across distributed squads.</p>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-mono text-[10px] uppercase text-zinc-500 tracking-wider font-semibold">Action &amp; Delivery Framework</span>
+<ul class="flex flex-col gap-1.5 text-xs sm:text-[13px] text-zinc-300 leading-relaxed list-disc list-outside pl-4">
+<li class="">Facilitated backlog refinement, breaking down complex epics with INVEST user story slicing.</li>
+<li class="">Instituted strict Definition of Ready (DoR) and Definition of Done (DoD) gating mechanisms.</li>
+<li class="">Decoupled frontend sprints from synchronous backend blockers using contract-first mock architectures.</li>
+</ul>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-mono text-[10px] uppercase text-zinc-500 tracking-wider font-semibold">Outcome &amp; Key Impact</span>
+<p class="text-xs sm:text-[13px] text-zinc-300 leading-relaxed">Streamlined cross-timezone handoffs between US and international engineering squads and drove blameless continuous improvement.</p>
+</div>
+<div class="pt-2">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-white/[0.05] border border-white/20 text-zinc-200 font-mono text-[11px]">
+<span class="material-symbols-outlined text-[14px] text-white">verified</span>
+<span class="">KEY IMPACT: Zero dependency wait time via contract-first mock architectures</span>
+</div>
+</div>
+</div>
+</div>
+<div class="interactive-card rounded-xl p-6 sm:p-7 flex flex-col lg:flex-row gap-6 lg:gap-8 relative border border-white/10">
+<div class="absolute -left-[23px] sm:-left-[31px] top-7 w-3 h-3 rounded-full bg-black border-2 border-zinc-400 flex items-center justify-center">
+<span class="w-1 h-1 rounded-full bg-zinc-400"></span>
+</div>
+<div class="lg:w-72 shrink-0 flex flex-col gap-2 relative z-10">
 <div class="flex items-center gap-2">
-<span class="w-2 h-2 rounded-full bg-zinc-600"></span>
-<span class="font-mono text-[11px] text-zinc-400 font-medium tracking-wider uppercase">FINTECH FOUNDATION</span>
+<span class="w-2 h-2 rounded-full bg-zinc-400"></span>
+<span class="font-mono text-[11px] text-zinc-300 font-medium tracking-wider uppercase">[ FOUNDING MANDATE ]</span>
 </div>
-<h3 class="font-bold text-white text-base leading-tight">
-              Satrapi (SatraPay)
-            </h3>
+<h3 class="font-bold text-white text-base sm:text-lg leading-tight">SatraPay</h3>
 <span class="text-xs text-zinc-400">Karaj, Alborz, Iran</span>
 <span class="font-mono text-xs text-zinc-500">May 2018 – May 2022</span>
+<div class="pt-2">
+<span class="inline-flex items-center px-2.5 py-1 rounded bg-white/[0.05] border border-white/[0.08] font-mono text-[11px] text-white">Co-Founder, Board Member &amp; Product Lead</span>
 </div>
-<div class="flex-1 flex flex-col gap-3 md:border-l md:border-white/[0.08] md:pl-8 relative z-10">
-<div class="inline-flex items-center self-start px-2.5 py-1 rounded bg-white/[0.05] border border-white/[0.08] font-mono text-xs text-white">
-              Co-Founder, Board Member &amp; Product Lead
-            </div>
-<ul class="flex flex-col gap-2 text-[13px] text-zinc-300 leading-relaxed list-disc list-outside pl-4 pt-1">
-<li class="transition-colors hover:text-white">Directed overall product development and <strong class="text-white font-medium">Product Roadmap</strong> in fintech and innovative payment ecosystems.</li>
-<li class="transition-colors hover:text-white">Engineered hardware-integrated and Near Field Communication (<strong class="text-white font-medium">NFC contactless payments</strong>) solutions.</li>
-<li class="transition-colors hover:text-white">Conducted user behavior analysis, directed <strong class="text-white font-medium">Software engineering squads</strong>, and governed production software release cycles.</li>
+</div>
+<div class="flex-1 flex flex-col gap-3.5 lg:border-l lg:border-white/[0.08] lg:pl-8 relative z-10">
+<div class="flex flex-col gap-1">
+<span class="font-mono text-[10px] uppercase text-zinc-500 tracking-wider font-semibold">Context</span>
+<p class="text-xs sm:text-[13px] text-zinc-300 leading-relaxed">Founding team of innovative fintech platform developing contactless NFC and digital payment solutions under high security regulations.</p>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-mono text-[10px] uppercase text-zinc-500 tracking-wider font-semibold">Action &amp; Delivery Framework</span>
+<ul class="flex flex-col gap-1.5 text-xs sm:text-[13px] text-zinc-300 leading-relaxed list-disc list-outside pl-4">
+<li class="">Directed end-to-end SDLC and hardware-integrated software development for NFC transactions.</li>
+<li class="">Governed engineering releases, architecture sprints, and financial regulatory compliance.</li>
+<li class="">Established agile execution frameworks from zero to scalable production deployment.</li>
+</ul>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-mono text-[10px] uppercase text-zinc-500 tracking-wider font-semibold">Outcome &amp; Key Impact</span>
+<p class="text-xs sm:text-[13px] text-zinc-300 leading-relaxed">Shipped robust contactless payment software with zero transaction regression failures across the multi-year production lifespan.</p>
+</div>
+<div class="pt-2">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-white/[0.05] border border-white/20 text-zinc-200 font-mono text-[11px]">
+<span class="material-symbols-outlined text-[14px] text-white">verified</span>
+<span class="">KEY IMPACT: Zero payment regression incidents across production lifecycle</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 05. SELECTED CASE STUDIES -->
+<section class="reveal-on-scroll pt-6 border-t border-zinc-800/80 flex flex-col gap-6 scroll-mt-24" id="case-studies">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center gap-2 font-mono text-xs text-zinc-400 uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-sm bg-white/40"></span>
+<span class="">// VERIFIED SYSTEM CASE STUDIES &amp; ARCHITECTURAL DOSSIERS</span>
+</div>
+<h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Selected Case Studies</h2>
+<p class="text-xs sm:text-sm text-zinc-400 max-w-2xl">
+          Real technical delivery challenges solved: contract-first schemas, asynchronous job queues, and synchronized multi-platform releases.
+        </p>
+</div>
+<!-- 5 Interactive Case Studies -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+<div class="interactive-card rounded-xl p-5 flex flex-col justify-between h-full group border border-white/10">
+<div class="flex flex-col gap-3 relative z-10">
+<div class="flex items-center justify-between text-zinc-400 font-mono text-[10px]">
+<span class="uppercase tracking-wider text-white font-semibold">HEALTHCARE TECH</span>
+<span class="text-zinc-500">Sept 2023</span>
+</div>
+<div class="flex items-baseline justify-between">
+<h3 class="text-base font-semibold text-white tracking-tight">TherExNow</h3>
+<a class="text-xs text-zinc-400 hover:text-white font-mono flex items-center gap-0.5 transition-colors" href="https://therexnow.com" rel="noreferrer" target="_blank">therexnow.com <span class="material-symbols-outlined text-[13px]">north_east</span></a>
+</div>
+<div class="font-mono text-[11px] text-zinc-500">Client: Apsy Technology</div>
+<div class="flex flex-wrap gap-1.5 pt-0.5">
+<span class="px-2 py-0.5 rounded bg-white/[0.04] border border-white/[0.08] font-mono text-[10px] text-zinc-300">OpenAPI 3.0</span>
+<span class="px-2 py-0.5 rounded bg-white/[0.04] border border-white/[0.08] font-mono text-[10px] text-zinc-300">Prism Mocks</span>
+<span class="px-2 py-0.5 rounded bg-white/[0.04] border border-white/[0.08] font-mono text-[10px] text-zinc-300">React Native</span>
+</div>
+<div class="flex flex-col gap-2 pt-1 text-xs text-zinc-300">
+<div class=""><strong class="text-zinc-400 font-mono text-[10px] uppercase block">Challenge:</strong> Frontend mobile &amp; web teams chronically blocked by backend API dependencies.</div>
+<div class=""><strong class="text-zinc-400 font-mono text-[10px] uppercase block">Intervention:</strong> Contract-first federation with OpenAPI 3.0 specs and Prism mock servers.</div>
+</div>
+</div>
+<div class="pt-3 mt-4 border-t border-white/[0.06] flex flex-col gap-1.5 relative z-10">
+<span class="font-mono text-[9px] text-zinc-500 uppercase">Impact Metric</span>
+<div class="font-mono text-xs text-zinc-200 bg-white/[0.04] px-2.5 py-1.5 rounded border border-white/15">Frontend built 3 weeks ahead of backend with 0 idle wait time</div>
+</div>
+</div>
+<div class="interactive-card rounded-xl p-5 flex flex-col justify-between h-full group border border-white/10">
+<div class="flex flex-col gap-3 relative z-10">
+<div class="flex items-center justify-between text-zinc-400 font-mono text-[10px]">
+<span class="uppercase tracking-wider text-white font-semibold">COMMERCE &amp; WEB3</span>
+<span class="text-zinc-500">July 2023</span>
+</div>
+<div class="flex items-baseline justify-between">
+<h3 class="text-base font-semibold text-white tracking-tight">SocialOrder</h3>
+<a class="text-xs text-zinc-400 hover:text-white font-mono flex items-center gap-0.5 transition-colors" href="https://socialorder.co" rel="noreferrer" target="_blank">socialorder.co <span class="material-symbols-outlined text-[13px]">north_east</span></a>
+</div>
+<div class="font-mono text-[11px] text-zinc-500">Client: IFS Software House</div>
+<div class="flex flex-wrap gap-1.5 pt-0.5">
+<span class="px-2 py-0.5 rounded bg-white/[0.04] border border-white/[0.08] font-mono text-[10px] text-zinc-300">Stripe API</span>
+<span class="px-2 py-0.5 rounded bg-white/[0.04] border border-white/[0.08] font-mono text-[10px] text-zinc-300">Web3</span>
+<span class="px-2 py-0.5 rounded bg-white/[0.04] border border-white/[0.08] font-mono text-[10px] text-zinc-300">Polygon</span>
+</div>
+<div class="flex flex-col gap-2 pt-1 text-xs text-zinc-300">
+<div class=""><strong class="text-zinc-400 font-mono text-[10px] uppercase block">Challenge:</strong> Volatility in payment gateways, Stripe integrations, &amp; Polygon smart contract milestones.</div>
+<div class=""><strong class="text-zinc-400 font-mono text-[10px] uppercase block">Intervention:</strong> Enforced strict DoR gating, slice-by-slice sprint plans, and automated QA staging.</div>
+</div>
+</div>
+<div class="pt-3 mt-4 border-t border-white/[0.06] flex flex-col gap-1.5 relative z-10">
+<span class="font-mono text-[9px] text-zinc-500 uppercase">Impact Metric</span>
+<div class="font-mono text-xs text-zinc-200 bg-white/[0.04] px-2.5 py-1.5 rounded border border-white/15">Flawless onboarding flow &amp; predictable settlement delivery</div>
+</div>
+</div>
+<div class="interactive-card rounded-xl p-5 flex flex-col justify-between h-full group border border-white/10">
+<div class="flex flex-col gap-3 relative z-10">
+<div class="flex items-center justify-between text-zinc-400 font-mono text-[10px]">
+<span class="uppercase tracking-wider text-white font-semibold">DATA &amp; SOCIAL TECH</span>
+<span class="text-zinc-500">July 2025</span>
+</div>
+<div class="flex items-baseline justify-between">
+<h3 class="text-base font-semibold text-white tracking-tight">QuesShare</h3>
+<span class="font-mono text-[10px] text-zinc-300 bg-white/[0.06] px-2 py-0.5 rounded border border-white/[0.12]">IFS Pipeline</span>
+</div>
+<div class="font-mono text-[11px] text-zinc-500">Client: IFS Software House</div>
+<div class="flex flex-wrap gap-1.5 pt-0.5">
+<span class="px-2 py-0.5 rounded bg-white/[0.04] border border-white/[0.08] font-mono text-[10px] text-zinc-300">Latency Telemetry</span>
+<span class="px-2 py-0.5 rounded bg-white/[0.04] border border-white/[0.08] font-mono text-[10px] text-zinc-300">Microservices</span>
+<span class="px-2 py-0.5 rounded bg-white/[0.04] border border-white/[0.08] font-mono text-[10px] text-zinc-300">Redis Cache</span>
+</div>
+<div class="flex flex-col gap-2 pt-1 text-xs text-zinc-300">
+<div class=""><strong class="text-zinc-400 font-mono text-[10px] uppercase block">Challenge:</strong> Large unstructured PRDs and ad-targeting algorithms causing severe scope creep.</div>
+<div class=""><strong class="text-zinc-400 font-mono text-[10px] uppercase block">Intervention:</strong> Translated macroscopic PRDs into atomic technical deliverables with latency benchmarks.</div>
+</div>
+</div>
+<div class="pt-3 mt-4 border-t border-white/[0.06] flex flex-col gap-1.5 relative z-10">
+<span class="font-mono text-[9px] text-zinc-500 uppercase">Impact Metric</span>
+<div class="font-mono text-xs text-zinc-200 bg-white/[0.04] px-2.5 py-1.5 rounded border border-white/15">Balanced squad capacity &amp; prevented architectural debt buildup</div>
+</div>
+</div>
+<div class="interactive-card rounded-xl p-5 flex flex-col justify-between h-full group border border-white/10">
+<div class="flex flex-col gap-3 relative z-10">
+<div class="flex items-center justify-between text-zinc-400 font-mono text-[10px]">
+<span class="uppercase tracking-wider text-white font-semibold">KNOWLEDGE &amp; MOBILE</span>
+<span class="text-zinc-500">Aug 2023</span>
+</div>
+<div class="flex items-baseline justify-between">
+<h3 class="text-base font-semibold text-white tracking-tight">Factogram</h3>
+<span class="font-mono text-[10px] text-zinc-300 bg-white/[0.06] px-2 py-0.5 rounded border border-white/[0.12]">Play Store</span>
+</div>
+<div class="font-mono text-[11px] text-zinc-500">Client: Apsy Technology</div>
+<div class="flex flex-wrap gap-1.5 pt-0.5">
+<span class="px-2 py-0.5 rounded bg-white/[0.04] border border-white/[0.08] font-mono text-[10px] text-zinc-300">Flutter Mobile</span>
+<span class="px-2 py-0.5 rounded bg-white/[0.04] border border-white/[0.08] font-mono text-[10px] text-zinc-300">CI/CD Staging</span>
+<span class="px-2 py-0.5 rounded bg-white/[0.04] border border-white/[0.08] font-mono text-[10px] text-zinc-300">Google Play Console</span>
+</div>
+<div class="flex flex-col gap-2 pt-1 text-xs text-zinc-300">
+<div class=""><strong class="text-zinc-400 font-mono text-[10px] uppercase block">Challenge:</strong> Mobile release volatility and frequent Google Play Store review staging delays.</div>
+<div class=""><strong class="text-zinc-400 font-mono text-[10px] uppercase block">Intervention:</strong> Established synchronized regression pipelines and dedicated sprint hardening cycles.</div>
+</div>
+</div>
+<div class="pt-3 mt-4 border-t border-white/[0.06] flex flex-col gap-1.5 relative z-10">
+<span class="font-mono text-[9px] text-zinc-500 uppercase">Impact Metric</span>
+<div class="font-mono text-xs text-zinc-200 bg-white/[0.04] px-2.5 py-1.5 rounded border border-white/15">100% store review pass rate with verified release cadence</div>
+</div>
+</div>
+<div class="interactive-card rounded-xl p-5 flex flex-col justify-between h-full group md:col-span-2 lg:col-span-2 border border-white/10">
+<div class="flex flex-col gap-3 relative z-10">
+<div class="flex items-center justify-between text-zinc-400 font-mono text-[10px]">
+<span class="uppercase tracking-wider text-white font-semibold">AI CONTENT &amp; MARKETPLACE</span>
+<span class="text-zinc-500">Sept 2023</span>
+</div>
+<div class="flex items-baseline justify-between">
+<h3 class="text-base font-semibold text-white tracking-tight">Linklyt</h3>
+<span class="font-mono text-[10px] text-zinc-300 bg-white/[0.06] px-2 py-0.5 rounded border border-white/[0.12]">Apsy Pipeline</span>
+</div>
+<div class="font-mono text-[11px] text-zinc-500">Client: Apsy Technology</div>
+<div class="flex flex-wrap gap-1.5 pt-0.5">
+<span class="px-2 py-0.5 rounded bg-white/[0.04] border border-white/[0.08] font-mono text-[10px] text-zinc-300">Latency Telemetry</span>
+<span class="px-2 py-0.5 rounded bg-white/[0.04] border border-white/[0.08] font-mono text-[10px] text-zinc-300">Async Queues</span>
+<span class="px-2 py-0.5 rounded bg-white/[0.04] border border-white/[0.08] font-mono text-[10px] text-zinc-300">BullMQ</span>
+<span class="px-2 py-0.5 rounded bg-white/[0.04] border border-white/[0.08] font-mono text-[10px] text-zinc-300">AI Workflows</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-3 pt-1 text-xs text-zinc-300">
+<div class=""><strong class="text-zinc-400 font-mono text-[10px] uppercase block">Challenge:</strong> High-latency AI generation APIs blocking digital asset ownership transfer protocols.</div>
+<div class=""><strong class="text-zinc-400 font-mono text-[10px] uppercase block">Intervention:</strong> Implemented asynchronous job queues and transparent latency telemetry dashboards.</div>
+</div>
+</div>
+<div class="pt-3 mt-4 border-t border-white/[0.06] flex flex-col gap-1.5 relative z-10">
+<span class="font-mono text-[9px] text-zinc-500 uppercase">Impact Metric</span>
+<div class="font-mono text-xs text-zinc-200 bg-white/[0.04] px-2.5 py-1.5 rounded border border-white/15">Predictable user transaction tracking and zero lost digital asset transfers</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 06. TECHNICAL / DELIVERY EXPERTISE (CATEGORIZED) -->
+<section class="reveal-on-scroll pt-6 border-t border-zinc-800/80 flex flex-col gap-6 scroll-mt-24" id="skills">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center gap-2 font-mono text-xs text-zinc-400 uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-sm bg-white/40"></span>
+<span class="">// TECHNICAL / DELIVERY EXPERTISE &amp; METHODOLOGY</span>
+</div>
+<h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Technical &amp; Delivery Expertise</h2>
+<p class="text-xs sm:text-sm text-zinc-400 max-w-2xl">
+          Clean categorization across delivery management, technical software engineering, organizational leadership, and industry toolchains.
+        </p>
+</div>
+<!-- 4 Categorized Columns -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="interactive-card rounded-xl p-5 flex flex-col gap-3.5 h-full border border-white/10">
+<div class="flex items-center justify-between border-b border-white/[0.08] pb-3">
+<div class="flex items-center gap-2 text-white font-semibold text-xs">
+<span class="material-symbols-outlined text-[18px] text-white">sync_alt</span>
+<span class="">Delivery Mastery</span>
+</div>
+<span class="font-mono text-[9px] text-zinc-400">FRAMEWORKS</span>
+</div>
+<ul class="flex flex-col gap-2 font-mono text-xs text-zinc-400">
+<li class="flex items-center gap-2 text-zinc-200"><span class="w-1.5 h-1.5 rounded-full bg-white"></span>Technical Delivery</li>
+<li class="flex items-center gap-2 text-zinc-200"><span class="w-1.5 h-1.5 rounded-full bg-white"></span>Agile Systems &amp; Scrum</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>Kanban Principles</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>Flow Optimization</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>Dependency Management</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>WIP Limits Enforcement</li>
+<li class="flex items-center gap-2 text-zinc-200"><span class="w-1.5 h-1.5 rounded-full bg-white"></span>Burndown &amp; CFD Tracking</li>
+</ul>
+</div>
+<div class="interactive-card rounded-xl p-5 flex flex-col gap-3.5 h-full border border-white/10">
+<div class="flex items-center justify-between border-b border-white/[0.08] pb-3">
+<div class="flex items-center gap-2 text-white font-semibold text-xs">
+<span class="material-symbols-outlined text-[18px] text-white">terminal</span>
+<span class="">Technical &amp; APIs</span>
+</div>
+<span class="font-mono text-[9px] text-zinc-400">SOFTWARE</span>
+</div>
+<ul class="flex flex-col gap-2 font-mono text-xs text-zinc-400">
+<li class="flex items-center gap-2 text-zinc-200"><span class="w-1.5 h-1.5 rounded-full bg-white"></span>API Coordination</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>Contract-First Mocking</li>
+<li class="flex items-center gap-2 text-zinc-200"><span class="w-1.5 h-1.5 rounded-full bg-white"></span>Git Version Control</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>QA &amp; Automated Staging</li>
+</ul>
+</div>
+<div class="interactive-card rounded-xl p-5 flex flex-col gap-3.5 h-full border border-white/10">
+<div class="flex items-center justify-between border-b border-white/[0.08] pb-3">
+<div class="flex items-center gap-2 text-white font-semibold text-xs">
+<span class="material-symbols-outlined text-[18px] text-white">groups</span>
+<span class="">Leadership</span>
+</div>
+<span class="font-mono text-[9px] text-zinc-400">GOVERNANCE</span>
+</div>
+<ul class="flex flex-col gap-2 font-mono text-xs text-zinc-400">
+<li class="flex items-center gap-2 text-zinc-200"><span class="w-1.5 h-1.5 rounded-full bg-white"></span>Cross-Functional Leadership</li>
+<li class="flex items-center gap-2 text-zinc-200"><span class="w-1.5 h-1.5 rounded-full bg-white"></span>Engineering Operations</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>Stakeholder Alignment</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>Technical Governance</li>
+<li class="flex items-center gap-2 text-zinc-200"><span class="w-1.5 h-1.5 rounded-full bg-white"></span>Cognitive Shielding</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>Conflict Mediation</li>
+</ul>
+</div>
+<div class="interactive-card rounded-xl p-5 flex flex-col gap-3.5 h-full border border-white/10">
+<div class="flex items-center justify-between border-b border-white/[0.08] pb-3">
+<div class="flex items-center gap-2 text-white font-semibold text-xs">
+<span class="material-symbols-outlined text-[18px] text-white">build</span>
+<span class="">Toolchain</span>
+</div>
+<span class="font-mono text-[9px] text-zinc-400">OPERATIONAL</span>
+</div>
+<ul class="flex flex-col gap-2 font-mono text-xs text-zinc-400">
+<li class="flex items-center gap-2 text-zinc-200"><span class="w-1.5 h-1.5 rounded-full bg-white"></span>Atlassian Jira (JQL &amp; Dashboards)</li>
+<li class="flex items-center gap-2 text-zinc-200"><span class="w-1.5 h-1.5 rounded-full bg-white"></span>Atlassian Confluence</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>Azure DevOps &amp; TFS</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>Postman / Prism Mocking</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>VS Code &amp; Git</li>
+<li class="flex items-center gap-2 text-zinc-200"><span class="w-1.5 h-1.5 rounded-full bg-white"></span>AI Requirements Drafting</li>
 </ul>
 </div>
 </div>
-</div>
-</section>
-<!-- 5. KEY PROJECTS & VERIFIED CASE STUDIES -->
-<section class="reveal-on-scroll pt-8 border-t border-zinc-800/80 flex flex-col gap-8 scroll-mt-24 is-revealed" id="projects">
-<div class="flex flex-col gap-2">
-<div class="flex items-center gap-2 font-mono text-xs text-zinc-400 uppercase tracking-wider">
-<span class="w-1.5 h-1.5 rounded-sm bg-white/40"></span>
-<span class="">// SYSTEM CASE STUDIES &amp; TECHNICAL DOSSIERS</span>
-</div>
-<h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
-          Key Projects &amp; Verified Case Studies
-        </h2>
-<p class="text-xs sm:text-sm text-zinc-400 max-w-2xl">
-          Real delivery challenges solved, contract-first specs orchestrated, and multi-team releases shipped in production.
-        </p>
-</div>
-<!-- Balanced 5 Card Grid (3 Top, 2 Bottom) with High-Fidelity Luminance on Hover -->
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-<div class="interactive-card rounded-xl p-6 flex flex-col justify-between h-full group"><div class="flex flex-col gap-3 relative z-10"><div class="flex items-center justify-between text-zinc-400 font-mono text-[11px]"><span class="uppercase tracking-wider">HEALTHCARE TECH</span><span class="">Sept 2023</span></div><div class="flex items-baseline justify-between"><h3 class="text-base font-semibold text-white tracking-tight">TherExNow</h3><a class="text-xs text-zinc-400 hover:text-emerald-400 font-mono flex items-center gap-0.5 transition-colors group-hover:translate-x-0.5" href="https://therexnow.com" rel="noreferrer" target="_blank">therexnow.com<span class="material-symbols-outlined text-[13px]">north_east</span></a></div><div class="font-mono text-[11px] text-zinc-500">Client: Apsy</div><p class="text-xs text-zinc-400 leading-relaxed">Digital Health &amp; Telemedicine platform. Resolved client idle wait states by introducing contract-first API specifications and mock servers, decoupling UI and backend development.</p></div><div class="pt-4 mt-6 border-t border-white/[0.06] flex flex-col gap-1.5 relative z-10"><span class="font-mono text-[10px] text-zinc-400 uppercase">Key Resolution</span><div class="font-mono text-xs text-white bg-black/60 px-2.5 py-1.5 rounded border border-white/[0.08] transition-colors group-hover:border-white/20">API Mock Servers &amp; Contract Specs</div></div></div>
-<div class="interactive-card rounded-xl p-6 flex flex-col justify-between h-full group"><div class="flex flex-col gap-3 relative z-10"><div class="flex items-center justify-between text-zinc-400 font-mono text-[11px]"><span class="uppercase tracking-wider">COMMERCE &amp; WEB3</span><span class="">July 2023</span></div><div class="flex items-baseline justify-between"><h3 class="text-base font-semibold text-white tracking-tight">SocialOrder</h3><a class="text-xs text-zinc-400 hover:text-emerald-400 font-mono flex items-center gap-0.5 transition-colors group-hover:translate-x-0.5" href="https://socialorder.co" rel="noreferrer" target="_blank">socialorder.co<span class="material-symbols-outlined text-[13px]">north_east</span></a></div><div class="font-mono text-[11px] text-zinc-500">Client: IFS</div><p class="text-xs text-zinc-400 leading-relaxed">Web3 Social Commerce Platform. End-to-end sprint facilitation for smart contract integration, customer onboarding, and international payment flows with structured story slicing.</p></div><div class="pt-4 mt-6 border-t border-white/[0.06] flex flex-col gap-1.5 relative z-10"><span class="font-mono text-[10px] text-zinc-400 uppercase">Key Resolution</span><div class="font-mono text-xs text-white bg-black/60 px-2.5 py-1.5 rounded border border-white/[0.08] transition-colors group-hover:border-white/20">Smart Contract Flow &amp; Payment Slicing</div></div></div>
-<div class="interactive-card rounded-xl p-6 flex flex-col justify-between h-full group"><div class="flex flex-col gap-3 relative z-10"><div class="flex items-center justify-between text-zinc-400 font-mono text-[11px]"><span class="uppercase tracking-wider">DATA &amp; SOCIAL TECH</span><span class="">July 2025</span></div><div class="flex items-baseline justify-between"><h3 class="text-base font-semibold text-white tracking-tight">QuesShare</h3><span class="font-mono text-[10px] text-zinc-400 bg-white/[0.06] px-2 py-0.5 rounded">IFS Pipeline</span></div><div class="font-mono text-[11px] text-zinc-500">Client: IFS</div><p class="text-xs text-zinc-400 leading-relaxed">Data-driven anonymous Q&amp;A platform. Translated product requirements into manageable technical user stories with balanced squad capacity planning.</p></div><div class="pt-4 mt-6 border-t border-white/[0.06] flex flex-col gap-1.5 relative z-10"><span class="font-mono text-[10px] text-zinc-400 uppercase">Key Resolution</span><div class="font-mono text-xs text-white bg-black/60 px-2.5 py-1.5 rounded border border-white/[0.08] transition-colors group-hover:border-white/20">Requirements Decomposition &amp; Delivery Slicing</div></div></div>
-<div class="interactive-card rounded-xl p-6 flex flex-col justify-between h-full group md:col-span-1 lg:col-span-1"><div class="flex flex-col gap-3 relative z-10"><div class="flex items-center justify-between text-zinc-400 font-mono text-[11px]"><span class="uppercase tracking-wider">KNOWLEDGE &amp; MOBILE</span><span class="">Aug 2023</span></div><div class="flex items-baseline justify-between"><h3 class="text-base font-semibold text-white tracking-tight">Factogram</h3><span class="font-mono text-[10px] text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">Google Play Store</span></div><div class="font-mono text-[11px] text-zinc-500">Client: Apsy</div><p class="text-xs text-zinc-400 leading-relaxed">Verified knowledge mobile application. Guided mobile release cycles, regression priorities, and app store release pipeline for distributed engineering squads.</p></div><div class="pt-4 mt-6 border-t border-white/[0.06] flex flex-col gap-1.5 relative z-10"><span class="font-mono text-[10px] text-zinc-400 uppercase">Key Resolution</span><div class="font-mono text-xs text-white bg-black/60 px-2.5 py-1.5 rounded border border-white/[0.08] transition-colors group-hover:border-white/20">Mobile Release Staging &amp; App Store Delivery</div></div></div>
-<div class="interactive-card rounded-xl p-6 flex flex-col justify-between h-full group md:col-span-2 lg:col-span-2"><div class="flex flex-col gap-3 relative z-10"><div class="flex items-center justify-between text-zinc-400 font-mono text-[11px]"><span class="uppercase tracking-wider">AI CONTENT &amp; MARKETPLACE</span><span class="">Sept 2023</span></div><div class="flex items-baseline justify-between"><h3 class="text-base font-semibold text-white tracking-tight">Linklyt</h3><span class="font-mono text-[10px] text-zinc-400 bg-white/[0.06] px-2 py-0.5 rounded">Apsy Pipeline</span></div><div class="font-mono text-[11px] text-zinc-500">Client: Apsy</div><p class="text-xs text-zinc-400 leading-relaxed">AI content marketplace. Scrum coordination across AI generation pipelines, asset ownership transfer protocols, and service latency tracking.</p></div><div class="pt-4 mt-6 border-t border-white/[0.06] flex flex-col gap-1.5 relative z-10"><span class="font-mono text-[10px] text-zinc-400 uppercase">Key Resolution</span><div class="font-mono text-xs text-white bg-black/60 px-2.5 py-1.5 rounded border border-white/[0.08] transition-colors group-hover:border-white/20">Latency Monitoring &amp; Digital Asset Ownership</div></div></div>
-</div>
-</section>
-<!-- 6. HONORS, EDUCATION & LANGUAGES -->
-<section class="reveal-on-scroll pt-8 border-t border-zinc-800/80 flex flex-col gap-8 scroll-mt-24 is-revealed" id="honors">
-<div class="flex flex-col gap-2">
-<div class="flex items-center gap-2 font-mono text-xs text-zinc-400 uppercase tracking-wider">
-<span class="w-1.5 h-1.5 rounded-sm bg-white/40"></span>
-<span class="">// CREDENTIALS, HONORS &amp; FOUNDATIONS</span>
-</div>
-<h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
-          Academic Foundation, Honors &amp; Languages
-        </h2>
-</div>
-<!-- 3-Column Organized Grid -->
-<div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-<!-- Card 1: National Honor -->
-<div class="interactive-card rounded-xl p-6 flex flex-col justify-between h-full group">
-<div class="flex flex-col gap-3 relative z-10">
+<!-- Signature Brand Terminology Glossary -->
+<div class="mt-2 p-5 rounded-xl bg-zinc-950 border border-zinc-800 flex flex-col gap-4">
 <div class="flex items-center justify-between">
-<div class="flex items-center gap-1.5 text-amber-400 font-mono text-[11px]">
-<span class="material-symbols-outlined text-[17px] group-hover:rotate-12 transition-transform">trophy</span>
-<span class="font-semibold uppercase">1ST PLACE WINNER</span>
+<span class="font-mono text-xs text-zinc-400 uppercase tracking-wider font-semibold">// SIGNATURE TERMINOLOGY &amp; OPERATIONAL DEFINITIONS</span>
+<span class="font-mono text-[10px] text-zinc-300 bg-white/[0.06] border border-white/[0.1] px-2 py-0.5 rounded">PLAIN-ENGLISH TRANSLATIONS</span>
 </div>
-<span class="font-mono text-xs text-zinc-500">Dec 2022</span>
-</div>
-<h3 class="text-base font-semibold text-white leading-snug">Shahid Modarres National Festival — Parliament Research Center</h3>
-<p class="text-xs text-zinc-400 leading-relaxed pt-1">Awarded first place nationally for research with <strong class="text-white font-medium">Dr. Siavash Sayyar Irani</strong> on participatory oversight mechanisms in governance, demonstrating systemic problem-solving and multi-stakeholder orchestration.</p>
-</div>
-<div class="pt-4 mt-6 border-t border-white/[0.06] font-mono text-[11px] text-zinc-400 flex items-center justify-between relative z-10">
-<span class="">Authority</span>
-<span class="text-zinc-200">IPRC National Level</span>
-</div>
-</div>
-<!-- Card 2: Academic Degree -->
-<div class="interactive-card rounded-xl p-6 flex flex-col justify-between h-full group">
-<div class="flex flex-col gap-3 relative z-10">
-<div class="flex items-center gap-2 text-white/70 font-mono text-xs">
-<span class="material-symbols-outlined text-[18px] group-hover:scale-110 transition-transform">school</span>
-<span class="tracking-wider uppercase font-semibold">ACADEMIC DEGREE</span>
-</div>
-<h3 class="text-base font-semibold text-white leading-snug">
-              B.Sc. in Computer Software Engineering
-            </h3>
-<span class="font-mono text-xs text-zinc-400">
-              Islamic Azad University, Karaj, Iran
-            </span>
-<span class="font-mono text-[11px] text-zinc-500">
-              Feb 2022 – July 2026
-            </span>
-<p class="text-xs text-zinc-400 leading-relaxed pt-1">
-              Rigorous computer software core powering technical delivery leadership, interface contracts, automated QA pipelines, and architectural empathy with core engineering squads.
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 font-mono text-xs">
+<div class="p-3 rounded-lg bg-black/40 border border-white/[0.06] flex flex-col gap-1.5">
+<span class="text-white font-semibold">Cognitive Shielding</span>
+<p class="text-zinc-400 font-sans text-xs leading-relaxed">
+              Protecting engineering squads from ad-hoc interruptions, context switching, and premature requirement changes to maintain continuous deep execution focus.
             </p>
 </div>
-<div class="pt-4 mt-6 border-t border-white/[0.06] font-mono text-[11px] text-zinc-400 flex items-center justify-between relative z-10">
-<span class="">Focus</span>
-<span class="text-zinc-200">Software Architecture</span>
-</div>
-</div>
-<!-- Card 3: Linguistic Proficiencies -->
-<div class="interactive-card rounded-xl p-6 flex flex-col justify-between h-full group">
-<div class="flex flex-col gap-3 relative z-10">
-<div class="flex items-center gap-2 text-white/70 font-mono text-xs">
-<span class="material-symbols-outlined text-[18px] group-hover:rotate-12 transition-transform">translate</span>
-<span class="tracking-wider uppercase font-semibold">LINGUISTIC PROFICIENCY</span>
-</div>
-<h3 class="text-base font-semibold text-white leading-snug">
-              Global Asynchronous Delivery
-            </h3>
-<p class="text-xs text-zinc-400 leading-relaxed">
-              Proficient in synchronous and asynchronous remote collaboration across international engineering squads.
+<div class="p-3 rounded-lg bg-black/40 border border-white/[0.06] flex flex-col gap-1.5">
+<span class="text-white font-semibold">Contract-First Federation</span>
+<p class="text-zinc-400 font-sans text-xs leading-relaxed">
+              Specifying OpenAPI interface schemas before coding begins, empowering frontend and backend squads to build against mocks asynchronously with zero blocker stalls.
             </p>
-<div class="flex flex-col gap-2 pt-2 font-mono text-xs">
-<div class="p-2.5 rounded bg-black/40 border border-white/[0.08] transition-colors hover:border-white/20">
-<div class="text-white font-medium">English: Professional Working</div>
-<div class="text-[11px] text-zinc-400">Advanced Reading, PRD/Specs Writing, International Scrum Facilitation</div>
 </div>
-<div class="p-2.5 rounded bg-black/40 border border-white/[0.08] transition-colors hover:border-white/20">
-<div class="text-white font-medium">Persian: Native Fluency</div>
-<div class="text-[11px] text-zinc-400">Mother Tongue</div>
-</div>
-</div>
-</div>
-<div class="pt-4 mt-4 border-t border-white/[0.06] font-mono text-[11px] text-zinc-400 flex items-center justify-between relative z-10">
-<span class="">Coverage</span>
-<span class="text-zinc-200">US / UAE Time Zones</span>
+<div class="p-3 rounded-lg bg-black/40 border border-white/[0.06] flex flex-col gap-1.5">
+<span class="text-white font-semibold">Deterministic Flow</span>
+<p class="text-zinc-400 font-sans text-xs leading-relaxed">
+              Establishing reliable sprint delivery velocity through rigorous INVEST story decomposition, empiric WIP caps, and protected 20% capacity debt reserves.
+            </p>
 </div>
 </div>
 </div>
 </section>
-<!-- 7. CONTACT & INQUIRIES (RESEND METALLIC CALL-TO-ACTION) -->
-<section class="reveal-on-scroll pt-8 border-t border-zinc-800/80 scroll-mt-24 is-revealed" id="contact">
+<!-- 07. NATIONAL RECOGNITION -->
+<section class="reveal-on-scroll pt-6 border-t border-zinc-800/80 flex flex-col gap-6 scroll-mt-24" id="recognition">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center gap-2 font-mono text-xs text-zinc-400 uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-sm bg-white"></span>
+<span class="">// HONORS &amp; EMPIRICAL RESEARCH CREDENTIALS</span>
+</div>
+<h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">National Recognition</h2>
+</div>
+<div class="interactive-card rounded-xl p-6 sm:p-7 flex flex-col gap-4">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-white/[0.08] pb-4">
+<div class="flex items-center gap-2 text-white font-mono text-xs font-semibold">
+<span class="material-symbols-outlined text-[20px] text-zinc-300">trophy</span>
+<span class="text-zinc-200">NATIONAL RECOGNITION · 1ST PLACE WINNER</span>
+</div>
+<span class="font-mono text-xs text-zinc-400">December 2022 · National Level</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-base sm:text-lg font-bold text-white">6th Shahid Modarres National Festival — Parliament Research Center</h3>
+<p class="text-xs sm:text-sm text-zinc-300 leading-relaxed">Conferred first place nationally for applied research conducted alongside <strong class="text-white font-medium">Dr. Siavash Sayyar Irani</strong> on participatory oversight mechanisms and macroscopic governance frameworks. Demonstrating systemic problem-solving, structured protocol design, and multi-stakeholder orchestration.</p>
+</div>
+<details class="group/details mt-2">
+<summary class="cursor-pointer font-mono text-xs text-zinc-400 hover:text-white inline-flex items-center gap-1.5 transition-colors select-none">
+<span class="material-symbols-outlined text-[16px] group-open/details:rotate-90 transition-transform">chevron_right</span>
+<span class="underline underline-offset-4">View Details &amp; Governance Methodology</span>
+</summary>
+<div class="mt-3 p-4 rounded-lg bg-black/60 border border-white/[0.08] text-xs text-zinc-400 leading-relaxed flex flex-col gap-2">
+<p class="">The research formalized participatory feedback loops and distributed constraint management to eliminate administrative lag—the same empirical systems architecture principles that Masoud applies to eliminate cross-squad friction, build API contracts, and stabilize engineering delivery.</p>
+<div class="flex items-center gap-4 font-mono text-[11px] text-zinc-500 pt-1">
+<span class="">Authority: Islamic Parliament Research Center (IPRC)</span>
+<span class="">Domain: Systemic Oversight &amp; Governance</span>
+</div>
+</div>
+</details>
+</div>
+</section>
+<!-- 08. RECOMMENDATIONS (OPERATIONAL TELEMETRY) -->
+<section class="reveal-on-scroll pt-6 border-t border-zinc-800/80 flex flex-col gap-6">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center gap-2 font-mono text-xs text-zinc-400 uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-sm bg-white"></span>
+<span class="">// OPERATIONAL TELEMETRY &amp; DELIVERY PRINCIPLES</span>
+</div>
+<h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Systemic Delivery Protocols</h2>
+<p class="text-xs sm:text-sm text-zinc-400 max-w-2xl leading-relaxed">Documented operational benchmarks, systemic governance protocols, and engineering velocity standards instituted across distributed squads.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="interactive-card rounded-xl p-5 flex flex-col justify-between h-full group border border-white/10">
+<div class="flex flex-col gap-3 relative z-10">
+<div class="flex items-center justify-between font-mono text-[10px]">
+<span class="px-2 py-0.5 rounded bg-white/[0.06] border border-white/15 text-white font-semibold uppercase tracking-wider">PROTOCOL 01</span>
+<span class="text-zinc-500 font-mono">CONTRACT-FIRST</span>
+</div>
+<h3 class="text-sm font-semibold text-white tracking-tight flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-zinc-300">schema</span>Deterministic Sprint Cadence &amp; Zero Wait</h3>
+<p class="text-xs text-zinc-300 leading-relaxed font-normal">Enforcing contract-first OpenAPI schemas and Prism mock gates ahead of sprint execution, ensuring zero frontend wait time and decoupling engineering cycles across distributed squads.</p>
+</div>
+<div class="pt-3 mt-4 border-t border-white/[0.06] flex items-center justify-between font-mono text-[10px] text-zinc-400 relative z-10">
+<span class="text-zinc-500">TELEMETRY GATE</span>
+<span class="text-white font-semibold">100% Mock Parity</span>
+</div>
+</div>
+<div class="interactive-card rounded-xl p-5 flex flex-col justify-between h-full group border border-white/10">
+<div class="flex flex-col gap-3 relative z-10">
+<div class="flex items-center justify-between font-mono text-[10px]">
+<span class="px-2 py-0.5 rounded bg-white/[0.06] border border-white/15 text-white font-semibold uppercase tracking-wider">PROTOCOL 02</span>
+<span class="text-zinc-500 font-mono">TECH QUALITY</span>
+</div>
+<h3 class="text-sm font-semibold text-white tracking-tight flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-zinc-300">shield_with_heart</span>Continuous Refactoring &amp; Quality</h3>
+<p class="text-xs text-zinc-300 leading-relaxed font-normal">Allocating regular sprint capacity for code maintenance, dependency updates, and technical debt reduction to keep delivery fast and sustainable.</p>
+</div>
+<div class="pt-3 mt-4 border-t border-white/[0.06] flex items-center justify-between font-mono text-[10px] text-zinc-400 relative z-10">
+<span class="text-zinc-500">CAPACITY RESERVE</span>
+<span class="text-white font-semibold">Sustainable Pace</span>
+</div>
+</div>
+<div class="interactive-card rounded-xl p-5 flex flex-col justify-between h-full group border border-white/10">
+<div class="flex flex-col gap-3 relative z-10">
+<div class="flex items-center justify-between font-mono text-[10px]">
+<span class="px-2 py-0.5 rounded bg-white/[0.06] border border-white/15 text-white font-semibold uppercase tracking-wider">PROTOCOL 03</span>
+<span class="text-zinc-500 font-mono">VELOCITY SHIELD</span>
+</div>
+<h3 class="text-sm font-semibold text-white tracking-tight flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-zinc-300">psychology</span>Cognitive Shielding &amp; Empirical Flow</h3>
+<p class="text-xs text-zinc-300 leading-relaxed font-normal">Protecting engineering focus by eliminating ad-hoc interruptions, managing Little's Law WIP limits, and translating business roadmap requirements into INVEST-compliant atomicity before grooming.</p>
+</div>
+<div class="pt-3 mt-4 border-t border-white/[0.06] flex items-center justify-between font-mono text-[10px] text-zinc-400 relative z-10">
+<span class="text-zinc-500">FLOW STABILITY</span>
+<span class="text-white font-semibold">&lt;3 WIP / Squad</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 09. PROFESSIONAL PHILOSOPHY & ABOUT -->
+<section class="reveal-on-scroll pt-6 border-t border-zinc-800/80 flex flex-col gap-6">
+<div class="interactive-card rounded-xl p-6 sm:p-8 flex flex-col md:flex-row gap-8 items-start">
+<div class="md:w-1/3 flex flex-col gap-2">
+<div class="flex items-center gap-2 font-mono text-xs text-zinc-400 uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-sm bg-white"></span>
+<span class="">OPERATIONAL PHILOSOPHY</span>
+</div>
+<h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight">
+            Predictable Engineering Through Empirical Discipline
+          </h2>
+<span class="font-mono text-xs text-zinc-500">B.Sc. in Computer Software Engineering</span>
+</div>
+<div class="md:w-2/3 flex flex-col gap-3.5 text-xs sm:text-[13px] text-zinc-300 leading-relaxed md:border-l md:border-white/[0.08] md:pl-8">
+<p class="">
+            True agile leadership is not about enforcing vanity standups or dogmatic ceremonies. It is about removing the real friction that slows engineers down: ambiguous requirements, hidden API dependencies, unvetted release cycles, and context thrashing.
+          </p>
+<p class="">
+            With a formal foundation in Computer Software Engineering and over seven years of hands-on technical coordination, I bridge the language gap between software architects and business stakeholders. When engineering squads know exactly what "Done" means and are protected by contract-first interfaces, deterministic velocity follows naturally.
+          </p>
+<div class="pt-2 flex flex-wrap gap-2 font-mono text-[11px] text-zinc-400">
+<span class="px-2 py-1 rounded bg-black/50 border border-white/[0.08]">Software Engineering Rigor</span>
+<span class="px-2 py-1 rounded bg-black/50 border border-white/[0.08]">Empirical Telemetry</span>
+<span class="px-2 py-1 rounded bg-black/50 border border-white/[0.08]">Cognitive Shielding</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 10. CONTACT CTA & INQUIRIES -->
+<section class="reveal-on-scroll pt-6 border-t border-zinc-800/80 scroll-mt-24" id="contact">
 <div class="interactive-card relative rounded-2xl p-8 sm:p-12 border border-zinc-800 text-center flex flex-col items-center gap-6 overflow-hidden">
 <div class="absolute top-0 left-1/4 right-1/4 h-[1px] bg-gradient-to-r from-transparent via-white/50 to-transparent"></div>
 <div class="flex items-center gap-2 font-mono text-xs text-zinc-400 uppercase tracking-wider relative z-10">
-<span class="relative flex h-2.5 w-2.5">
-<span class="status-radar-1 absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-<span class="status-radar-2 absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-50"></span>
-<span class="status-glow relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+<span class="relative flex h-2 w-2">
+<span class="status-radar-1 absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+<span class="status-glow relative inline-flex rounded-full h-2 w-2 bg-white"></span>
 </span>
-<span class="">// ENGAGEMENT INQUIRIES &amp; MANDATES</span>
+<span class="">// BUILDING COMPLEX SYSTEMS? LET'S CONNECT</span>
 </div>
 <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-tight max-w-2xl leading-tight relative z-10">
-          Ready to stabilize delivery and accelerate engineering cadence?
+          If you're looking for a technical delivery leader who connects engineering execution with predictable delivery, let's talk.
         </h2>
 <p class="text-xs sm:text-sm text-zinc-400 max-w-xl relative z-10 leading-relaxed">
-          Available for technical delivery leadership, sprint health turnarounds, and cross-squad API contract standardization across remote teams.
+          Available for technical delivery leadership, sprint health turnarounds, contract-first API standardization, and distributed squad orchestration.
         </p>
-<!-- Quick Action Contact CTAs with Tactile Animations -->
-<div class="flex flex-wrap items-center justify-center gap-3 pt-2 relative z-10">
-<button class="copy-email-btn btn-tactile btn-tactile-shimmer group relative inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-md bg-white hover:bg-neutral-100 text-black text-xs font-semibold tracking-tight shadow-[0_0_25px_rgba(255,255,255,0.18)] hover:shadow-[0_0_38px_rgba(255,255,255,0.38)] cursor-pointer" data-email="masoudivzi@gmail.com" type="button">
-<span class="material-symbols-outlined text-[17px] text-black group-hover:rotate-6 transition-transform btn-icon">mail</span>
-<span class="btn-text">masoudivzi@gmail.com</span>
-<span class="copied-tooltip pointer-events-none absolute -top-9 px-2.5 py-1 rounded bg-zinc-900 border border-white/20 text-white font-mono text-[10px] uppercase opacity-0 scale-95 transition-all duration-200 shadow-2xl">Copied to clipboard!</span>
-</button>
-<button class="copy-text-btn btn-tactile inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-md metallic-pill hover:border-white/30 text-white text-xs font-medium cursor-pointer" data-copy="(+98) 991 633 0625">
-<span class="material-symbols-outlined text-[16px] text-zinc-300">call</span>
-<span class="">(+98) 991 633 0625</span>
-</button>
-<a class="btn-tactile inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-md metallic-pill hover:border-white/30 text-white text-xs font-medium" href="https://linkedin.com/in/masoud-valizadeh-agile" rel="noreferrer" target="_blank">
-<span class="material-symbols-outlined text-[16px] text-zinc-300">open_in_new</span>
-<span class="">LinkedIn</span>
+<!-- CTA Buttons -->
+<div class="flex flex-wrap items-center justify-center gap-3 pt-2 relative z-10 font-mono text-xs">
+<a class="btn-tactile btn-tactile-shimmer inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-md bg-white hover:bg-neutral-200 text-black font-semibold tracking-tight shadow-[0_0_20px_rgba(255,255,255,0.2)]" href="mailto:Masoudivzi@gmail.com">
+<span class="material-symbols-outlined text-[16px]">mail</span>
+<span class="">Email Masoud (Masoudivzi@gmail.com)</span>
 </a>
-<a class="btn-tactile inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-md metallic-pill hover:border-white/30 text-white text-xs font-medium" href="https://github.com/MasoudVz" rel="noreferrer" target="_blank">
-<span class="material-symbols-outlined text-[16px] text-zinc-300">code</span>
-<span class="">GitHub</span>
+<a class="btn-tactile inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-md metallic-pill hover:border-white/30 text-white" href="https://linkedin.com/in/masoud-valizadeh-agile" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+<span class="">Connect on LinkedIn</span>
 </a>
-<a class="btn-tactile inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-md metallic-pill hover:border-white/30 text-white text-xs font-medium" href="https://masoudvalizadeh.ir" rel="noreferrer" target="_blank">
-<span class="material-symbols-outlined text-[16px] text-zinc-300">language</span>
-<span class="">masoudvalizadeh.ir</span>
+<a class="btn-tactile inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-md metallic-pill hover:border-white/30 text-white" download="" href="https://raw.githubusercontent.com/MasoudVz/MasoudVz.github.io/main/Masoud_Valizadeh_Scrum_Master_CV.pdf" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span class="">Download Full CV (PDF)</span>
 </a>
 </div>
 </div>
 </section>
 </main>
 <!-- FOOTER -->
-<footer class="w-full border-t border-white/[0.08] bg-black/90 py-10 transition-colors">
-<div class="max-w-content mx-auto px-6 md:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-zinc-400">
-<div class="flex items-center gap-2 text-zinc-300">
-<span class="relative flex h-2 w-2 mr-1">
-<span class="status-radar-1 absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-<span class="status-glow relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
-</span>
-<span class="">Masoud Valizadeh — Staff Technical Delivery Lead &amp; Scrum Master</span>
-</div>
-<div class="flex items-center gap-6">
-<a class="hover:text-white transition-colors" href="mailto:masoudivzi@gmail.com">masoudivzi@gmail.com</a>
-<a class="hover:text-white transition-colors" href="https://linkedin.com/in/masoud-valizadeh-agile" rel="noreferrer" target="_blank">LinkedIn</a>
-<a class="hover:text-white transition-colors" href="https://github.com/MasoudVz" rel="noreferrer" target="_blank">GitHub</a>
+<footer class="w-full border-t border-white/[0.08] bg-black/95 py-10">
+<div class="max-w-content mx-auto px-5 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-zinc-400">
+<div class="flex items-center gap-2 text-zinc-300"><span class="relative flex h-2 w-2 mr-1"><span class="status-radar-1 absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span><span class="status-glow relative inline-flex rounded-full h-2 w-2 bg-white"></span></span><span class="">Masoud Valizadeh — Staff Technical Delivery Lead &amp; Scrum Master | Empirical Systems Architecture</span></div>
+<div class="flex items-center gap-5">
+<a class="hover:text-white transition-colors" href="mailto:Masoudivzi@gmail.com">Masoudivzi@gmail.com</a>
+<a class="hover:text-white transition-colors" href="https://linkedin.com/in/masoud-valizadeh-agile" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+<a class="hover:text-white transition-colors" href="https://github.com/MasoudVz" rel="noopener noreferrer" target="_blank">GitHub</a>
 </div>
 <div>
-<span class="">© 2025 Masoud Valizadeh. Strictly verified engineering dossiers.</span>
+<span class="">© 2025 Masoud Valizadeh. Empirical Systems Architecture.</span>
 </div>
 </div>
 </footer>
 </div>
-<!-- SPOTLIGHT & INTERACTIVE TILT PHYSICS SCRIPTS -->
+<!-- SPOTLIGHT & CARD HOVER INTERACTION SCRIPTS -->
 <script>
   (function() {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    // Smooth scroll support with offset calculation for anchor links
+    // Smooth Anchor Scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         const targetId = this.getAttribute('href');
-        if (targetId === '#') return;
+        if (targetId === '#' || targetId === '') return;
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
           e.preventDefault();
@@ -750,22 +1132,20 @@ DUBAI &amp; US OVERLAP
           });
           if (history.pushState) {
             history.pushState(null, null, targetId);
-          } else {
-            location.hash = targetId;
           }
         }
       });
     });
 
-    // 1. Dynamic Mouse-Tracking Spotlight & Resend 3D Tilt Physics
+    // Spotlight cursor tracking and Card boundary calculations
     const mouseGlow = document.getElementById('mouse-glow');
     if (!prefersReducedMotion) {
       const cards = document.querySelectorAll('.interactive-card');
       let rafPending = false;
-      let lastClientX = -500;
-      let lastClientY = -500;
+      let lastClientX = -800;
+      let lastClientY = -800;
 
-      const updateMousePositions = () => {
+      const updatePositions = () => {
         if (mouseGlow) {
           mouseGlow.style.left = `${lastClientX}px`;
           mouseGlow.style.top = `${lastClientY}px`;
@@ -777,27 +1157,6 @@ DUBAI &amp; US OVERLAP
           const y = lastClientY - rect.top;
           card.style.setProperty('--mouse-x', `${x}px`);
           card.style.setProperty('--mouse-y', `${y}px`);
-
-          // 3D Tilt calculation when hovering directly over or near a card
-          const isHovered = (
-            lastClientX >= rect.left &&
-            lastClientX <= rect.right &&
-            lastClientY >= rect.top &&
-            lastClientY <= rect.bottom
-          );
-
-          if (isHovered) {
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-            const deltaX = (x - centerX) / centerX;
-            const deltaY = (y - centerY) / centerY;
-            // subtle elegant tilt (max 4.5deg)
-            const rotateX = (-deltaY * 4.5).toFixed(2);
-            const rotateY = (deltaX * 4.5).toFixed(2);
-            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
-          } else if (card.style.transform && card.style.transform !== 'none') {
-            card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
-          }
         });
         rafPending = false;
       };
@@ -807,124 +1166,37 @@ DUBAI &amp; US OVERLAP
         lastClientY = e.clientY;
         if (!rafPending) {
           rafPending = true;
-          requestAnimationFrame(updateMousePositions);
+          requestAnimationFrame(updatePositions);
         }
       }, { passive: true });
 
-      // Clean card reset on mouse leave
       window.addEventListener('mouseleave', () => {
         cards.forEach((card) => {
-          card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+          card.style.setProperty('--mouse-x', '-800px');
+          card.style.setProperty('--mouse-y', '-800px');
         });
       });
     }
 
-    // 2. Entrance Choreography via IntersectionObserver (Staggered fade-up)
+    // IntersectionObserver scroll reveal for sections and elements
     if (!prefersReducedMotion && 'IntersectionObserver' in window) {
       const revealElements = document.querySelectorAll('.reveal-on-scroll');
       const observer = new IntersectionObserver((entries, obs) => {
-        entries.forEach((entry, idx) => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setTimeout(() => {
-              entry.target.classList.add('is-revealed');
-            }, idx * 60);
+            entry.target.classList.add('is-revealed');
             obs.unobserve(entry.target);
           }
         });
       }, {
-        threshold: 0.08,
-        rootMargin: '0px 0px -40px 0px'
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
       });
 
       revealElements.forEach((el) => observer.observe(el));
     } else {
       document.querySelectorAll('.reveal-on-scroll').forEach(el => el.classList.add('is-revealed'));
     }
-
-    // 3. Tactile Copy to Clipboard Action with Tooltip & State Feedback
-    const copyButtons = document.querySelectorAll('.copy-email-btn');
-    copyButtons.forEach((btn) => {
-      btn.addEventListener('click', async (e) => {
-        e.preventDefault();
-        const email = btn.getAttribute('data-email') || 'masoudivzi@gmail.com';
-        const textSpan = btn.querySelector('.btn-text');
-        const iconSpan = btn.querySelector('.btn-icon');
-        const tooltip = btn.querySelector('.copied-tooltip');
-        const originalText = textSpan ? textSpan.textContent : '';
-        const originalIcon = iconSpan ? iconSpan.textContent : '';
-
-        try {
-          if (navigator.clipboard && window.isSecureContext) {
-            await navigator.clipboard.writeText(email);
-          } else {
-            const textarea = document.createElement('textarea');
-            textarea.value = email;
-            textarea.style.position = 'fixed';
-            textarea.style.opacity = '0';
-            document.body.appendChild(textarea);
-            textarea.focus();
-            textarea.select();
-            document.execCommand('copy');
-            document.body.removeChild(textarea);
-          }
-
-          if (textSpan) textSpan.textContent = 'Copied to clipboard!';
-          if (iconSpan) iconSpan.textContent = 'check';
-          if (tooltip) {
-            tooltip.style.opacity = '1';
-            tooltip.style.transform = 'scale(1) translateY(-3px)';
-          }
-
-          setTimeout(() => {
-            if (textSpan) textSpan.textContent = originalText;
-            if (iconSpan) iconSpan.textContent = originalIcon;
-            if (tooltip) {
-              tooltip.style.opacity = '0';
-              tooltip.style.transform = 'scale(0.95) translateY(0)';
-            }
-          }, 2200);
-
-        } catch (err) {
-          window.location.href = `mailto:${email}`;
-        }
-      });
-    });
-
-    // 4. Secondary Quick-Copy Phone / Text Button
-    const copyTextBtns = document.querySelectorAll('.copy-text-btn');
-    copyTextBtns.forEach((btn) => {
-      btn.addEventListener('click', async (e) => {
-        e.preventDefault();
-        const str = btn.getAttribute('data-copy');
-        if (!str) return;
-        try {
-          if (navigator.clipboard && window.isSecureContext) {
-            await navigator.clipboard.writeText(str);
-          } else {
-            const textarea = document.createElement('textarea');
-            textarea.value = str;
-            textarea.style.position = 'fixed';
-            textarea.style.opacity = '0';
-            document.body.appendChild(textarea);
-            textarea.focus();
-            textarea.select();
-            document.execCommand('copy');
-            document.body.removeChild(textarea);
-          }
-          const originalContent = btn.innerHTML;
-          btn.classList.add('text-emerald-400', 'border-emerald-500/40');
-          btn.innerHTML = `<span class="material-symbols-outlined text-[16px] text-emerald-400">check</span><span>Copied!</span>`;
-          setTimeout(() => {
-            btn.innerHTML = originalContent;
-            btn.classList.remove('text-emerald-400', 'border-emerald-500/40');
-          }, 1800);
-        } catch (err) {
-          console.warn('Copy failed:', err);
-        }
-      });
-    });
   })();
 </script>
-
-
 </body></html>
